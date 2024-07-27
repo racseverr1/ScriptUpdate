@@ -19,7 +19,10 @@ gg.alert(modbyfami)
 gg.clearResults()
 gg.clearList()
 gg.sleep(100)
-
+on = "*"
+off = ''
+HA = off
+HB = off
 
 ----------------------+-+-++++-------++++
 L={'⏩', '🔳', '🔳', '🔳', '🔳', '🔳'} -- LOADING TABLE
