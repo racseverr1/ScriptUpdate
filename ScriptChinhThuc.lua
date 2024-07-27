@@ -14,7 +14,7 @@ if A ~= true then gg.alert("⚠\n Tài khoảng chưa đăng ký tool \n Vui lò
 return 
 else gg.toast("✅ Kết nối thành công !") end
 -----------------------------------------    
-	modbyfami = os.date ("\n==============================\n⏱Hạn sử dụng còn: xx ⏱\n📅Ngày : %x📅\n📜Phiên Bản : Chính Thức📜\n\n📲Script by Nguyễn Vinh📲\n\n🆘 FB: fb.com/@nguyenvinh2789 🆘\n\n==============================") 
+	modbyfami = os.date ("\n==============================\n⏱Hạn sử dụng còn: xx ⏱\n📅Ngày : %x📅\n📜Phiên Bản : 0.4📜\n\n📲Script by Nguyễn Vinh📲\n\n🆘 FB: fb.com/@nguyenvinh2789 🆘\n\n==============================\n===> Thông tin update <===\n\n==============================\n") 
 gg.alert(modbyfami)  							
 gg.clearResults()
 gg.clearList()
