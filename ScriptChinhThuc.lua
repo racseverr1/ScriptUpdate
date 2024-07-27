@@ -1,18 +1,7 @@
 gg.setVisible(false)
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
--- Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh Nguyễn Vinh 
-
-Day = os.date('%d%m%Y')
-HSD = '27082024' -- hsd 10/12/2024
-if Day > HSD then 
-gg.alert("Script đã hết hạn. liên hệ tác giả.","ok")
-os.exit()
+if os.date("%Y%m%d") >= "20240827"then 
+gg.alert("Script đã hết hạn. liên hệ tác giả.","ok") 
+os.exit() 
 end
 
 local Passwords = {"vodanh001","bazoca","nguyenvinh"} -- write all your choosen passwords in this tab .
@@ -24,23 +13,13 @@ end
 if A ~= true then gg.alert("⚠\n Tài khoảng chưa đăng ký tool \n Vui lòng liên hệ tác giả \n ⚠ ")
 return 
 else gg.toast("✅ Kết nối thành công !") end
-
-
 -----------------------------------------    
-	modbyfami = os.date ("Phiên bản 0.3\
-\
-			ℹ️Update New:\
-				- Shop Bội Dã Tẩu\
-				- Thêm vé vòng quay vào shop\
-				- Thêm mảnh vũ khí hoàng kim vào shop\
-	\
-					User : 17  -  Hạn sử dụng còn: 7 ngày.\
-	\
-            🔰Script by Nguyen Vinh🔰") 
+	modbyfami = os.date ("\n==============================\n⏱Hạn sử dụng còn: xx ⏱\n📅Ngày : %x📅\n📜Phiên Bản : Chính Thức📜\n\n📲Script by Nguyễn Vinh📲\n\n🆘 FB: fb.com/@nguyenvinh2789 🆘\n\n==============================") 
 gg.alert(modbyfami)  							
 gg.clearResults()
 gg.clearList()
 gg.sleep(100)
+
 
 ----------------------+-+-++++-------++++
 L={'⏩', '🔳', '🔳', '🔳', '🔳', '🔳'} -- LOADING TABLE
@@ -66,16 +45,23 @@ gg.setVisible(true)
 
 
 function HOME()
+	on = "[✔️]"
+	off = "[❌]"
+	Hdate = off
+	Hmin = off
+	Hmax = off
+	Hpass = off
+	Hblock = off
 -- menu
 menu=gg.multiChoice({
-		"✔️ Tăng KNB",
-		"✔️ Tăng DMG",
-		"✔️ Shop Item Mới",
-		"✔️ Các Chức Năng Khác",
-		"✔️ Lấy Item trực tiếp",
+		"🔰 Tăng KNB",
+		"🔰 Tăng DMG",
+		"🔰 Shop Item Mới",
+		"🔰 Các Chức Năng Khác",
+		"🔰 Lấy Item trực tiếp",
 		" Test scrip",
 		"❌Exit❌",
-		} ,nil, "🎉Chọn mục🎉") -- tieu de
+		} ,nil, "🎉Chọn mục🎉","Thoát") -- tieu de
 
 if menu == nil then
 	else
@@ -142,6 +128,7 @@ end
 
 
 	function TANGKNB() -- TANG KNB
+	Hdate = on
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("25;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(3000) -- THỜI GIAN CHỜ
@@ -154,10 +141,10 @@ end
 
 	function TANGDMG()
 		TANGDMG1=gg.multiChoice({
-			"✔️Tăng Dmg và máu",	--1
-			"✔️Tăng Tốc Độ Chạy",	--2
-			"✔️Tăng Hồi Máu",	--3
-			"✔️Tăng Thời Gian TTL 1h",	--4
+			"🔰Tăng Dmg và máu",	--1
+			"🔰Tăng Tốc Độ Chạy",	--2
+			"🔰Tăng Hồi Máu",	--3
+			"🔰Tăng Thời Gian TTL 1h",	--4
 
 			"❌Exit❌"},nil,"🎉Chọn mục🎉")
 
@@ -212,11 +199,11 @@ end
 
 	function SHOPITEMMOI()
 		SHOPITEMMOI1=gg.multiChoice({
-			"✔️ Shop Ngựa",	--1
-			"✔️ Shop Bạch Hổ Đường",	--2
+			"🔰 Shop Ngựa",	--1
+			"🔰 Shop Bạch Hổ Đường",	--2
 			"🆕 Shop Dã Tẩu",	--3
-			"✔️ Shop Phong Hỏa Liên Thành",	--4
-			"✔️ Shop Các vật phẩm khác",	--4
+			"🔰 Shop Phong Hỏa Liên Thành",	--4
+			"🔰 Shop Các vật phẩm khác",	--4
 
 			"❌Exit❌"},nil,"🎉Chọn mục🎉")
 
@@ -307,7 +294,7 @@ end
 				function shopbhd()
 						shopbhd1=gg.multiChoice({
 						"✔ Giảm giá vật phẩm.",	--1
-						"✔️ Dây Chuyền BHD",
+						"🔰 Dây Chuyền BHD",
 
 						"❌Exit❌"},nil,"🎉Chọn mục🎉")
 
@@ -532,7 +519,7 @@ end
 
 	function CACCHUCNANGKHAC()
 				CACCHUCNANGKHAC1=gg.multiChoice({
-					"✔️ LB Bạch Hổ Đường (10k điểm)",	--1
+					"🔰 LB Bạch Hổ Đường (10k điểm)",	--1
 					"✔ LB Phong Hỏa Liên Thành (10k điểm)",	--2
 					"✔ LB Dã Tẩu (10k điểm)",	--3
 					"✔ Tinh Lực - Hoạt Lực(1000) ( 50k điểm )",	--4
@@ -604,19 +591,19 @@ end
 	
 	function LAYITEMTRUCTIEP()
 				LAYITEMTRUCTIEP1=gg.multiChoice({
-						"✔️Lấy giá trị",		-- 1
-						"✔️Sách Exp 120",		-- 2
-						"✔️Sách Exp 150",		-- 3
-						"✔️Rương Skill 120",	-- 4
-						"✔️Rương Skill 150",	-- 5
-						"✔️Đại Thành 90",		-- 6
-						"✔️Đại Thành 150",		-- 7
-						"✔️Phiếu KNB khóa",		-- 8
-						"✔️Huyền Tinh 6",		-- 9
-						"✔️Huyền Tinh 7",		-- 10
-						"✔️Huyền Tinh 8",		-- 11
-						"✔️Mảnh Vũ khí hoàng kim( chưa tác dụng )",		-- 12
-						"✔️Huyết Ngọc ( chưa tác dụng )",		-- 13
+						"🔰Lấy giá trị",		-- 1
+						"🔰Sách Exp 120",		-- 2
+						"🔰Sách Exp 150",		-- 3
+						"🔰Rương Skill 120",	-- 4
+						"🔰Rương Skill 150",	-- 5
+						"🔰Đại Thành 90",		-- 6
+						"🔰Đại Thành 150",		-- 7
+						"🔰Phiếu KNB khóa",		-- 8
+						"🔰Huyền Tinh 6",		-- 9
+						"🔰Huyền Tinh 7",		-- 10
+						"🔰Huyền Tinh 8",		-- 11
+						"🔰Mảnh Vũ khí hoàng kim( chưa tác dụng )",		-- 12
+						"🔰Huyết Ngọc ( chưa tác dụng )",		-- 13
 						"❌Exit❌"},nil,"🎉Chọn mục🎉")
 
 		if LAYITEMTRUCTIEP1 == nil then
