@@ -1,13 +1,15 @@
 gg.setVisible(false)
-if os.date("%Y%m%d") >= "20240827"then 
-gg.alert("Script đã hết hạn. liên hệ tác giả.","ok") 
-os.exit() 
-end
 
-local day, month, year = ("08-08-2024"):match("(%d%d)-(%d%d)-(%d%d%d%d)")
-local span = 64
-local endtime = os.time({day = day + span, month = month, year = year})
-gg.alert(os.date("%c", endtime))
+hsd = os.date()
+reference = os.time{day=28, year=2024, month=7} 
+daysfrom = os.difftime(os.time(), reference) / (24 * 60 * 60) -- seconds in a day
+wholedays = math.floor(daysfrom)
+if wholedays >= 0 then
+gg.alert(" \n==============================\n\n Tài khoảng hết hạn \n Vui lòng liên hệ tác giả \n \n==============================\n ")
+os.exit()
+else
+end
+gg.alert("\n==============================\n\nHạn sử dụng còn:\n"..wholedays.."ngày \n \n==============================\n") -- today it prints "1"
 
 local Passwords = {"vodanh001","bazoca","nguyenvinh"} -- write all your choosen passwords in this tab .
 local Menu = gg.prompt({"Tên đăng nhập game:"},nil,{"text"})
