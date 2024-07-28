@@ -1,32 +1,8 @@
 gg.setVisible(false)
 --------------------------------------------------------
-L={'⏩', '🔳', '🔳', '🔳', '🔳', '🔳'} -- LOADING TABLE
-LD = 0
-for i=0, 6, 1 do
-	if gg.isVisible(true) and i ~= 6 then
-		gg.setVisible(false)
-	end
-	gg.sleep(300)
-	gg.toast('Loading: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/100%')
-	LD = LD + 20
-	table.remove(L)
-	table.insert(L, 2, "⏩")
-	if i == 6 then
-		gg.toast('Tải Script Thành Công!')
-		--gg.sleep(1000)
-		gg.toast('Tải Script Thành Công!')
-	end
-end
+
 --------------------------------------------------------
-local Passwords = {"v"} -- write all your choosen passwords in this tab .
-local Menu = gg.prompt({"Tên đăng nhập game:"},nil,{"text"})
-if not Menu then return end
-for l , I in pairs(Passwords) do
-if Menu[1] == I then A = true end
-end
-if A ~= true then gg.alert("⚠\n Tài khoảng chưa đăng ký tool \n Vui lòng liên hệ tác giả \n ⚠ ")
-return 
-else gg.toast("✅ Kết nối thành công !") end
+
 --------------------------------------------------------
 hsd = os.date()
 reference = os.time{day=29, year=2024, month=7} 
@@ -59,7 +35,7 @@ menu=gg.multiChoice({
 		"🔰 Shop Item Mới",
 		"🔰 Các Chức Năng Khác",
 		"🔰 Lấy Item trực tiếp",
-		" 💰Test scrip",
+		 " Test scrip",
 		"❌Exit❌",
 		} ,nil, "🎉Chọn mục🎉","Thoát") -- tieu de
 
@@ -76,14 +52,14 @@ HOMEDM=-1 end
 
 function TESTSCRIPT()
       local t = gg.prompt({
-                       '💰️Lấy giá trị',
-                       '️💰️Bạc', -- 2
-                       '💰️Bạc Khóa️', -- 1
-                       '💰KNB', -- 4
-                       '💰KNB Khóa', -- 3
+                       '🔷️Lấy giá trị',
+                       '️🔷️Bạc', -- 2
+                       '🔷️Bạc Khóa️', -- 1
+                       '🔷KNB', -- 4
+                       'KNB Khóa', -- 3
 '❌Quay lại menu❌'
 },nil, {'checkbox','checkbox','checkbox','checkbox','checkbox','checkbox'})
-        if t == nil then
+        if t ==nil then
            else
                if t[1] then
                          gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -552,7 +528,7 @@ end
 							 gg.searchNumber("50;100;150;402" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 							 gg.sleep(3000) -- THỜI GIAN CHỜ
 							 gg.refineNumber("50;100;150" , gg.TYPE_DWORD) -- lọc giá trị 3
-							 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+							 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 							 gg.editAll("10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 							 gg.alert("🔸\n Thay đổi thành công\n LB tham gia hoạt động có.\n🔸")  -- thong bao	 
 							 gg.clearResults()					
