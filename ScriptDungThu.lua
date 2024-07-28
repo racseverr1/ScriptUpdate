@@ -59,7 +59,7 @@ menu=gg.multiChoice({
 		"🔰 Shop Item Mới",
 		"🔰 Các Chức Năng Khác",
 		"🔰 Lấy Item trực tiếp",
-		" Test scrip",
+		" 💰Test scrip",
 		"❌Exit❌",
 		} ,nil, "🎉Chọn mục🎉","Thoát") -- tieu de
 
