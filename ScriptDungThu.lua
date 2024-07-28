@@ -87,44 +87,37 @@ HOMEDM=-1 end
 				if TESTSCRIPT1[3] == true then EXIT() end end --/thoat
 		HOMEDM=-1		
 		end
-				function laygiatri()
+				function laygiatri1()
 						 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 						 gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 						 gg.sleep(2000) -- THỜI GIAN CHỜ
-						 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3	
+						 gg.refineNumber("5;600000" , gg.TYPE_DWORD) -- lọc giá trị 3	
 						 gg.sleep(2000) -- THỜI GIAN CHỜ						 
 						 t1 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 						 gg.addListItems(t1)	 
 						 gg.clearResults()	
 						 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-						 gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+						 gg.searchNumber("5;800000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 						 gg.sleep(2000) -- THỜI GIAN CHỜ
-						 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3	
+						 gg.refineNumber("5;800000" , gg.TYPE_DWORD) -- lọc giá trị 3	
 						 gg.sleep(2000) -- THỜI GIAN CHỜ						 
 						 t1 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 						 gg.addListItems(t1)	 
 						 gg.clearResults()	
 						 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-						 gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+						 gg.searchNumber("5;1000000;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 						 gg.sleep(2000) -- THỜI GIAN CHỜ
-						 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3	
+						 gg.refineNumber("5;1000000" , gg.TYPE_DWORD) -- lọc giá trị 3	
 						 gg.sleep(2000) -- THỜI GIAN CHỜ						 
 						 t1 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 						 gg.addListItems(t1)	 
 						 gg.clearResults()							 
 				end
-				function sachexp120()
+				function KNB()
 						 gg .loadResults( gg .getListItems())-- thong bao
 						 gg.getResults(3)
-						 gg.editAll("91441" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+						 gg.editAll("500000;4" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						 gg.alert("🔸\n Cập nhật sách Exp 120 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function sachexp150()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("91442" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật sách Exp 150 thành công\n🔸")  -- thong bao	 
 						 gg.clearResults()				
 				end
 
