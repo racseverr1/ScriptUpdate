@@ -1,5 +1,3 @@
-        --  gg.alert("==========================================\nScript Đang Bảo Trì.\n Liên hệ Nguyễn Vinh để biết thêm chi tiết\n==========================================")
-
 gg.setVisible(false)
 --------------------------------------------------------
 L={'⏩', '🔳', '🔳', '🔳', '🔳', '🔳'} -- LOADING TABLE
@@ -72,8 +70,8 @@ if menu == nil then
 		if menu[3] == true then SHOPITEMMOI() end -- menu 3	
 		if menu[4] == true then CACCHUCNANGKHAC() end -- menu 3	
 		if menu[5] == true then LAYITEMTRUCTIEP() end -- menu 4
-		-- if menu[6] == true then TESTSCRIPT() end
-		if menu[6] == true then EXIT() end end --/thoat
+		if menu[6] == true then TESTSCRIPT() end
+		if menu[7] == true then EXIT() end end --/thoat
 HOMEDM=-1 end
 
 function TESTSCRIPT()
