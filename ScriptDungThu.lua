@@ -83,7 +83,7 @@ function TESTSCRIPT()
                        '💰KNB Khóa', -- 3
 '❌Quay lại menu❌'
 },nil, {'checkbox','checkbox','checkbox','checkbox','checkbox','checkbox'})
-        if t ==nil then
+        if t == nil then
            else
                if t[1] then
                          gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
