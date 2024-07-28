@@ -551,7 +551,7 @@ end
 							 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 							 gg.searchNumber("40;60;100;402" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 							 gg.sleep(3000) -- THỜI GIAN CHỜ
-							 gg.refineNumber("50;100;150" , gg.TYPE_DWORD) -- lọc giá trị 3
+							 gg.refineNumber("40;60;100" , gg.TYPE_DWORD) -- lọc giá trị 3
 							 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 							 gg.editAll("10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 							 gg.alert("🔸\n Thay đổi thành công\n LB tham gia hoạt động có.\n🔸")  -- thong bao	 
