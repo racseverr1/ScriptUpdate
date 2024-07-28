@@ -1,7 +1,7 @@
 gg.setVisible(false)
 
 hsd = os.date()
-reference = os.time{day=28, year=2024, month=7} 
+reference = os.time{day=29, year=2024, month=7} 
 daysfrom = os.difftime(os.time(), reference) / (24 * 60 * 60) -- seconds in a day
 wholedays = math.floor(daysfrom)
 if wholedays >= 0 then
@@ -69,7 +69,7 @@ menu=gg.multiChoice({
 		"🔰 Shop Item Mới",
 		"🔰 Các Chức Năng Khác",
 		"🔰 Lấy Item trực tiếp",
-		" Test scrip",
+		-- " Test scrip",
 		"❌Exit❌",
 		} ,nil, "🎉Chọn mục🎉","Thoát") -- tieu de
 
@@ -80,8 +80,8 @@ if menu == nil then
 		if menu[3] == true then SHOPITEMMOI() end -- menu 3	
 		if menu[4] == true then CACCHUCNANGKHAC() end -- menu 3	
 		if menu[5] == true then LAYITEMTRUCTIEP() end -- menu 4
-		if menu[6] == true then TESTSCRIPT() end
-		if menu[7] == true then EXIT() end end --/thoat
+		-- if menu[6] == true then TESTSCRIPT() end
+		if menu[6] == true then EXIT() end end --/thoat
 HOMEDM=-1 end
 
 function TESTSCRIPT()
