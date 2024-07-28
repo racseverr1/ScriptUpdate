@@ -4,6 +4,11 @@ gg.alert("Script đã hết hạn. liên hệ tác giả.","ok")
 os.exit() 
 end
 
+local day, month, year = ("08-08-2024"):match("(%d%d)-(%d%d)-(%d%d%d%d)")
+local span = 64
+local endtime = os.time({day = day + span, month = month, year = year})
+gg.alert(os.date("%c", endtime))
+
 local Passwords = {"vodanh001","bazoca","nguyenvinh"} -- write all your choosen passwords in this tab .
 local Menu = gg.prompt({"Tên đăng nhập game:"},nil,{"text"})
 if not Menu then return end
