@@ -1,8 +1,32 @@
 gg.setVisible(false)
 --------------------------------------------------------
-
+L={'⏩', '🔳', '🔳', '🔳', '🔳', '🔳'} -- LOADING TABLE
+LD = 0
+for i=0, 6, 1 do
+	if gg.isVisible(true) and i ~= 6 then
+		gg.setVisible(false)
+	end
+	gg.sleep(300)
+	gg.toast('Loading: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/100%')
+	LD = LD + 20
+	table.remove(L)
+	table.insert(L, 2, "⏩")
+	if i == 6 then
+		gg.toast('Tải Script Thành Công!')
+		--gg.sleep(1000)
+		gg.toast('Tải Script Thành Công!')
+	end
+end
 --------------------------------------------------------
-
+local Passwords = {"v"} -- write all your choosen passwords in this tab .
+local Menu = gg.prompt({"Tên đăng nhập game:"},nil,{"text"})
+if not Menu then return end
+for l , I in pairs(Passwords) do
+if Menu[1] == I then A = true end
+end
+if A ~= true then gg.alert("⚠\n Tài khoảng chưa đăng ký tool \n Vui lòng liên hệ tác giả \n ⚠ ")
+return 
+else gg.toast("✅ Kết nối thành công !") end
 --------------------------------------------------------
 hsd = os.date()
 reference = os.time{day=29, year=2024, month=7} 
@@ -35,7 +59,7 @@ menu=gg.multiChoice({
 		"🔰 Shop Item Mới",
 		"🔰 Các Chức Năng Khác",
 		"🔰 Lấy Item trực tiếp",
-		 " Test scrip",
+		" 💰Test scrip",
 		"❌Exit❌",
 		} ,nil, "🎉Chọn mục🎉","Thoát") -- tieu de
 
@@ -50,56 +74,59 @@ if menu == nil then
 		if menu[7] == true then EXIT() end end --/thoat
 HOMEDM=-1 end
 
-function TESTSCRIPT()
-      local t = gg.prompt({
-                       '🔷️Lấy giá trị',
-                       '️🔷️Bạc', -- 2
-                       '🔷️Bạc Khóa️', -- 1
-                       '🔷KNB', -- 4
-                       'KNB Khóa', -- 3
-'❌Quay lại menu❌'
-},nil, {'checkbox','checkbox','checkbox','checkbox','checkbox','checkbox'})
-        if t ==nil then
-           else
-               if t[1] then
-                         gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-						 gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-						 gg.sleep(3000) -- THỜI GIAN CHỜ
-						 gg.refineNumber("5;600000" , gg.TYPE_DWORD) 
-						 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-						 gg.addListItems(t2)	 
-						 gg.clearResults()	
-	
-                         gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-						 gg.searchNumber("5;800000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-						 gg.sleep(3000) -- THỜI GIAN CHỜ
-						 gg.refineNumber("5;800000" , gg.TYPE_DWORD) 
-						 t2 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-						 gg.addListItems(t2)	 
-						 gg.clearResults()		
-						
-                         gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-						 gg.searchNumber("5;1000000;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-						 gg.sleep(3000) -- THỜI GIAN CHỜ
-						 gg.refineNumber("5;800000" , gg.TYPE_DWORD) 
-						 t2 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-						 gg.addListItems(t2)	 
-						 gg.alert("🔸\n Lấy giá trị thành công\n🔸")   -- thong bao	
-						 gg.clearResults()		
-               end
-               
-               if t[2] then
-                         gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(50)
-						 gg.editAll("500000;4" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật sách Exp 120 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()			
-               end
-               
-               
-        end
-end
+	function TESTSCRIPT()
+				TESTSCRIPT1=gg.multiChoice({
+						"🔰Lấy giá trị",		-- 1
+						"🔰KNB",		-- 2
+						"❌Exit❌"},nil,"🎉Chọn mục🎉")
 
+		if TESTSCRIPT1 == nil then
+			else
+				if TESTSCRIPT1[1] == true then laygiatri1() end -- menu 1
+				if TESTSCRIPT1[2] == true then KNB() end -- menu 2
+				if TESTSCRIPT1[3] == true then EXIT() end end --/thoat
+		HOMEDM=-1		
+		end
+				function laygiatri()
+						 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+						 gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+						 gg.sleep(2000) -- THỜI GIAN CHỜ
+						 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3	
+						 gg.sleep(2000) -- THỜI GIAN CHỜ						 
+						 t1 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+						 gg.addListItems(t1)	 
+						 gg.clearResults()	
+						 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+						 gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+						 gg.sleep(2000) -- THỜI GIAN CHỜ
+						 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3	
+						 gg.sleep(2000) -- THỜI GIAN CHỜ						 
+						 t1 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+						 gg.addListItems(t1)	 
+						 gg.clearResults()	
+						 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+						 gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+						 gg.sleep(2000) -- THỜI GIAN CHỜ
+						 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3	
+						 gg.sleep(2000) -- THỜI GIAN CHỜ						 
+						 t1 = gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+						 gg.addListItems(t1)	 
+						 gg.clearResults()							 
+				end
+				function sachexp120()
+						 gg .loadResults( gg .getListItems())-- thong bao
+						 gg.getResults(3)
+						 gg.editAll("91441" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+						 gg.alert("🔸\n Cập nhật sách Exp 120 thành công\n🔸")  -- thong bao	 
+						 gg.clearResults()				
+				end
+				function sachexp150()
+						 gg .loadResults( gg .getListItems())-- thong bao
+						 gg.getResults(3)
+						 gg.editAll("91442" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+						 gg.alert("🔸\n Cập nhật sách Exp 150 thành công\n🔸")  -- thong bao	 
+						 gg.clearResults()				
+				end
 
 
 
@@ -528,7 +555,7 @@ end
 							 gg.searchNumber("50;100;150;402" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 							 gg.sleep(3000) -- THỜI GIAN CHỜ
 							 gg.refineNumber("50;100;150" , gg.TYPE_DWORD) -- lọc giá trị 3
-							 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+							 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 							 gg.editAll("10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 							 gg.alert("🔸\n Thay đổi thành công\n LB tham gia hoạt động có.\n🔸")  -- thong bao	 
 							 gg.clearResults()					
@@ -608,90 +635,7 @@ end
 						 gg.alert("🔸\n Lấy giá trị thành công\n🔸")   -- thong bao	
 						 gg.clearResults()				
 				end
-				function sachexp120()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("91441" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật sách Exp 120 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function sachexp150()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("91442" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật sách Exp 150 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function ruongskill120()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("10467" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Rương skill 120 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function ruongskill150()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)	 
-						 gg.editAll("10468" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Rương skill 150 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function daithanh90()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("91439" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Đại Thành 90 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function daithanh150()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("91440" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Đại Thành 150 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function phieuknbkhoa()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("10448" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Phiếu KNB Khóa thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function huyentinh6()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("188" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Huyền Tinh 6 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function huyentinh7()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("189" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Huyền Tinh 7 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function huyentinh8()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("190" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Huyền Tinh 8 thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function manhvkhk()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("10470" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Mảnh vũ khí hoàng kim thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
-				function huyetngoc()
-						 gg .loadResults( gg .getListItems())-- thong bao
-						 gg.getResults(3)
-						 gg.editAll("8532" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-						 gg.alert("🔸\n Cập nhật Huyết Ngọc thành công\n🔸")  -- thong bao	 
-						 gg.clearResults()				
-				end
+
 
 ----------------------------
 
