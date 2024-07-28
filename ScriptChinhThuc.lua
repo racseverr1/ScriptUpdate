@@ -1,37 +1,5 @@
 gg.setVisible(false)
-
-hsd = os.date()
-reference = os.time{day=29, year=2024, month=7} 
-daysfrom = os.difftime(os.time(), reference) / (24 * 60 * 60) -- seconds in a day
-wholedays = math.floor(daysfrom)
-if wholedays >= 0 then
-gg.alert(" \n==============================\n\n Tài khoảng hết hạn \n Vui lòng liên hệ tác giả \n \n==============================\n ")
-os.exit()
-else
-end
-gg.alert("\n==============================\n\nHạn sử dụng còn:\n"..wholedays.."ngày \n \n==============================\n") -- today it prints "1"
-
-local Passwords = {"vodanh001","bazoca","nguyenvinh"} -- write all your choosen passwords in this tab .
-local Menu = gg.prompt({"Tên đăng nhập game:"},nil,{"text"})
-if not Menu then return end
-for l , I in pairs(Passwords) do
-if Menu[1] == I then A = true end
-end
-if A ~= true then gg.alert("⚠\n Tài khoảng chưa đăng ký tool \n Vui lòng liên hệ tác giả \n ⚠ ")
-return 
-else gg.toast("✅ Kết nối thành công !") end
------------------------------------------    
-	modbyfami = os.date ("\n==============================\n⏱Hạn sử dụng còn: xx ⏱\n📅Ngày : %x📅\n📜Phiên Bản : 0.4📜\n\n📲Script by Nguyễn Vinh📲\n\n🆘 FB: fb.com/@nguyenvinh2789 🆘\n\n==============================\n===> Thông tin update <===\n\n==============================\n") 
-gg.alert(modbyfami)  							
-gg.clearResults()
-gg.clearList()
-gg.sleep(100)
-on = "*"
-off = ''
-HA = off
-HB = off
-
-----------------------+-+-++++-------++++
+--------------------------------------------------------
 L={'⏩', '🔳', '🔳', '🔳', '🔳', '🔳'} -- LOADING TABLE
 LD = 0
 for i=0, 6, 1 do
@@ -49,19 +17,41 @@ for i=0, 6, 1 do
 		gg.toast('Tải Script Thành Công!')
 	end
 end
+--------------------------------------------------------
+local Passwords = {"vodanh001","bazoca","nguyenvinh"} -- write all your choosen passwords in this tab .
+local Menu = gg.prompt({"Tên đăng nhập game:"},nil,{"text"})
+if not Menu then return end
+for l , I in pairs(Passwords) do
+if Menu[1] == I then A = true end
+end
+if A ~= true then gg.alert("⚠\n Tài khoảng chưa đăng ký tool \n Vui lòng liên hệ tác giả \n ⚠ ")
+return 
+else gg.toast("✅ Kết nối thành công !") end
+--------------------------------------------------------
+hsd = os.date()
+reference = os.time{day=29, year=2024, month=7} 
+daysfrom = os.difftime(os.time(), reference) / (24 * 60 * 60) -- seconds in a day
+wholedays = math.floor(daysfrom)
+if wholedays >= 0 then
+gg.alert(" \n==============================\n\n Tài khoảng hết hạn \n Vui lòng liên hệ tác giả \n \n==============================\n ")
+os.exit()
+else
+end
+gg.alert("\n==============================\n\nHạn sử dụng còn:\n"..wholedays.."ngày \n \n==============================\n") -- today it prints "1"
+-----------------------------------------    
+	modbyfami = os.date ("\n==============================\n📅Ngày : %x📅\n📜Phiên Bản : 0.4📜\n\n📲Script by Nguyễn Vinh📲\n\n🆘 FB: fb.com/@nguyenvinh2789 🆘\n\n==============================\n===> Thông tin update <===\n\n==============================\n") 
+gg.alert(modbyfami)  							
+gg.clearResults()
+gg.clearList()
+gg.sleep(100)
+----------------------+-+-++++-------++++
+
 
 --------------------------------------------------------
 gg.setVisible(true)
 
 
 function HOME()
-	on = "[✔️]"
-	off = "[❌]"
-	Hdate = off
-	Hmin = off
-	Hmax = off
-	Hpass = off
-	Hblock = off
 -- menu
 menu=gg.multiChoice({
 		"🔰 Tăng KNB",
@@ -138,7 +128,6 @@ end
 
 
 	function TANGKNB() -- TANG KNB
-	Hdate = on
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("25;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(3000) -- THỜI GIAN CHỜ
@@ -560,7 +549,7 @@ end
 					end
 					function lbphlt()
 							 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-							 gg.searchNumber("50;100;150;402" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+							 gg.searchNumber("40;60;100;402" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 							 gg.sleep(3000) -- THỜI GIAN CHỜ
 							 gg.refineNumber("50;100;150" , gg.TYPE_DWORD) -- lọc giá trị 3
 							 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
