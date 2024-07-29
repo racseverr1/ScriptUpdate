@@ -549,11 +549,11 @@ end
 					end
 					function lbphlt()
 							 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-							 gg.searchNumber("50;100;150;402" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+							 gg.searchNumber("10000;10000;10000;401" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 							 gg.sleep(3000) -- THỜI GIAN CHỜ
-							 gg.refineNumber("50;100;150" , gg.TYPE_DWORD) -- lọc giá trị 3
+							 gg.refineNumber("401" , gg.TYPE_DWORD) -- lọc giá trị 3
 							 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-							 gg.editAll("10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+							 gg.editAll("402" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 							 gg.alert("🔸\n Thay đổi thành công\n LB tham gia hoạt động có.\n🔸")  -- thong bao	 
 							 gg.clearResults()					
 					end
