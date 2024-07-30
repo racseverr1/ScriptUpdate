@@ -1,4 +1,3 @@
-	--				gg.alert("==========================================\nScript Đang Bảo Trì.\n Liên hệ Nguyễn Vinh để biết thêm chi tiết\n==========================================")
 gg.setVisible(false)
 --------------------------------------------------------
 L={'⏩', '🔳', '🔳', '🔳', '🔳', '🔳'} -- LOADING TABLE
@@ -98,7 +97,7 @@ HOMEDM=-1 end
 				if TANGKNBTRUCTIEP1[5] == true then EXIT() end end --/thoat
 		HOMEDM=-1 end	
 	end
-
+		local GIATRI = false
 	function LAYGIATRI1()
 		if GIATRI = true then end
 		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
