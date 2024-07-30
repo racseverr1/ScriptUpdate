@@ -97,9 +97,7 @@ HOMEDM=-1 end
 				if TANGKNBTRUCTIEP1[5] == true then EXIT() end end --/thoat
 		HOMEDM=-1 end	
 	end
-		local GIATRI = false
 	function LAYGIATRI1()
-		if GIATRI = true then end
 		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		gg.sleep(3000) -- THỜI GIAN CHỜ
@@ -110,16 +108,11 @@ HOMEDM=-1 end
 		gg.clearResults()
 	end
 	function BAC1()
-		if GIATRI ~= true then gg.alert("⚠\n Chưa lấy giá trị. \n ⚠ ")
-			return 
-				else 
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("2" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("🔸\n Bug bạc thành công\n🔸")  -- thong bao	 
 					gg.clearResults()
-		end
-	
 	end
 
 
