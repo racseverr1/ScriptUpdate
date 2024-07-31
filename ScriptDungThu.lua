@@ -26,7 +26,7 @@ local Menu = gg.prompt({"Tên đăng nhập game:"},nil,{"text"})
 	else gg.toast("✅ Kết nối thành công !✅") end
 --------------------------------------------------------
 hsd = os.date()
-reference = os.time{day=29, year=2024, month=8} 
+reference = os.time{day=29, year=2024, month=7} 
 daysfrom = os.difftime(os.time(), reference) / (24 * 60 * 60) -- seconds in a day
 wholedays = math.floor(daysfrom)
 if wholedays >= 0 then
