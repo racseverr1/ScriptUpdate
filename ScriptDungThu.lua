@@ -78,6 +78,11 @@ end
 	end
 ---------- knb nhan truc tiep từ ruong dã tẩu ---------------
 	function TANGKNBTRUCTIEP()
+		if wholedays >= 0 then
+gg.alert("\n────⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆────\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n────────────────────────────\n")	
+os.exit()
+	else
+end
 		gg.alert("\n╰┈➤⚜Chọn mục [ LẤY GIÁ TRỊ TRƯỚC ] để tránh lỗi\n╰┈➤⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!\n")
 		TANGKNBTRUCTIEP1=gg.choice({
 			"🔰 Lấy giá trị",	--1
