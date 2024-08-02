@@ -27,16 +27,16 @@ gg.setVisible(true)
 HOME = 1
 function HOME()
 menu=gg.choice({	-- menu
-		"🔰 [Free]Tăng KNB (Nhận từ quái)",		-- ok		
-		"🔰 [Free]Tăng DMG",
-		"🔰 [Free]Shop",	
-		"🔰 [Phí]Tăng KNB,Bạc (Trực tiếp)",
-		"🔰 [Phí]Nhận vật phẩm (Tùy Chọn)",
-		"🔰 [Phí]Shop Trang Bị",		
-		"🔰 [Phí]Pet",		
-		"🔰 [Phí]Các Chức Năng Khác",		
+		"🔰 [ Free ]Tăng KNB (Nhận từ quái)",		-- ok		
+		"🔰 [ Free ]Tăng DMG",
+		"🔰 [ Free ]Shop",	
+		"🔰 [ Phí ]Tăng KNB,Bạc (Trực tiếp)",
+		"🔰 [ Phí ]Nhận vật phẩm (Tùy Chọn)",
+		"🔰 [ Phí ]Shop Trang Bị",		
+		"🔰 [ Phí ]Pet",		
+		"🔰 [ Phí ]Các Chức Năng Khác",		
 		"❌Exit❌",
-	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
+	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
 		if menu == 1 then TANGKNBTUQUAI() end -- menu 1
 		if menu == 2 then TANGDMG() end -- menu 3	
 		if menu == 3 then SHOP() end -- menu 3	
@@ -50,33 +50,23 @@ HOMEDM=-1
 end
 ---------- knb từ quái -------------------
 	function TANGKNBTUQUAI() 
-if wholedays >= 0 then
-gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
-os.exit()
-	else
-end	
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("25;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(3000) -- THỜI GIAN CHỜ
 		 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3
 		 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 10v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 10v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end
 	function TANGDMG()
-if wholedays >= 0 then
-gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
-os.exit()
-	else
-end
 			TANGDMG1=gg.choice({
 				"🔰 Tăng Dmg và máu",	--1
 				"🔰 Tăng Tốc Độ Chạy",	--2
 				"🔰 Tăng Hồi Máu",	--3
 				"🔰 Tăng Thời Gian TTL 1h",
 				"🔰 Quay lại",
-				},nil,"\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
+				},nil,"─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
 				if TANGDMG1 == 1 then TANGDMGVAMAU() end -- menu 1
 				if TANGDMG1 == 2 then TANGTOCDOCHAY() end -- menu 2
 				if TANGDMG1 == 3 then TANGHOIMAU() end -- menu 3	
@@ -90,7 +80,7 @@ end
 				gg.refineNumber("30" , gg.TYPE_DWORD) -- lọc giá trị 3
 				gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("1000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Trường Mệnh Hoàn và Đại Lực Hoàn⚜☾₊‧⁺˖⋆")  -- thong bao	 
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Trường Mệnh Hoàn và Đại Lực Hoàn⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()		
 			end				
 			function TANGTOCDOCHAY()
@@ -100,7 +90,7 @@ end
 				gg.refineNumber("20" , gg.TYPE_DWORD) -- lọc giá trị 3
 				gg.getResults(3) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("300" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Gia Bào Hoàn⚜☾₊‧⁺˖⋆")  -- thong bao	 
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Gia Bào Hoàn⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()		
 			end				
 			function TANGHOIMAU()
@@ -110,7 +100,7 @@ end
 				-- gg.refineNumber("800" , gg.TYPE_DWORD) -- lọc giá trị 3
 				gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("5400;10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng bình máu mua trong Hiệu Thuốc⚜☾₊‧⁺˖⋆")  -- thong bao	 
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng bình máu mua trong Hiệu Thuốc⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()		
 			end				
 			function TANGTIENTHAOLO()
@@ -120,7 +110,7 @@ end
 				 gg.refineNumber("64800" , gg.TYPE_DWORD) -- lọc giá trị 3
 				 gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				 gg.editAll("304819200" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-				 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Tiên Thảo Lộ 1h⚜☾₊‧⁺˖⋆")  -- thong bao	 
+				 gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Tiên Thảo Lộ 1h⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				 gg.clearResults()		
 			end
 	function SHOP()
@@ -172,23 +162,28 @@ end
 			 gg.sleep(1000)
 			 gg.clearResults()
 			 gg.clearList()	 
-			 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công \n Lại Npc Hiệu Thuốc Phượng Tường Mua ⚜☾₊‧⁺˖⋆")  -- thong bao					
+			 gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công \n Lại Npc Hiệu Thuốc Phượng Tường Mua ⚜☾₊‧⁺˖⋆")  -- thong bao					
 			end			
 ----------------------------
 	function TANGKNBVABAC()
 		gg.alert("________「 ✦ Nguyên Vinh ✦ 」_______\n────⋆˖⁺‧₊☽ Tính Năng Thu Phí ☾₊‧⁺˖⋆────\n─⋆˖⁺‧₊☽ Liên hệ FB NGUYỄN VINH đăng ký ☾₊‧⁺˖⋆─")
+		 HOME()
 	end
 	function NHANVATPHAMTUYCHON()
 		gg.alert("________「 ✦ Nguyên Vinh ✦ 」_______\n────⋆˖⁺‧₊☽ Tính Năng Thu Phí ☾₊‧⁺˖⋆────\n─⋆˖⁺‧₊☽ Liên hệ FB NGUYỄN VINH đăng ký ☾₊‧⁺˖⋆─")
-	end
+	 HOME()
+    end
 	function SHOPTRANGBI()
 		gg.alert("________「 ✦ Nguyên Vinh ✦ 」_______\n────⋆˖⁺‧₊☽ Tính Năng Thu Phí ☾₊‧⁺˖⋆────\n─⋆˖⁺‧₊☽ Liên hệ FB NGUYỄN VINH đăng ký ☾₊‧⁺˖⋆─")
+		 HOME()
 	end
 	function PET()
 		gg.alert("________「 ✦ Nguyên Vinh ✦ 」_______\n────⋆˖⁺‧₊☽ Tính Năng Thu Phí ☾₊‧⁺˖⋆────\n─⋆˖⁺‧₊☽ Liên hệ FB NGUYỄN VINH đăng ký ☾₊‧⁺˖⋆─")
+		 HOME()
 	end
 	function CACCHUCNANGKHAC()
 		gg.alert("________「 ✦ Nguyên Vinh ✦ 」_______\n────⋆˖⁺‧₊☽ Tính Năng Thu Phí ☾₊‧⁺˖⋆────\n─⋆˖⁺‧₊☽ Liên hệ FB NGUYỄN VINH đăng ký ☾₊‧⁺˖⋆─")
+		 HOME()
 	end
 	
 function EXIT()
