@@ -16,8 +16,17 @@ for i=0, 6, 1 do
 	end
 end
 --------------------------------------------------------
+local Passwords = {"hungnguyen"}
+local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
+	if not Menu then return end
+	for l , I in pairs(Passwords) do
+		if Menu[1] == I then A = true end
+	end
+	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
+	else gg.toast("✅ Kết nối thành công !✅") end
+--------------------------------------------------------
 hsd = os.date()
-reference = os.time{day=4, year=2024, month=8} 
+reference = os.time{day=3, year=2025, month=8} 
 daysfrom = os.difftime(os.time(), reference) / (24 * 60 * 60) -- seconds in a day
 wholedays = math.floor(daysfrom)
 if wholedays >= 0 then
@@ -40,21 +49,21 @@ function HOME()
 menu=gg.choice({	-- menu
 		"🔰 Tăng KNB (Nhận từ quái)",		-- ok
 		"🔰 Tăng KNB,Bạc (Trực tiếp)",
-		-- "🔰 Nhận vật phẩm (Tùy Chọn)",
+		"🔰 Nhận vật phẩm (Tùy Chọn)",
 		"🔰 Shop Trang Bị",		
-		-- "🔰 Pet",		
+		"🔰 Pet",		
 		"🔰 Tăng DMG",
-		-- "🔰 Các Chức Năng Khác",
+		"🔰 Các Chức Năng Khác",
 		"❌Exit❌",
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
 		if menu == 1 then TANGKNBTUQUAI() end -- menu 1
 		if menu == 2 then TANGKNBTRUCTIEP() end -- menu 2
-		-- if menu == 3 then NHANVATPHAMTUYCHON() end -- menu 3
-		if menu == 3 then SHOPTRANGBI() end -- menu 3
-		-- if menu == 5 then PET() end -- menu 3
-		if menu == 4 then TANGDMG() end -- menu 3	
-		-- if menu == 7 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 5 then EXIT() end --/thoat
+		if menu == 3 then NHANVATPHAMTUYCHON() end -- menu 3
+		if menu == 4 then SHOPTRANGBI() end -- menu 3
+		if menu == 5 then PET() end -- menu 3
+		if menu == 6 then TANGDMG() end -- menu 3	
+		if menu == 7 then CACCHUCNANGKHAC() end -- menu 3	
+		if menu == 8 then EXIT() end --/thoat
 HOMEDM=-1
 end
 ----------
