@@ -49,12 +49,12 @@ menu=gg.choice({	-- menu
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
 		if menu == 1 then TANGKNBTUQUAI() end -- menu 1
 		if menu == 2 then TANGKNBTRUCTIEP() end -- menu 2
-		if menu == 3 then NHANVATPHAMTUYCHON() end -- menu 3
-		if menu == 4 then SHOPTRANGBI() end -- menu 3
-		if menu == 5 then PET() end -- menu 3
-		if menu == 6 then TANGDMG() end -- menu 3	
-		if menu == 7 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 8 then EXIT() end --/thoat
+		-- if menu == 3 then NHANVATPHAMTUYCHON() end -- menu 3
+		if menu == 3 then SHOPTRANGBI() end -- menu 3
+		-- if menu == 5 then PET() end -- menu 3
+		if menu == 4 then TANGDMG() end -- menu 3	
+		-- if menu == 7 then CACCHUCNANGKHAC() end -- menu 3	
+		if menu == 5 then EXIT() end --/thoat
 HOMEDM=-1
 end
 ----------
