@@ -318,15 +318,17 @@ end
 		gg.alert("\n╰┈➤⚜Chọn mục [ LẤY GIÁ TRỊ TRƯỚC ] để tránh lỗi\n╰┈➤⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!\n")
 		TANGKNBTRUCTIEP1=gg.choice({
 			"🔰 Lấy giá trị",	--1
+			"🔰 Bạc khóa",	--2
 			"🔰 Bạc",	--2
 			"🔰 KNB",
 			"🔰 Quay Lai",
 			},nil,"\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
 			
 				if TANGKNBTRUCTIEP1 == 1 then LAYGIATRI1() end -- menu 1
-				if TANGKNBTRUCTIEP1 == 2 then BAC1() end -- menu 2
-				if TANGKNBTRUCTIEP1 == 3 then KNB1() end -- menu 3
-                if TANGKNBTRUCTIEP1 == 4 then HOME() end -- menu 3	
+				if TANGKNBTRUCTIEP1 == 2 then BACKHOA1() end -- menu 2
+				if TANGKNBTRUCTIEP1 == 3 then BAC1() end -- menu 2
+				if TANGKNBTRUCTIEP1 == 4 then KNB1() end -- menu 3
+                if TANGKNBTRUCTIEP1 == 5 then HOME() end -- menu 3	
 		 end 	
 	function LAYGIATRI1()
 		gg.alert("\n⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu 💥☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽💥 Đợi đến khi nào hiện thông báo 💥☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽💥 Chưa hiện thông báo đừng bấm gì tránh lôi khi bug 💥☾₊‧⁺˖⋆\n")  -- thong bao	 	
@@ -435,13 +437,21 @@ end
 		gg.alert("\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!⚜ ☾₊‧⁺˖⋆\n") 		
 		gg.clearResults()			
 	end
+		function BACKHOA1()
+					gg .loadResults( gg .getListItems())-- thong bao
+					gg.getResults(30)
+					gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Bug Bạc Khóa thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
+					gg.clearResults()
+	end
+	
 		function BAC1()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("2" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Bug bạc thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 					gg.clearResults()
-	end
+	end	
 		function KNB1()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
