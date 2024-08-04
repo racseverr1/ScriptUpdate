@@ -36,7 +36,7 @@ os.exit()
 end
 gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n                 ➤ Hạn sử dụng còn: \n                         ➤ "..wholedays.."ngày \n \n─\n")	
 -----------------------------------------    
-modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 0.6📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n──・┆✦ Update ✦ ┆・─\n╰┈➤⌞ 1⌝: Thêm trang bị pet  \n╰┈➤⌞ 2⌝: Thêm kỹ năng pet \n╰┈➤⌞ 3⌝: Tăng cấp pet nhanh\n")
+modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 0.6📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n──・┆✦ Update ✦ ┆・─\n╰┈➤⌞ 1⌝: Mở Nâng Cấp Pet lên 120  \n╰┈➤⌞ 2⌝: Bug Linh Ngộ (5000đ) \n╰┈➤⌞ 3⌝: Huấn Luyện Pet Bớt Phế\n")
 gg.alert(modbyfami)  							
 gg.clearResults()
 gg.clearList()
@@ -134,15 +134,18 @@ end
 PET1=gg.choice({	-- menu
 		"🔰 Trang Bị",		-- ok
 		"🔰 Tăng Max Cấp",
+		"🔰 Bug Linh Ngộ (5000đ)",
+		"🔰 Huấn Luyện Pet Bớt Phế",
 		"🔰 Quay Lai",
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") -- tieu de	
 		if PET1 == 1 then TRANGBIPET() end -- menu 1
-		-- if PET1 == 2 then KYNANGPET() end -- menu 2
 		if PET1 == 2 then TANGMAXCAP() end -- menu 3	
-		if PET1 == 3 then HOME() end --/thoat
+		if PET1 == 3 then BUGLINHNGO() end -- menu 3	
+		if PET1 == 4 then HUANLUYENPETBOTPHE() end -- menu 3	
+		if PET1 == 5 then HOME() end --/thoat
 HOMEDM=-1
 end
-			function TRANGBIPET()			
+function TRANGBIPET()			
 				gg.searchNumber("14709" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 				gg.sleep(500) -- THỜI GIAN CHỜ
 				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
@@ -234,51 +237,35 @@ end
 			end
 function TANGMAXCAP()
 TANGMAXCAP1=gg.choice({	-- menu
-		"🔰 Cấp 1-10",		-- ok
-		"🔰 Cấp 11-20",		-- ok
-		"🔰 Cấp 21-30",		-- ok
-		"🔰 Cấp 31-40",		-- ok
-		"🔰 Cấp 41-50",		-- ok
-		"🔰 Cấp 51-60",		-- ok
-		"🔰 Cấp 61-70",		-- ok
-		"🔰 Cấp 71-80",		-- ok
-		"🔰 Cấp 81-90",		-- ok
-		"🔰 Cấp 91-100",		-- ok
+		"🔰 Cấp 1-30",		-- ok
+		"🔰 Cấp 31-60",		-- ok
+		"🔰 Cấp 61-90",		-- ok
+		"🔰 Cấp 91-120",		-- ok
 		"🔰 Quay Lai",
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") -- tieu de	
-		if TANGMAXCAP1 == 1 then CAP110() end -- menu 1
-		if TANGMAXCAP1 == 2 then CAP1120() end -- menu 1
-		if TANGMAXCAP1 == 3 then CAP2130() end -- menu 1
-		if TANGMAXCAP1 == 4 then CAP3140() end -- menu 1
-		if TANGMAXCAP1 == 5 then CAP4150() end -- menu 1
-		if TANGMAXCAP1 == 6 then CAP5160() end -- menu 1
-		if TANGMAXCAP1 == 7 then CAP6170() end -- menu 1
-		if TANGMAXCAP1 == 8 then CAP7180() end -- menu 1
-		if TANGMAXCAP1 == 9 then CAP8190() end -- menu 1
-		if TANGMAXCAP1 == 10 then CAP91100() end -- menu 1
+		if TANGMAXCAP1 == 1 then CAP130() end -- menu 1
+		if TANGMAXCAP1 == 2 then CAP3160() end -- menu 1
+		if TANGMAXCAP1 == 3 then CAP6190() end -- menu 1
+		if TANGMAXCAP1 == 4 then CAP91120() end -- menu 1
 
-		if TANGMAXCAP1 == 11 then HOME() end --/thoat
+		if TANGMAXCAP1 == 5 then HOME() end --/thoat
 HOMEDM=-1
 end
-	function CAP110() 
+	function CAP130() 
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("1000;2000;3000;4500;5800;7000;8400;11300;17000;22400" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3	 
 		 gg.clearResults()
-	end
-	function CAP1120() 
+
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("29000;36000;45000;58000;75000;95000;120000;175000;244600;250000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3 
 		 gg.clearResults()
-	end
-	function CAP2130() 
+		 
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("256000;264000;273000;283000;303000;343000;423000;572000;993000;1030000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
@@ -287,25 +274,21 @@ end
 		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end	
-	function CAP3140() 
+	function CAP3160() 
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("1069000;1111000;1158000;1213000;1282000;1373000;1494000;1650000;1820000;1830000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3 
 		 gg.clearResults()
-	end		
-	function CAP4150() 
+
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("1905200;2000400;2200000;2420000;2662000;3058000;3520000;4219600;5884800;5900000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3 
 		 gg.clearResults()
-	end	
-	function CAP5160() 
+
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("5990000;6240000;6540000;6940000;7440000;8040000;8740000;9740000;12550000;12600000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
@@ -314,42 +297,165 @@ end
 		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end	
-	function CAP6170() 
+	function CAP6190() 
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("12800000;13100000;13500000;14000000;14700000;15700000;17250000;19250000;23340000;23600000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3 
 		 gg.clearResults()
-	end	
-	function CAP7180() 
+
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("25100000;26700000;28400000;30200000;33100000;36200000;39500000;43000000;49000000;50490000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3 
 		 gg.clearResults()
-	end	
-	function CAP8190() 
+
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("52104000;54060000;57240000;62700000;70560000;;91640000;105020000;129600000;129840000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.searchNumber("52104000;54060000;57240000;62700000;70560000;79800000;91640000;105020000;129600000;129840000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end	
-	function CAP91100() 
+	function CAP91120() 
 		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		 gg.searchNumber("132480000;139080000;150240000;165240000;181800000;199920000;216120000;237840000;284880000;285600000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3 
+		 gg.clearResults()
+
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("286800000;292800000;300000000;312000000;328800000;350400000;375600000;406800000;506400000;507000000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(2000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.clearResults()
+
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("508200000;510600000;516600000;528600000;552600000;612360000;730200000;895800000;1152600000;1164000000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(2000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
-	end		
+	end			
+function BUGLINHNGO()
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("10402;10;10403;10;100" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.refineNumber("10;100" , gg.TYPE_DWORD) -- lọc giá trị 3
+		 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("5000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng viên tăng Linh Ngộ trong KTC⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()
+end	
+function HUANLUYENPETBOTPHE()
+if wholedays >= 0 then
+gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
+os.exit()
+	else
+end
+HUANLUYENPETBOTPHE1=gg.choice({	-- menu
+		"🔰 Hỏa Kỳ Lân và Kim Ảnh",		-- ok
+		"🔰 Hồng Ảnh và Thanh Sát",
+		"🔰 Hoa Tiên Tử",
+		"🔰 Tinh Điệp và Hỏa Song",
+		"🔰 Mộng Hằng Chi Diệp",
+		"🔰 Tử Kiêu",
+		"🔰 Quay Lai",
+	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") -- tieu de	
+		if HUANLUYENPETBOTPHE1 == 1 then HOAKYLAN() end -- menu 1
+		if HUANLUYENPETBOTPHE1 == 2 then HONGANH() end -- menu 3		
+		if HUANLUYENPETBOTPHE1 == 3 then HOATIENTU() end -- menu 3	
+		if HUANLUYENPETBOTPHE1 == 4 then TINHDIEP() end -- menu 3	
+		if HUANLUYENPETBOTPHE1 == 5 then MONGHANGCHIDIEP() end -- menu 3	
+		if HUANLUYENPETBOTPHE1 == 6 then TUKIEU() end -- menu 3	
+		if HUANLUYENPETBOTPHE1 == 7 then HOME() end --/thoat
+HOMEDM=-1
+end	
+	function HOAKYLAN()
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;1;80;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 -- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 10v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()
+		 
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;1;80;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()		 
+	end	
+	function HONGANH()
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;60;1;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 -- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 10v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()
+		 
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;60;1;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()		 
+	end	
+
+	function HOATIENTU()
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;1;1;100;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()
+	end	
+	function TINHDIEP()
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;1;1;80;80" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()
+		 
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;1;1;80;80" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()		 
+	end	
+	function MONGHANGCHIDIEP()
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;80;80;1;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()
+	end	
+	function TUKIEU()
+		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		 gg.searchNumber("50000;50;50;50;50" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+		 gg.sleep(3000) -- THỜI GIAN CHỜ
+		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.clearResults()
+	end										
 ---------- knb từ quái -------------------
 	function TANGKNBTUQUAI() 
 if wholedays >= 0 then
