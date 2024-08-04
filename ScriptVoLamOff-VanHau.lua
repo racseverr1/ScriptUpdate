@@ -860,8 +860,8 @@ end
 			"🔰 Viêm Hỏa Chi Châu (Bùa)",	-- 1
 			"🔰 Cương Khí Hộ Thể (Bùa)",	-- 2
 			"🔰 Mê Tâm Thuật (Bùa)",		-- 3
-			"🔰 Cuồng Lôi Ám Chú (Bùa)",	-- 4
-			"🔰 Liệt Diệm Ám Chú (Bùa)",	-- 5
+			-- "🔰 Cuồng Lôi Ám Chú (Bùa)",	-- 4
+			-- "🔰 Liệt Diệm Ám Chú (Bùa)",	-- 5
 			"🔰 Hàn Băng Ám Chú (Bùa)",		--	6
 			"🔰 Kim Hoàng Ám Chú (Bùa)",	--7
 			"🔰 Hủ Độc Ám Chú (Bùa)",		--8
@@ -889,25 +889,25 @@ end
 				if BUFFVABUA1 == 1 then BUA1() end			-- menu 1
 				if BUFFVABUA1 == 2 then BUA2() end			-- menu 1
 				if BUFFVABUA1 == 3 then BUA3() end			-- menu 1
-				if BUFFVABUA1 == 4 then BUA4() end			-- menu 1
-				if BUFFVABUA1 == 5 then BUA5() end			-- menu 1
-				if BUFFVABUA1 == 6 then BUA6() end			-- menu 1
-				if BUFFVABUA1 == 7 then BUA7() end			-- menu 1
-				if BUFFVABUA1 == 8 then BUA8() end			-- menu 1
-				if BUFFVABUA1 == 9 then BUA9() end			-- menu 1
-				if BUFFVABUA1 == 10 then BUA10() end			-- menu 1
-				if BUFFVABUA1 == 11 then BUA11() end			-- menu 1
-				if BUFFVABUA1 == 12 then BUA12() end			-- menu 1
-				if BUFFVABUA1 == 13 then BUA13() end			-- menu 1
-				if BUFFVABUA1 == 14 then BUA14() end			-- menu 1
-				if BUFFVABUA1 == 15 then BUA15() end			-- menu 1
-				if BUFFVABUA1 == 16 then BUA16() end			-- menu 1
-				if BUFFVABUA1 == 17 then BUA17() end			-- menu 1
-				if BUFFVABUA1 == 18 then BUA18() end			-- menu 1
-				if BUFFVABUA1 == 19 then BUA19() end			-- menu 1
-				if BUFFVABUA1 == 20 then BUFF1() end			-- menu 1
-				if BUFFVABUA1 == 21 then BUFF2() end			-- menu 1
-				if BUFFVABUA1 == 22 then NHANVATPHAMTUYCHON() end		-- menu 4
+				-- if BUFFVABUA1 == 4 then BUA4() end			-- menu 1
+				-- if BUFFVABUA1 == 5 then BUA5() end			-- menu 1
+				if BUFFVABUA1 == 4 then BUA6() end			-- menu 1
+				if BUFFVABUA1 == 5 then BUA7() end			-- menu 1
+				if BUFFVABUA1 == 6 then BUA8() end			-- menu 1
+				if BUFFVABUA1 == 7 then BUA9() end			-- menu 1
+				if BUFFVABUA1 == 8 then BUA10() end			-- menu 1
+				if BUFFVABUA1 == 9 then BUA11() end			-- menu 1
+				if BUFFVABUA1 == 10 then BUA12() end			-- menu 1
+				if BUFFVABUA1 == 11 then BUA13() end			-- menu 1
+				if BUFFVABUA1 == 12 then BUA14() end			-- menu 1
+				if BUFFVABUA1 == 13 then BUA15() end			-- menu 1
+				if BUFFVABUA1 == 14 then BUA16() end			-- menu 1
+				if BUFFVABUA1 == 15 then BUA17() end			-- menu 1
+				if BUFFVABUA1 == 16 then BUA18() end			-- menu 1
+				if BUFFVABUA1 == 17 then BUA19() end			-- menu 1
+				if BUFFVABUA1 == 18 then BUFF1() end			-- menu 1
+				if BUFFVABUA1 == 19 then BUFF2() end			-- menu 1
+				if BUFFVABUA1 == 20 then NHANVATPHAMTUYCHON() end		-- menu 4
 end	
 				function BUA1()
 					gg .loadResults( gg .getListItems())-- thong bao
@@ -930,20 +930,20 @@ end
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
 					gg.clearResults()		
 				end	
-				function BUA4()
-					gg .loadResults( gg .getListItems())-- thong bao
-					gg.getResults(30)
-					gg.editAll("14012" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
-				end	
-				function BUA5()
-					gg .loadResults( gg .getListItems())-- thong bao
-					gg.getResults(30)
-					gg.editAll("14013" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
-				end	
+				-- function BUA4()
+					-- gg .loadResults( gg .getListItems())-- thong bao
+					-- gg.getResults(30)
+					-- gg.editAll("14012" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+					-- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
+					-- gg.clearResults()		
+				-- end	
+				-- function BUA5()
+					-- gg .loadResults( gg .getListItems())-- thong bao
+					-- gg.getResults(30)
+					-- gg.editAll("14013" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+					-- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
+					-- gg.clearResults()		
+				-- end	
 				function BUA6()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
