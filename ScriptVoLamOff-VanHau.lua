@@ -89,7 +89,7 @@ s = gg.prompt({"Nhập lần 2 :"},{})
 gg.searchNumber(s[1] , gg.TYPE_DWORD)
 gg.getResults(200)
 gg.alert("Có 10s")
-gg.sleep(5000)
+gg.sleep(10000)
 
 s = gg.prompt({"Nhập lần 3 :"},{})
   if s == nil then 
@@ -99,9 +99,19 @@ s = gg.prompt({"Nhập lần 3 :"},{})
 gg.searchNumber(s[1] , gg.TYPE_DWORD)
 gg.getResults(200)
 gg.alert("Có 10s")
-gg.sleep(5000)
+gg.sleep(10000)
 
-s = gg.prompt({"Nhập lần  :"},{})
+s = gg.prompt({"Nhập lần 4 :"},{})
+  if s == nil then 
+    gg.alert("Chưa nhập ID")
+    return
+  end
+gg.searchNumber(s[1] , gg.TYPE_DWORD)
+gg.getResults(200)
+gg.alert("Có 10s")
+gg.sleep(10000)
+
+s = gg.prompt({"Nhập lần 5 :"},{})
   if s == nil then 
     gg.alert("Chưa nhập ID")
     return
