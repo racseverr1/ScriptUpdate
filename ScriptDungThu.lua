@@ -16,7 +16,7 @@ for i=0, 6, 1 do
 	end
 end
 -----------------------------------------    
-modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 0.1📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n──・┆✦ Update ✦ ┆・─\n╰┈➤⌞ 1⌝:   \n╰┈➤⌞ 2⌝: \n╰┈➤⌞ 3⌝:\n")
+modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 0.2 (6/8)📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n──・┆✦ Update ✦ ┆・─\n╰┈➤⌞ 1⌝: Tăng KNB 10v => 30v \n╰┈➤⌞ 2⌝: Thêm giảm giá toàn bộ Shop \n╰┈➤⌞ 3⌝: Tăng thời gian bug dmg\n")
 gg.alert(modbyfami)  							
 gg.clearResults()
 gg.clearList()
@@ -55,8 +55,8 @@ end
 		 gg.sleep(3000) -- THỜI GIAN CHỜ
 		 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3
 		 gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 10v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.editAll("300000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+		 gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 30v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end
 	function TANGDMG()
@@ -77,9 +77,9 @@ end
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("30;5400" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 				gg.sleep(3000) -- THỜI GIAN CHỜ
-				gg.refineNumber("30" , gg.TYPE_DWORD) -- lọc giá trị 3
+				-- gg.refineNumber("30" , gg.TYPE_DWORD) -- lọc giá trị 3
 				gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-				gg.editAll("1000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.editAll("54000000;1000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Trường Mệnh Hoàn và Đại Lực Hoàn⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()		
 			end				
@@ -99,7 +99,7 @@ end
 				gg.sleep(3000) -- THỜI GIAN CHỜ
 				-- gg.refineNumber("800" , gg.TYPE_DWORD) -- lọc giá trị 3
 				gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-				gg.editAll("5400;10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.editAll("54000000;10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng bình máu mua trong Hiệu Thuốc⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()		
 			end				
@@ -109,11 +109,48 @@ end
 				 gg.sleep(3000) -- THỜI GIAN CHỜ
 				 gg.refineNumber("64800" , gg.TYPE_DWORD) -- lọc giá trị 3
 				 gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-				 gg.editAll("304819200" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				 gg.editAll("54000000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				 gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Tiên Thảo Lộ 1h⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				 gg.clearResults()		
 			end
+			
 	function SHOP()
+			SHOP1=gg.choice({
+				"🔰 Bug Shop Hiệu Thuốc",	--1
+				"🔰 Giảm Giá Shop Trang Bị",	--2
+				"🔰 Quay lại",
+				},nil,"─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
+				if SHOP1 == 1 then BUGSHOPHIEUTHUOC() end -- menu 1
+				if SHOP1 == 2 then GIAMGIASHOPTRANGBI() end -- menu 2
+				if SHOP1 == 3 then HOME() end
+	end	
+
+			function GIAMGIASHOPTRANGBI()
+				gg.searchNumber("888888888" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("88888" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)	 
+				gg.clearResults()
+				gg.clearList()	 
+				gg.searchNumber("666666666" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("66666" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)	 
+				gg.clearResults()
+				gg.clearList()	
+				gg.searchNumber("444444444" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("44444" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)	 
+				gg.clearResults()
+				gg.clearList()		
+				gg.alert("\n⋆˖⁺‧₊☽ ⚜ Giảm giá các shop thành công⚜☾₊‧⁺˖⋆")  -- thong bao				
+			end			
+			
+			function BUGSHOPHIEUTHUOC()
 			-- RUONG DA TAU
 			 gg.searchNumber("20770" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 			 gg.sleep(500) -- THỜI GIAN CHỜ
