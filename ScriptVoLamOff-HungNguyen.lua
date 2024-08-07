@@ -45,6 +45,8 @@ gg.sleep(100)
 gg.setVisible(true)
 --------------------------------------------------------
 HOME = 1
+a = 0
+b = 0
 function HOME()
 menu=gg.choice({	-- menu
 		"🔰 Tăng KNB (Nhận từ quái)",		-- ok
@@ -67,6 +69,9 @@ menu=gg.choice({	-- menu
 HOMEDM=-1
 end
 ----------
+
+
+
 function PET()
 if wholedays >= 0 then
 gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
@@ -77,14 +82,14 @@ PET1=gg.choice({	-- menu
 		"🔰 Trang Bị",		-- ok
 		"🔰 Tăng Max Cấp",
 		"🔰 Bug Linh Ngộ (5000đ)",
-		"🔰 Huấn Luyện Pet Bớt Phế",
+		-- "🔰 Huấn Luyện Pet Bớt Phế",
 		"🔰 Quay Lai",
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") -- tieu de	
 		if PET1 == 1 then TRANGBIPET() end -- menu 1
 		if PET1 == 2 then TANGMAXCAP() end -- menu 3	
 		if PET1 == 3 then BUGLINHNGO() end -- menu 3	
-		if PET1 == 4 then HUANLUYENPETBOTPHE() end -- menu 3	
-		if PET1 == 5 then HOME() end --/thoat
+		-- if PET1 == 4 then HUANLUYENPETBOTPHE() end -- menu 3	
+		if PET1 == 4 then HOME() end --/thoat
 HOMEDM=-1
 end
 			function TRANGBIPET()			
@@ -295,109 +300,7 @@ function BUGLINHNGO()
 		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng viên tăng Linh Ngộ trong KTC⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 end	
-function HUANLUYENPETBOTPHE()
-if wholedays >= 0 then
-gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
-os.exit()
-	else
-end
-HUANLUYENPETBOTPHE1=gg.choice({	-- menu
-		"🔰 Hỏa Kỳ Lân và Kim Ảnh",		-- ok
-		"🔰 Hồng Ảnh và Thanh Sát",
-		"🔰 Hoa Tiên Tử",
-		"🔰 Tinh Điệp và Hỏa Song",
-		"🔰 Mộng Hằng Chi Diệp",
-		"🔰 Tử Kiêu",
-		"🔰 Quay Lai",
-	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") -- tieu de	
-		if HUANLUYENPETBOTPHE1 == 1 then HOAKYLAN() end -- menu 1
-		if HUANLUYENPETBOTPHE1 == 2 then HONGANH() end -- menu 3		
-		if HUANLUYENPETBOTPHE1 == 3 then HOATIENTU() end -- menu 3	
-		if HUANLUYENPETBOTPHE1 == 4 then TINHDIEP() end -- menu 3	
-		if HUANLUYENPETBOTPHE1 == 5 then MONGHANGCHIDIEP() end -- menu 3	
-		if HUANLUYENPETBOTPHE1 == 6 then TUKIEU() end -- menu 3	
-		if HUANLUYENPETBOTPHE1 == 7 then HOME() end --/thoat
-HOMEDM=-1
-end	
-	function HOAKYLAN()
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;1;80;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 -- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 10v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()
-		 
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;1;80;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()		 
-	end	
-	function HONGANH()
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;60;1;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 -- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 10v KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()
-		 
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;60;1;80;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()		 
-	end	
 
-	function HOATIENTU()
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;1;1;100;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()
-	end	
-	function TINHDIEP()
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;1;1;80;80" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()
-		 
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;1;1;80;80" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()		 
-	end	
-	function MONGHANGCHIDIEP()
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;80;80;1;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()
-	end	
-	function TUKIEU()
-		 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		 gg.searchNumber("50000;50;50;50;50" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		 gg.sleep(3000) -- THỜI GIAN CHỜ
-		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Kiểm tra lại pet⚜☾₊‧⁺˖⋆")  -- thong bao	 
-		 gg.clearResults()
-	end		
 ---------- knb từ quái -------------------
 	function TANGKNBTUQUAI() 
 if wholedays >= 0 then
@@ -424,6 +327,7 @@ end
 		gg.alert("\n╰┈➤⚜Chọn mục [ LẤY GIÁ TRỊ TRƯỚC ] để tránh lỗi\n╰┈➤⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!\n")
 		TANGKNBTRUCTIEP1=gg.choice({
 			"🔰 Lấy giá trị",	--1
+			"🔰 Lấy rương sách TL DB",	--1
 			"🔰 Bạc khóa",	--2
 			"🔰 Bạc",	--2
 			"🔰 KNB",
@@ -431,141 +335,179 @@ end
 			},nil,"\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
 			
 				if TANGKNBTRUCTIEP1 == 1 then LAYGIATRI1() end -- menu 1
-				if TANGKNBTRUCTIEP1 == 2 then BACKHOA1() end -- menu 2
-				if TANGKNBTRUCTIEP1 == 3 then BAC1() end -- menu 2
-				if TANGKNBTRUCTIEP1 == 4 then KNB1() end -- menu 3
-                if TANGKNBTRUCTIEP1 == 5 then HOME() end -- menu 3	
+				if TANGKNBTRUCTIEP1 == 2 then RUONGSACHTINHLINHDACBIET() end -- menu 2
+				if TANGKNBTRUCTIEP1 == 3 then BACKHOA1() end -- menu 2
+				if TANGKNBTRUCTIEP1 == 4 then BAC1() end -- menu 2
+				if TANGKNBTRUCTIEP1 == 5 then KNB1() end -- menu 3
+                if TANGKNBTRUCTIEP1 == 6 then HOME() end -- menu 3	
 		 end 	
 	function LAYGIATRI1()
-		gg.alert("\n⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu 💥☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽💥 Đợi đến khi nào hiện thông báo 💥☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽💥 Chưa hiện thông báo đừng bấm gì tránh lôi khi bug 💥☾₊‧⁺˖⋆\n")  -- thong bao	 	
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("5" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("5;800000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("5" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()
+		if a == 0 then
+			gg.alert("\n⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu 💥☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽💥 Đợi đến khi nào hiện thông báo 💥☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽💥 Chưa hiện thông báo đừng bấm gì tránh lôi khi bug 💥☾₊‧⁺˖⋆\n")  -- thong bao	 	
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("5" , gg.TYPE_DWORD) -- lọc giá trị 3		
+			t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.addListItems(t1)	 
+			gg.clearResults()
+			
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("5;800000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("5" , gg.TYPE_DWORD) -- lọc giá trị 3		
+			t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.addListItems(t1)	 
+			gg.clearResults()
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("5;1000000;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("5" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()		
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;20795;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("20795" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()		
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("5;1000000;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("5" , gg.TYPE_DWORD) -- lọc giá trị 3		
+			t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.addListItems(t1)	 
+			gg.clearResults()		
+			
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;20795;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("20795" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()		
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;20796;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("20796" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;20796;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("20796" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;20798;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("20798" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;20798;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("20798" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;20799;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("20799" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;20799;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("20799" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;20797;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("20797" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;20797;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("20797" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;10445;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("10445" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;10445;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("10445" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;10446;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("10446" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)       -- phạm vi tìm kiếm
-		gg.searchNumber("0;349;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("349" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;352;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("352" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.clearResults()	
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;10446;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("10446" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
+			
+			gg.setRanges(gg.REGION_ANONYMOUS)       -- phạm vi tìm kiếm
+			gg.searchNumber("0;349;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("349" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
+			
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;352;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("352" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.clearResults()	
 
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("0;343;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("343" , gg.TYPE_DWORD) -- lọc giá trị 3
-		gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("13727" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		gg.alert("\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!⚜ ☾₊‧⁺˖⋆\n") 		
-		gg.clearResults()			
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("0;343;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("343" , gg.TYPE_DWORD) -- lọc giá trị 3
+			gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("12508" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+			gg.alert("\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!⚜ ☾₊‧⁺˖⋆\n") 		
+			gg.clearResults()
+			
+			a = 1
+		end	
+			TANGKNBTRUCTIEP()
 	end
+----------------------------------------------
+		function RUONGSACHTINHLINHDACBIET()
+			if a == 0 then
+				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao	
+				TANGKNBTRUCTIEP()
+				else		
+					gg .loadResults( gg .getListItems())-- thong bao
+					gg.getResults(30)
+					gg.editAll("6" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Bug thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
+					gg.clearResults()
+			end	
+		TANGKNBTRUCTIEP()	
+	end
+	
 		function BACKHOA1()
+			if a == 0 then
+				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao	
+				TANGKNBTRUCTIEP()
+				else		
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Bug Bạc Khóa thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 					gg.clearResults()
+			end	
+		TANGKNBTRUCTIEP()	
 	end
-	
 		function BAC1()
+			if a == 0 then
+				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
+				TANGKNBTRUCTIEP()
+				else	
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("2" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Bug bạc thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 					gg.clearResults()
+			end		
+			TANGKNBTRUCTIEP()
 	end	
 		function KNB1()
+			if a == 0 then
+				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
+				TANGKNBTRUCTIEP()	
+				else			
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("4" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Bug KNB thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 					gg.clearResults()
+			end		
+			TANGKNBTRUCTIEP()
 	end	
-	---------- nhận vật phẩm tùy chọn từ rương nguyên liệu cao-----------------
+	---------- nhận vật phẩm tùy chọn từ rương sách tinh linh đặc biệt-----------------
 		function NHANVATPHAMTUYCHON()
 if wholedays >= 0 then
 gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
@@ -591,106 +533,88 @@ end
 				if NHANVATPHAMTUYCHON1 == 7 then HOME() end			-- menu 6	
 			 end 	
 		function LAYGIATRI2()
-			gg.alert("\n─⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Đợi đến khi nào hiện thông báo💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Chưa hiện thông báo đừng bấm gì tránh lôi khi bug💥 ☾₊‧⁺˖⋆─\n")  -- thong bao	 	
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2192;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2192" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t2 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t2)	 
-		gg.clearResults()
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2212;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2212" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()		  
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2232;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2232" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()			
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2252;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2252" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()			
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2312;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2312" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()			
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2332;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2332" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2352;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2352" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.clearResults()		
-		
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchNumber("2372;1000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
-		gg.sleep(1000) -- THỜI GIAN CHỜ
-		gg.refineNumber("2372" , gg.TYPE_DWORD) -- lọc giá trị 3		
-		t1 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.addListItems(t1)	 
-		gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG NGUYÊN LIỆU CAO CẤP] để nhận!⚜ ☾₊‧⁺˖⋆") 				
-		gg.clearResults()			
+			if b == 0 then
+				gg.alert("\n─⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Đợi đến khi nào hiện thông báo💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Chưa hiện thông báo đừng bấm gì tránh lôi khi bug💥 ☾₊‧⁺˖⋆─\n")  -- thong bao	 	
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("34456;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("34456" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				t2 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.addListItems(t2)	 
+				gg.clearResults()
+				
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("34515;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("34515" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				t2 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.addListItems(t2)	 
+				gg.clearResults()		  
+				
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("34507;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("34507" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				t2 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.addListItems(t2)	 
+				gg.clearResults()			
+				
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("34569;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("34569" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				t2 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.addListItems(t2)	 
+				gg.clearResults()			
+				
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("34571;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("34571" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				t2 = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.addListItems(t2)	 
+				gg.clearResults()		
+				
+			b = 1
+			end		
+		NHANVATPHAMTUYCHON()
 	end	
 	function SACHEXP()
-		SACHEXP1=gg.choice({
-			"🔰 Bạch Cầu Hoàn",					--1
-			"🔰 Sách Exp 120",					--2
-			"🔰 Sách Exp 150",					--3
-			"🔰 Quay lại",					--3
-			},nil,"\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")	--3			
-				if SACHEXP1 == 1 then BACHCAUHOAN() end			-- menu 1
-				if SACHEXP1 == 2 then SACHEXP120() end			-- menu 1
-				if SACHEXP1 == 3 then SACHEXP150() end 			-- menu 2
-				if SACHEXP1 == 4 then NHANVATPHAMTUYCHON() end 			-- menu 2
+		if b == 0 then
+			gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
+			NHANVATPHAMTUYCHON()
+			else
+				SACHEXP1=gg.choice({
+					"🔰 Sách Exp 120",					--2
+					"🔰 Sách Exp 150",					--3
+					"🔰 Quay lại",					--3
+					},nil,"\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")	--3			
+						if SACHEXP1 == 1 then SACHEXP120() end			-- menu 1
+						if SACHEXP1 == 2 then SACHEXP150() end 			-- menu 2
+						if SACHEXP1 == 3 then NHANVATPHAMTUYCHON() end 			-- menu 2
+		end				
 	end	
-		function BACHCAUHOAN()
-						gg .loadResults( gg .getListItems())-- thong bao
-						gg.getResults(30)
-						gg.editAll("110001" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Bạch Cầu Hoàn thành công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
-			end	
 		function SACHEXP120()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("91441" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Sách Exp 120 thành công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 	  
-						gg.clearResults()		
+						gg.clearResults()	
+				SACHEXP()		
 			end
 		function SACHEXP150()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("91442" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Sách Exp 150 thành công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 	  	  
-						gg.clearResults()		
+						gg.clearResults()	
+				SACHEXP()							
 			end
 	function KYNANG()
+			if b == 0 then
+			gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
+			NHANVATPHAMTUYCHON()
+			else
 		KYNANG1=gg.choice({
 			"🔰 Kỹ Năng Pet",				--1
 			"🔰 Rương Skill 120",				--1
@@ -706,6 +630,7 @@ end
 				if KYNANG1 == 4 then DAITHANH150() end				-- menu 3
 				if KYNANG1 == 5 then DAITHANH90() end				-- menu 4
 				if KYNANG1 == 6 then NHANVATPHAMTUYCHON() end		-- menu 4
+			end	
 end	
 		function KYNANGPET()
 			KYNANGPET1=gg.choice({
@@ -774,126 +699,145 @@ end
 					gg.getResults(30)
 					gg.editAll("34528" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end
 				function GAN1()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34546" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end
 				function GAN2()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34550" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end
 				function GAN3()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34561" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function XAAOE1()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34529" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end	
 				function XAAOE2()
+				
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34532" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function XAAOE3()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34534" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function XAAOE4()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34536" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end		
 				function XAAOE5()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34538" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end		
 				function XAAOE6()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34540" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function XAAOE7()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34547" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function XAAOE8()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34548" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function XAAOE9()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34551" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function XAAOE10()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34554" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function XAAOE11()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34558" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function XAAOE12()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34559" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function XAAOE13()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34560" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function XAAOE14()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34456" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end	
 				function XAAOE15()
 		gg .loadResults( gg .getListItems())-- thong bao
@@ -901,6 +845,7 @@ end
 		gg.editAll("34556" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 		gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
 		gg.clearResults()		
+		KYNANGPET()
 	end	
 	
 			function BUFFVABUA()
@@ -962,147 +907,152 @@ end
 					gg.getResults(30)
 					gg.editAll("34507" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function BUA2()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34571" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end	
 				function BUA3()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34570" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
-				-- function BUA4()
-					-- gg .loadResults( gg .getListItems())-- thong bao
-					-- gg.getResults(30)
-					-- gg.editAll("14012" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-					-- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					-- gg.clearResults()		
-				-- end	
-				-- function BUA5()
-					-- gg .loadResults( gg .getListItems())-- thong bao
-					-- gg.getResults(30)
-					-- gg.editAll("14013" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-					-- gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					-- gg.clearResults()		
-				-- end	
 				function BUA6()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34466" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function BUA7()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34467" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function BUA8()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34468" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end	
 				function BUA9()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34469" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUA10()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34470" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUA11()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34501" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUA12()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34502" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUA13()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34503" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end		
 				function BUA14()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34505" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUA15()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34506" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUA16()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34513" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end			
 				function BUA17()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34514" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end			
 				function BUA18()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34516" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()
+KYNANGPET()					
 				end			
 				function BUA19()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34517" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUFF1()
 					gg .loadResults( gg .getListItems())-- thong bao
 					gg.getResults(30)
 					gg.editAll("34515" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 					gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-					gg.clearResults()		
+					gg.clearResults()	
+KYNANGPET()					
 				end		
 				function BUFF2()
 		gg .loadResults( gg .getListItems())-- thong bao
 		gg.getResults(30)
 		gg.editAll("34569" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 		gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆")  -- thong bao	 
-		gg.clearResults()		
+		gg.clearResults()	
+KYNANGPET()		
 	end		
 
 			function RUONGSKILL120()
@@ -1111,29 +1061,38 @@ end
 						gg.editAll("10467" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Rương Skill 120 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 						gg.clearResults()		
+						KYNANG()
 			end
 			function RUONGSKILL150()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("10468" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Rương Skill 150 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+KYNANG()						
 			end
 			function DAITHANH150()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("91440" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Đại Thành 150 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 	 
-						gg.clearResults()		
+						gg.clearResults()
+KYNANG()						
 			end
 			function DAITHANH90()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("91439" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Đại Thành 90 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+KYNANG()						
 			end
 	function HUYENTINH()
+		if b == 0 then
+			gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
+			NHANVATPHAMTUYCHON()
+			else
+			
 		HUYENTINH1=gg.choice({
 			"🔰 Huyền Tinh 1",				--1
 			"🔰 Huyền Tinh 2",				--2
@@ -1155,6 +1114,7 @@ end
 				if HUYENTINH1 == 7 then HUYENTINH7() end			-- menu 1
 				if HUYENTINH1 == 8 then HUYENTINH8() end		-- menu 1
 				if HUYENTINH1 == 9 then NHANVATPHAMTUYCHON() end			-- menu 6	
+		end		
 end	
 			function HUYENTINH1()
 						gg .loadResults( gg .getListItems())-- thong bao
@@ -1162,6 +1122,7 @@ end
 						gg.editAll("183" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Huyền Tinh 1 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 						gg.clearResults()		
+						HUYENTINH()
 			end
 			function HUYENTINH2()
 						gg .loadResults( gg .getListItems())-- thong bao
@@ -1169,27 +1130,31 @@ end
 						gg.editAll("184" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập Nhập Huyền Tinh 2 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 						gg.clearResults()		
+						HUYENTINH()
 			end
 			function HUYENTINH3()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("185" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 3 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+HUYENTINH()						
 			end
 			function HUYENTINH4()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("186" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 4 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+HUYENTINH()						
 			end
 			function HUYENTINH5()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("187" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 5 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()
+HUYENTINH()						
 			end
 			function HUYENTINH6()
 						gg .loadResults( gg .getListItems())-- thong bao
@@ -1197,22 +1162,29 @@ end
 						gg.editAll("188" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 6 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 						gg.clearResults()		
+						HUYENTINH()
 			end
 			function HUYENTINH7()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("189" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 7 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()
+HUYENTINH()						
 			end
 			function HUYENTINH8()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("190" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 8 thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+HUYENTINH()						
 			end
 	function NGUYENLIEUGHEPDO()
+			if b == 0 then
+			gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
+			NHANVATPHAMTUYCHON()
+			else
 		NGUYENLIEUGHEPDO1=gg.choice({
 			"🔰 Ngũ Hành Hồn Thạch",				--1
 			"🔰 Mảnh Vũ Khí",					--2
@@ -1225,6 +1197,7 @@ end
 				if NGUYENLIEUGHEPDO1 == 3 then HUYETNGOC() end			-- menu 2
 				if NGUYENLIEUGHEPDO1 == 4 then HOATHINGOC() end 			-- menu 2
 				if NGUYENLIEUGHEPDO1 == 5 then NHANVATPHAMTUYCHON() end 			-- menu 2
+			end	
 end	
 			function NGUHANHHONTHACH()
 						 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -1234,21 +1207,24 @@ end
 						 gg.getResults(400) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 						 gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng rương Ngũ Hành Hồn Thạch 100⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						 gg.clearResults()		
+						 gg.clearResults()
+NGUYENLIEUGHEPDO()						 
 			end
 			function MANHVUKHI()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("10470" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập nhật Mảnh Vũ Khí thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+NGUYENLIEUGHEPDO()						
 			end
 			function HUYETNGOC()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("8532" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập nhật Huyết Ngọc thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+NGUYENLIEUGHEPDO()						
 			end
 			function HOATHINGOC()
 						gg .loadResults( gg .getListItems())-- thong bao
@@ -1256,10 +1232,15 @@ end
 						gg.editAll("2444" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập nhật Hòa Thị Ngọc thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 						gg.clearResults()		
+						NGUYENLIEUGHEPDO()
 			end	
 	function THUCUOI()
+			if b == 0 then
+			gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
+			NHANVATPHAMTUYCHON()
+			else
 		THUCUOI1=gg.choice({
-			"🔰 Siêu Quang",						--1
+			"🔰 Siêu Quang (Dễ bị ban)",						--1
 			"🔰 Kim Hổ Vương",					--2
 			"🔰 Bạch Hổ Vương",					--3
 			"🔰 Hắc Hổ Vương",
@@ -1271,6 +1252,7 @@ end
 				if THUCUOI1 == 3 then BACHHOVUONG() end			-- menu 2
 				if THUCUOI1 == 4 then HACHOVUONG() end			-- menu 2
 				if THUCUOI1 == 5 then NHANVATPHAMTUYCHON() end			-- menu 2
+			end	
 end	
 			function SIEUQUANG()
 						gg .loadResults( gg .getListItems())-- thong bao
@@ -1278,27 +1260,31 @@ end
 						gg.editAll("1100001" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập nhật Siêu Quang thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
 						gg.clearResults()		
+						THUCUOI()
 			end
 			function KIMHOVUONG()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("1100002" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập nhật Kim Hổ Vương thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+THUCUOI()						
 			end
 			function BACHHOVUONG()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("1100003" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập nhật Bạch Hổ Vương thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+THUCUOI()						
 			end
 			function HACHOVUONG()
 						gg .loadResults( gg .getListItems())-- thong bao
 						gg.getResults(30)
 						gg.editAll("1100004" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 						gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập nhật Hắc Hổ Vương thành công⚜☾₊‧⁺˖⋆")  -- thong bao	 
-						gg.clearResults()		
+						gg.clearResults()	
+THUCUOI()						
 			end			
 ------------ Shop trang bị------------------
 	function SHOPTRANGBI()
@@ -1342,7 +1328,7 @@ end
 				gg.clearResults()
 				gg.clearList()		
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Giảm giá các shop thành công⚜☾₊‧⁺˖⋆")  -- thong bao				
-				
+				SHOPTRANGBI()
 			end
 			function NHANVODANH()			
 				gg.searchNumber("14707" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
@@ -1360,7 +1346,8 @@ end
 				gg.sleep(1000)
 				gg.clearResults()
 				gg.clearList()	 
-				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công Nhẫn Vô Danh\n Lại Npc Thợ Rèn Phượng Tường Mua ⚜☾₊‧⁺˖⋆")  -- thong bao					
+				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công Nhẫn Vô Danh\n Lại Npc Thợ Rèn Phượng Tường Mua ⚜☾₊‧⁺˖⋆")  -- thong bao		
+SHOPTRANGBI()				
 			end
 			function VATPHAMKHAC()
 			-- RUONG DA TAU
@@ -1411,7 +1398,8 @@ end
 			 gg.sleep(1000)
 			 gg.clearResults()
 			 gg.clearList()	 
-			 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công \n Lại Npc Hiệu Thuốc Phượng Tường Mua ⚜☾₊‧⁺˖⋆")  -- thong bao					
+			 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công \n Lại Npc Hiệu Thuốc Phượng Tường Mua ⚜☾₊‧⁺˖⋆")  -- thong bao			
+SHOPTRANGBI()			 
 			end			
 	function TANGDMG()
 if wholedays >= 0 then
@@ -1440,7 +1428,8 @@ end
 				gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("1000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Trường Mệnh Hoàn và Đại Lực Hoàn⚜☾₊‧⁺˖⋆")  -- thong bao	 
-				gg.clearResults()		
+				gg.clearResults()	
+TANGDMG()				
 			end				
 			function TANGTOCDOCHAY()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -1450,7 +1439,8 @@ end
 				gg.getResults(3) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("300" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Gia Bào Hoàn⚜☾₊‧⁺˖⋆")  -- thong bao	 
-				gg.clearResults()		
+				gg.clearResults()
+TANGDMG()				
 			end				
 			function TANGHOIMAU()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -1461,6 +1451,7 @@ end
 				gg.editAll("5400;10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng bình máu mua trong Hiệu Thuốc⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()		
+				TANGDMG()
 			end				
 			function TANGTIENTHAOLO()
 				 gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -1471,6 +1462,7 @@ end
 				 gg.editAll("304819200" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Tiên Thảo Lộ 1h⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				 gg.clearResults()		
+				 TANGDMG()
 			end
 	function CACCHUCNANGKHAC()
 if wholedays >= 0 then
@@ -1499,7 +1491,8 @@ end
 				gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n LB bán tại Kỳ Trân Các⚜☾₊‧⁺˖⋆")  -- thong bao	 
-				gg.clearResults()					
+				gg.clearResults()	
+CACCHUCNANGKHAC()				
 			end
 			function LBPHLT()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -1509,7 +1502,8 @@ end
 				gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("402" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng lệnh bài BHD nhận.⚜☾₊‧⁺˖⋆")  -- thong bao	 
-				gg.clearResults()					
+				gg.clearResults()	
+CACCHUCNANGKHAC()				
 			end
 			function LBDT()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -1519,7 +1513,8 @@ end
 				gg.getResults(15) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("10000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n LB mua tại kỳ trân các.⚜☾₊‧⁺˖⋆")  -- thong bao	 
-				gg.clearResults()					
+				gg.clearResults()		
+CACCHUCNANGKHAC()				
 			end
 			function TLHT1000()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -1529,7 +1524,8 @@ end
 				gg.getResults(5) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("100000" , gg.TYPE_DWORD) -- chỉnh s��a giá trị 3
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng bình 1000 tại Kỳ trân các⚜☾₊‧⁺˖⋆")  -- thong bao	 
-				gg.clearResults()					
+				gg.clearResults()	
+CACCHUCNANGKHAC()				
 			end			
 
 ----------------------------
