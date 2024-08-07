@@ -1549,7 +1549,7 @@ end
 				if CACCHUCNANGKHAC1 == 4 then TLHT1000() end 	-- menu 2		
 				if CACCHUCNANGKHAC1 == 5 then HOME() end 	-- menu 2		
 		end
-			function lbbhd()
+			function LBBHD()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("50;100;150;401" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 				gg.sleep(3000) -- THỜI GIAN CHỜ
@@ -1559,7 +1559,7 @@ end
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n LB bán tại Kỳ Trân Các⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()					
 			end
-			function lbphlt()
+			function LBPHLT()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("10000;10000;10000;401" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 				gg.sleep(3000) -- THỜI GIAN CHỜ
@@ -1569,7 +1569,7 @@ end
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng lệnh bài BHD nhận.⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()					
 			end
-			function lbdt()
+			function LBDT()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("101;20;1" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 				gg.sleep(3000) -- THỜI GIAN CHỜ
@@ -1579,7 +1579,7 @@ end
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n LB mua tại kỳ trân các.⚜☾₊‧⁺˖⋆")  -- thong bao	 
 				gg.clearResults()					
 			end
-			function tlhl1000()
+			function TLHT1000()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("500;1000;1500;5000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 				gg.sleep(3000) -- THỜI GIAN CHỜ
