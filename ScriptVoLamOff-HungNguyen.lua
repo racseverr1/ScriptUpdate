@@ -49,6 +49,7 @@ a = 0
 b = 0
 function HOME()
 menu=gg.choice({	-- menu
+		"🆕	Bug Speed",		-- ok	
 		"🔰 Tăng KNB (Nhận từ quái)",		-- ok
 		"🔰 Tăng KNB,Bạc (Trực tiếp)",
 		"🔰 Nhận vật phẩm (Tùy Chọn)",
@@ -58,18 +59,27 @@ menu=gg.choice({	-- menu
 		"🔰 Các Chức Năng Khác",
 		"❌Exit❌",
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
-		if menu == 1 then TANGKNBTUQUAI() end -- menu 1
-		if menu == 2 then TANGKNBTRUCTIEP() end -- menu 2
-		if menu == 3 then NHANVATPHAMTUYCHON() end -- menu 3
-		if menu == 4 then SHOPTRANGBI() end -- menu 3
-		if menu == 5 then PET() end -- menu 3
-		if menu == 6 then TANGDMG() end -- menu 3	
-		if menu == 7 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 8 then EXIT() end --/thoat
+		if menu == 1 then SPEED() end -- menu 1
+		if menu == 2 then TANGKNBTUQUAI() end -- menu 1
+		if menu == 3 then TANGKNBTRUCTIEP() end -- menu 2
+		if menu == 4 then NHANVATPHAMTUYCHON() end -- menu 3
+		if menu == 5 then SHOPTRANGBI() end -- menu 3
+		if menu == 6 then PET() end -- menu 3
+		if menu == 7 then TANGDMG() end -- menu 3	
+		if menu == 8 then CACCHUCNANGKHAC() end -- menu 3	
+		if menu == 9 then EXIT() end --/thoat
 HOMEDM=-1
 end
 ----------
-
+function SPEED()
+		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		gg.searchAddress("7F7F80070B6C", -1, gg.TYPE_FLOAT, gg.SIGN_EQUAL, 0, -1, 0)
+		gg.sleep(2000) -- THỜI GIAN CHỜ
+		gg.getResults(3) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		gg.editAll("2" , gg.TYPE_FLOAT) -- chỉnh sửa giá trị 3
+		gg.alert("________「 ✦ Xong ✦ 」_______")	 
+		gg.clearResults()
+end
 
 
 function PET()
