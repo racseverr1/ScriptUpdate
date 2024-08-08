@@ -29,8 +29,9 @@ gg.setVisible(true)
 HOME = 1
 function HOME()
 menu=gg.choice({	-- menu
-		"🔰	[ Free ]Tăng KNB (Nhận từ quái)",		-- ok		
-		"🆕	[ Free ]Bug các tính năng khác",
+		"🆕	[ Free ]Bug Speed",		-- ok		
+		"🔰	[ Free ]Bug KNB Train",		-- ok		
+		"🆕	[ Free ]Bug Tính Năng Khác",
 		"🔰 [ Free ]Shop",	
 		"🆕	[ Free ]Tăng Cấp Pet 120",	
 		"🔰 [ Phí ]Tăng KNB,Bạc (Trực tiếp)",
@@ -40,18 +41,30 @@ menu=gg.choice({	-- menu
 		"🔰 [ Phí ]Các Chức Năng Khác",		
 		"❌Exit❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
-		if menu == 1 then TANGKNBTUQUAI() end -- menu 1
-		if menu == 2 then TANGDMG() end -- menu 3	
-		if menu == 3 then SHOP() end -- menu 3	
-		if menu == 4 then PETFREE() end -- menu 3	
-		if menu == 5 then TANGKNBVABAC() end -- menu 3	
-		if menu == 6 then NHANVATPHAMTUYCHON() end -- menu 3	
-		if menu == 7 then SHOPTRANGBI() end -- menu 3	
-		if menu == 8 then PET() end -- menu 3	
-		if menu == 9 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 10 then EXIT() end --/thoat
+		if menu == 1 then SPEED() end -- menu 1
+		if menu == 2 then TANGKNBTUQUAI() end -- menu 1
+		if menu == 3 then TANGDMG() end -- menu 3	
+		if menu == 4 then SHOP() end -- menu 3	
+		if menu == 5 then PETFREE() end -- menu 3	
+		if menu == 6 then TANGKNBVABAC() end -- menu 3	
+		if menu == 7 then NHANVATPHAMTUYCHON() end -- menu 3	
+		if menu == 8 then SHOPTRANGBI() end -- menu 3	
+		if menu == 9 then PET() end -- menu 3	
+		if menu == 10 then CACCHUCNANGKHAC() end -- menu 3	
+		if menu == 11 then EXIT() end --/thoat
 HOMEDM=-1
 end
+
+function SPEED()
+		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		gg.searchAddress("7F7F80070B6C", -1, gg.TYPE_FLOAT, gg.SIGN_EQUAL, 0, -1, 0)
+		gg.sleep(2000) -- THỜI GIAN CHỜ
+		gg.getResults(3) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		gg.editAll("2" , gg.TYPE_FLOAT) -- chỉnh sửa giá trị 3
+		gg.alert("________「 ✦ Xong ✦ 」_______")	 
+		gg.clearResults()
+end
+
 ---------- pet free ----------------
 function PETFREE()
 TANGMAXCAP1=gg.choice({	-- menu
