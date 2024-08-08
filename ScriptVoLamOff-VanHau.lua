@@ -50,6 +50,7 @@ b = 0
 function HOME()
 menu=gg.choice({	-- menu
 		"🔰 Bug số lượng",		-- ok
+		"🆕	Bug Speed",		-- ok
 		"🔰 Tăng KNB (Nhận từ quái)",		-- ok
 		"🔰 Tăng KNB,Bạc (Trực tiếp)",
 		"🔰 Nhận vật phẩm (Tùy Chọn)",
@@ -60,14 +61,15 @@ menu=gg.choice({	-- menu
 		"❌Exit❌",
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
 		if menu == 1 then BUGSOLUONG() end -- menu 1
-		if menu == 2 then TANGKNBTUQUAI() end -- menu 1
-		if menu == 3 then TANGKNBTRUCTIEP() end -- menu 2
-		if menu == 4 then NHANVATPHAMTUYCHON() end -- menu 3
-		if menu == 5 then SHOPTRANGBI() end -- menu 3
-		if menu == 6 then PET() end -- menu 3
-		if menu == 7 then TANGDMG() end -- menu 3	
-		if menu == 8 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 9 then EXIT() end --/thoat
+		if menu == 2 then SPEED() end -- menu 1
+		if menu == 3 then TANGKNBTUQUAI() end -- menu 1
+		if menu == 4 then TANGKNBTRUCTIEP() end -- menu 2
+		if menu == 5 then NHANVATPHAMTUYCHON() end -- menu 3
+		if menu == 6 then SHOPTRANGBI() end -- menu 3
+		if menu == 7 then PET() end -- menu 3
+		if menu == 8 then TANGDMG() end -- menu 3	
+		if menu == 9 then CACCHUCNANGKHAC() end -- menu 3	
+		if menu == 10 then EXIT() end --/thoat
 HOMEDM=-1
 end
 ----------
@@ -80,8 +82,8 @@ s = gg.prompt({"Nhập lần 1 :"},{})
   end
 gg.searchNumber(s[1] , gg.TYPE_DWORD)
 gg.getResults(200)
-gg.alert("Có 10s")
-gg.sleep(10000)
+gg.alert("Có 6s")
+gg.sleep(6000)
 
 s = gg.prompt({"Nhập lần 2 :"},{})
   if s == nil then 
@@ -90,8 +92,8 @@ s = gg.prompt({"Nhập lần 2 :"},{})
   end
 gg.searchNumber(s[1] , gg.TYPE_DWORD)
 gg.getResults(200)
-gg.alert("Có 10s")
-gg.sleep(10000)
+gg.alert("Có 6s")
+gg.sleep(6000)
 
 s = gg.prompt({"Nhập lần 3 :"},{})
   if s == nil then 
@@ -100,8 +102,8 @@ s = gg.prompt({"Nhập lần 3 :"},{})
   end
 gg.searchNumber(s[1] , gg.TYPE_DWORD)
 gg.getResults(200)
-gg.alert("Có 10s")
-gg.sleep(10000)
+gg.alert("Có 6s")
+gg.sleep(6000)
 
 s = gg.prompt({"Nhập lần 4 :"},{})
   if s == nil then 
@@ -110,8 +112,8 @@ s = gg.prompt({"Nhập lần 4 :"},{})
   end
 gg.searchNumber(s[1] , gg.TYPE_DWORD)
 gg.getResults(200)
-gg.alert("Có 10s")
-gg.sleep(10000)
+gg.alert("Có 6s")
+gg.sleep(6000)
 
 s = gg.prompt({"Nhập lần 5 :"},{})
   if s == nil then 
@@ -125,7 +127,15 @@ gg.alert("Ok xong")
 end
 
 
-
+function SPEED()
+		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+		gg.searchAddress("7F7F80070B6C", -1, gg.TYPE_FLOAT, gg.SIGN_EQUAL, 0, -1, 0)
+		gg.sleep(2000) -- THỜI GIAN CHỜ
+		gg.getResults(3) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+		gg.editAll("2" , gg.TYPE_FLOAT) -- chỉnh sửa giá trị 3
+		gg.alert("________「 ✦ Xong ✦ 」_______")	 
+		gg.clearResults()
+end
 -----------
 function PET()
 if wholedays >= 0 then
