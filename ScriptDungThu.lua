@@ -18,7 +18,7 @@ for i=0, 6, 1 do
 	end
 end
 -----------------------------------------    
-modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 0.3 (7/8)📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n──・┆✦ Update ✦ ┆・─\n╰┈➤⌞ 1⌝: Tăng cấp pet lên 120 \n╰┈➤⌞ 2⌝: Dùng TLHL 1000 => 100k điểm \n╰┈➤⌞ 3⌝:\n")
+modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 0.3 (7/8)📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n──・┆✦ Update ✦ ┆・─\n╰┈➤⌞ 1⌝: Tăng cấp pet lên 120 \n╰┈➤⌞ 2⌝: Dùng TLHL 1000 => 100k điểm \n╰┈➤⌞ 3⌝:Cập nhật shop HKMP\n")
 gg.alert(modbyfami)  							
 gg.clearResults()
 gg.clearList()
@@ -30,6 +30,7 @@ HOME = 1
 function HOME()
 menu=gg.choice({	-- menu
 		"🆕	[ Free ]Bug Speed",		-- ok		
+		"🆕	[ Free ]Bug Shop HKMP",		-- ok		
 		"🔰	[ Free ]Bug KNB Train",		-- ok		
 		"🆕	[ Free ]Bug Tính Năng Khác",
 		"🔰 [ Free ]Shop",	
@@ -42,18 +43,34 @@ menu=gg.choice({	-- menu
 		"❌Exit❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
 		if menu == 1 then SPEED() end -- menu 1
-		if menu == 2 then TANGKNBTUQUAI() end -- menu 1
-		if menu == 3 then TANGDMG() end -- menu 3	
-		if menu == 4 then SHOP() end -- menu 3	
-		if menu == 5 then PETFREE() end -- menu 3	
-		if menu == 6 then TANGKNBVABAC() end -- menu 3	
-		if menu == 7 then NHANVATPHAMTUYCHON() end -- menu 3	
-		if menu == 8 then SHOPTRANGBI() end -- menu 3	
-		if menu == 9 then PET() end -- menu 3	
-		if menu == 10 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 11 then EXIT() end --/thoat
+		if menu == 2 then BUGSHOPHOANGKIM() end -- menu 1
+		if menu == 3 then TANGKNBTUQUAI() end -- menu 1
+		if menu == 4 then TANGDMG() end -- menu 3	
+		if menu == 5 then SHOP() end -- menu 3	
+		if menu == 6 then PETFREE() end -- menu 3	
+		if menu == 7 then TANGKNBVABAC() end -- menu 3	
+		if menu == 8 then NHANVATPHAMTUYCHON() end -- menu 3	
+		if menu == 9 then SHOPTRANGBI() end -- menu 3	
+		if menu == 10 then PET() end -- menu 3	
+		if menu == 11 then CACCHUCNANGKHAC() end -- menu 3	
+		if menu == 12 then EXIT() end --/thoat
 HOMEDM=-1
 end
+
+function BUGSHOPHOANGKIM()
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("10470;10", gg.TYPE_DWORD)
+				gg.sleep(2000) -- THỜI GIAN CHỜ
+				gg.refineNumber("10470" , gg.TYPE_DWORD)
+				gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("184" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nDùng 10 viên HT2 đến đổi⚜☾₊‧⁺˖⋆")	 
+				gg.clearResults()
+end
+
+
+
+
 
 function SPEED()
 		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -61,8 +78,9 @@ function SPEED()
 		gg.sleep(2000) -- THỜI GIAN CHỜ
 		gg.getResults(3) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 		gg.editAll("2" , gg.TYPE_FLOAT) -- chỉnh sửa giá trị 3
-		gg.alert("________「 ✦ Xong ✦ 」_______")	 
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công⚜☾₊‧⁺˖⋆")	 
 		gg.clearResults()
+
 end
 
 ---------- pet free ----------------
@@ -101,7 +119,7 @@ end
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end	
 	function CAP3160() 
@@ -124,7 +142,7 @@ end
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end	
 	function CAP6190() 
@@ -147,7 +165,7 @@ end
 		 gg.sleep(2000) -- THỜI GIAN CHỜ
 		 gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 		 gg.editAll("1" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
-		 gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n      ⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
+		 gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái Để Lên Cấp⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		 gg.clearResults()
 	end	
 	function CAP91120() 
