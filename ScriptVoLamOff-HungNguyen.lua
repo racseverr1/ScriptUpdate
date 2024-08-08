@@ -70,7 +70,14 @@ menu=gg.choice({	-- menu
 		if menu == 9 then EXIT() end --/thoat
 HOMEDM=-1
 end
-----------
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function SPEED()
 		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 		gg.searchAddress("7F7F80070B6C", -1, gg.TYPE_FLOAT, gg.SIGN_EQUAL, 0, -1, 0)
@@ -80,8 +87,6 @@ function SPEED()
 		gg.alert("________「 ✦ Xong ✦ 」_______")	 
 		gg.clearResults()
 end
-
-
 function PET()
 if wholedays >= 0 then
 gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
@@ -525,7 +530,7 @@ os.exit()
 	else
 end		
 		NHANVATPHAMTUYCHON1=gg.choice({
-			"🔰 Lấy giá trị(chọn dòng này trước)",					--1
+			"🔰 Lấy giá trị(chọn dòng này trước)",			--2
 			"🔰 Sách Exp",						--2
 			"🔰 Kỹ Năng",						--3
 			"🔰 Huyền Tinh",						--4
@@ -589,6 +594,9 @@ end
 			end		
 		NHANVATPHAMTUYCHON()
 	end	
+
+	
+	
 	function SACHEXP()
 		if b == 0 then
 			gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao
@@ -1305,15 +1313,17 @@ os.exit()
 end	
 		SHOPTRANGBI1=gg.choice({
 			"🔰 Giảm Giá Toàn Bộ Shop",	--1
+			"🔰 VK Hoàng Kim(🔥nguy cơ ban cao🔥)",	--1
 			"🔰 Nhận Vô Danh",	--1
 			"🔰 Vật Phẩm Khác",
 			-- "🔰 Trang Bị Pet",
 			"🔰 Quay Lại",
 			},nil,"\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
 				if SHOPTRANGBI1 == 1 then GIAMGIATOANBOSHOP() end -- menu 1
-				if SHOPTRANGBI1 == 2 then NHANVODANH() end -- menu 2
-				if SHOPTRANGBI1 == 3 then VATPHAMKHAC() end  -- menu 2
-				if SHOPTRANGBI1 == 4 then HOME() end  -- menu 2
+				if SHOPTRANGBI1 == 2 then HOANGKIMMONPHAI() end -- menu 2
+				if SHOPTRANGBI1 == 3 then NHANVODANH() end -- menu 2
+				if SHOPTRANGBI1 == 4 then VATPHAMKHAC() end  -- menu 2
+				if SHOPTRANGBI1 == 5 then HOME() end  -- menu 2
 end
 			function GIAMGIATOANBOSHOP()
 				gg.searchNumber("888888888" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
@@ -1340,6 +1350,199 @@ end
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Giảm giá các shop thành công⚜☾₊‧⁺˖⋆")  -- thong bao				
 				SHOPTRANGBI()
 			end
+	function HOANGKIMMONPHAI()
+				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜🚫CẢNH BÁO🚫⚜- Trang bị này là vũ khí vip nhất của game\n- Hiện tại trang bị ad chưa mở để người chơi sử dụng\n- Nên tỷ lệ ban khá cao nếu sử dụng mà khoe ra ngoài.\n\n🚫 KHUYẾN CÁO SỬ DỤNG TRẢI NGHIỆM🚫\n🚫Lưu tài khoảng thường xuyên nếu muốn dùng🚫☾₊‧⁺˖⋆")  -- thong bao		
+	-- thieu lam
+				gg.searchNumber("14760" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41020" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 
+				
+				gg.searchNumber("14716" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41023" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+								
+				gg.searchNumber("14717" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41026" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+		--- thien vuong										
+				gg.searchNumber("14718" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41029" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+												
+				gg.searchNumber("14719" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41032" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+												
+				gg.searchNumber("14720" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41035" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+		--- ngami										
+				gg.searchNumber("14736" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41038" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																
+				gg.searchNumber("14737" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41041" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+			-- thuy yen													
+				gg.searchNumber("14738" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41044" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																
+				gg.searchNumber("14739" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41047" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+			-- ngũ độc													
+				gg.searchNumber("14740" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41050" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																
+				gg.searchNumber("14746" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41053" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+			-- duong mon													
+				gg.searchNumber("14747" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41056" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																
+				gg.searchNumber("14748" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41059" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																				
+				gg.searchNumber("41062" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41062" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+									---- cái bang											
+				gg.searchNumber("20820" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41065" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																								
+				gg.searchNumber("20821" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41068" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+									--- thien nhan															
+				gg.searchNumber("20822" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41071" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																								
+				gg.searchNumber("20823" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41074" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+										--- vo dang														
+				gg.searchNumber("20824" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41077" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																								
+				gg.searchNumber("20830" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41080" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+										--- con luan																		
+				gg.searchNumber("20831" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41083" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+																												
+				gg.searchNumber("20832" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(500) -- THỜI GIAN CHỜ
+				gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("41086" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.sleep(1000)
+				gg.clearResults()
+				gg.clearList()	 				
+				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công \n Lại Npc Thợ Rèn Phượng Tường Mua\n Shop Bạc Khóa ⚜☾₊‧⁺˖⋆")  -- thong bao		
+SHOPTRANGBI()				
+				
+				
+				
+		end				
+	-- end					
 			function NHANVODANH()			
 				gg.searchNumber("14707" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 				gg.sleep(500) -- THỜI GIAN CHỜ
@@ -1538,7 +1741,14 @@ CACCHUCNANGKHAC()
 CACCHUCNANGKHAC()				
 			end			
 
-----------------------------
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 function EXIT()
 
