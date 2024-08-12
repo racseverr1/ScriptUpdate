@@ -57,7 +57,7 @@ menu=gg.choice({	-- menu
 		if menu == 3 then BUGSHOPHOANGKIM() end -- menu 1
 		if menu == 4 then TANGKNBTUQUAI() end -- menu 1
 		if menu == 5 then TANGDMG() end -- menu 3	
-		if menu == 6 then SHOP() end -- menu 3	
+		if menu == 6 then BUGSHOPHOANGKIM() end -- menu 3	
 		if menu == 7 then PETFREE() end -- menu 3	
 		if menu == 8 then LIENHE() end -- menu 3	
 		-- if menu == 8 then NHANVATPHAMTUYCHON() end -- menu 3	
