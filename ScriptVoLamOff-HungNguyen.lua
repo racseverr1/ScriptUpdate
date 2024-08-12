@@ -47,9 +47,12 @@ gg.setVisible(true)
 HOME = 1
 a = 0
 b = 0
+bugtoc = 0
+event = 0
 function HOME()
 menu=gg.choice({	-- menu
-		"🆕	Bug Speed",		-- ok	
+		"🆕	Event",		-- ok
+		"🔰	Bug Speed",		-- ok
 		"🔰 Tăng KNB (Nhận từ quái)",		-- ok
 		"🔰 Tăng KNB,Bạc (Trực tiếp)",
 		"🔰 Nhận vật phẩm (Tùy Chọn)",
@@ -59,15 +62,16 @@ menu=gg.choice({	-- menu
 		"🔰 Các Chức Năng Khác",
 		"❌Exit❌",
 	} ,nil, "\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
-		if menu == 1 then SPEED() end -- menu 1
-		if menu == 2 then TANGKNBTUQUAI() end -- menu 1
-		if menu == 3 then TANGKNBTRUCTIEP() end -- menu 2
-		if menu == 4 then NHANVATPHAMTUYCHON() end -- menu 3
-		if menu == 5 then SHOPTRANGBI() end -- menu 3
-		if menu == 6 then PET() end -- menu 3
-		if menu == 7 then TANGDMG() end -- menu 3	
-		if menu == 8 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 9 then EXIT() end --/thoat
+		if menu == 1 then EVENT() end -- menu 1
+		if menu == 2 then SPEED() end -- menu 1
+		if menu == 3 then TANGKNBTUQUAI() end -- menu 1
+		if menu == 4 then TANGKNBTRUCTIEP() end -- menu 2
+		if menu == 5 then NHANVATPHAMTUYCHON() end -- menu 3
+		if menu == 6 then SHOPTRANGBI() end -- menu 3
+		if menu == 7 then PET() end -- menu 3
+		if menu == 8 then TANGDMG() end -- menu 3	
+		if menu == 9 then CACCHUCNANGKHAC() end -- menu 3	
+		if menu == 10 then EXIT() end --/thoat
 HOMEDM=-1
 end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -78,15 +82,105 @@ end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+------ Bug tốc ---------
 function SPEED()
-		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
-		gg.searchAddress("7F7F80070B6C", -1, gg.TYPE_FLOAT, gg.SIGN_EQUAL, 0, -1, 0)
-		gg.sleep(2000) -- THỜI GIAN CHỜ
-		gg.getResults(3) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-		gg.editAll("2" , gg.TYPE_FLOAT) -- chỉnh sửa giá trị 3
-		gg.alert("________「 ✦ Xong ✦ 」_______")	 
-		gg.clearResults()
+if bugtoc == 0 then
+gg.setVisible(false)
+gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC | gg.REGION_OTHER)
+gg.searchFuzzy('0', gg.TYPE_FLOAT, gg.SIGN_FUZZY_GREATER)
+  for i = 1 , 50 do
+gg.searchFuzzy('0', gg.TYPE_FLOAT, gg.SIGN_FUZZY_GREATER)
+gg.refineNumber('0.01~6', gg.TYPE_FLOAT)
+gg.sleep(50)                                                   
+  end
+resultsCount = gg.getResultsCount()
+  secondResults = gg.getResults(resultsCount)
+  local addTables = {}
+  local speed = {}
+  for i = 1, #secondResults do
+    local loops = 0x0
+    for b = 1, 200 do
+      addTables[#addTables + 1] = {address = secondResults[i].address + loops, flags = gg.TYPE_FLOAT}
+      addTables[#addTables + 1] = {address = secondResults[i].address - loops, flags = gg.TYPE_FLOAT}
+      loops = loops + 0x4
+    end
+  end
+  addTables = gg.getValues(addTables)
+  for i, v in ipairs (addTables) do
+    if v.value == 1 then
+      speed[#speed +1] = {address = v.address, flags = v.flags, name = "Speed"}
+    end
+  end
+  if #speed ~= 0 then
+	-- gg.editAll("3" , gg.TYPE_FLOAT, gg.SIGN_FUZZY_GREATER)  	
+    gg.addListItems(speed)
+    gg.clearResults()
+						
+	gg .loadResults( gg .getListItems())-- thong bao
+	gg.getResults(10)
+	gg.editAll("3" , gg.TYPE_FLOAT, gg.SIGN_FUZZY_GREATER) -- chỉnh sửa giá trị 3
+	gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công⚜☾₊‧⁺˖⋆")  
+	bugtoc = 1
+	gg.clearResults()		
+  else
+  end
+else
+gg.alert("⋆˖⁺‧₊☽ ⚜Đã Bug Speed Rồi⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Không thể Kích Hoạt⚜☾₊‧⁺˖⋆") 
 end
+end
+---- event-----------
+function EVENT()
+	if event == 0 then
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("100;1000;506" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("506" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				event = gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.addListItems(event)
+				gg.clearResults()	
+		event = 1		
+	end			
+	if event == 1 then	
+			EVENT1=gg.choice({	-- menu
+					"🔰 ==> Hướng dẫn <==",		-- ok
+					"🔰 Mâm Chay",		-- ok
+					"🔰 Mâm Mặn",
+					"🔰 Mâm Đặc Biệt",
+					"🔰 Quay Lại",
+				} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") -- tieu de	
+					if EVENT1 == 1 then HUONGDAN() end -- menu 1
+					if EVENT1 == 2 then MAMCHAY() end -- menu 1
+					if EVENT1 == 3 then MAMMAN() end -- menu 3	
+					if EVENT1 == 4 then MAMDACBIET() end -- menu 3	
+					if EVENT1 == 5 then HOME() end --/thoat
+			HOMEDM=-1		
+	else	
+	end	
+end
+function HUONGDAN()
+	gg.alert("⋆˖⁺‧₊☽ ⚜ Hướng dẫn⚜☾₊‧⁺˖⋆\n - Sau khi chọn loại event cần thì dùng rương NHHT(1000) bán tại Kỳ Trân Các click nhận\n - Sau khi nhận bấm vào vật phẩm vừa nhận và tách ra 1.\n - Bắt buộc phải tách ra để tránh lỗi khi nhận vật phẩm event loại tiếp theo.",nil,"Đã đọc và hiểu")
+EVENT()
+end
+
+			function MAMCHAY()
+				gg .loadResults( gg .getListItems()) -- thong bao
+				gg.getResults(30)
+				gg.editAll("8871"  , gg.TYPE_DWORD)
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công\n Sử dụng rương NHHTx1000 để nhận ⚜☾₊‧⁺˖⋆")
+			end	
+			function MAMMAN()
+				gg .loadResults( gg .getListItems()) -- thong bao
+				gg.getResults(30)
+				gg.editAll("8872"  , gg.TYPE_DWORD)
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công\n Sử dụng rương NHHTx1000 để nhận ⚜☾₊‧⁺˖⋆")
+			end		
+			function MAMDACBIET()
+				gg .loadResults( gg .getListItems()) -- thong bao
+				gg.getResults(30)
+				gg.editAll("8873"  , gg.TYPE_DWORD)
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công\n Sử dụng rương NHHTx1000 để nhận ⚜☾₊‧⁺˖⋆")
+			end	
 function PET()
 if wholedays >= 0 then
 gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng hết hạn \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")	
