@@ -99,7 +99,7 @@ resultsCount = gg.getResultsCount()
 						
 	gg .loadResults( gg .getListItems())-- thong bao
 	gg.getResults(10)
-	gg.editAll("3" , gg.TYPE_FLOAT, gg.SIGN_FUZZY_GREATER) -- chỉnh sửa giá trị 3
+	gg.editAll("2" , gg.TYPE_FLOAT, gg.SIGN_FUZZY_GREATER) -- chỉnh sửa giá trị 3
 	gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công⚜☾₊‧⁺˖⋆")  
 	bugtoc = 1
 	gg.clearResults()		
