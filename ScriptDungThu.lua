@@ -47,7 +47,6 @@ menu=gg.choice({	-- menu
 		"[🆓]	Bug Shop HKMP",		-- ok		
 		"[🆓]	Bug KNB Train",		-- ok		
 		"[🆓]	Bug Dmg",
-		"[🆓]	Shop",	
 		"[🆓]	Tăng Cấp Pet 120",	
 		"Các tính năng khác",	
 		"❌Thoát❌",
@@ -57,14 +56,9 @@ menu=gg.choice({	-- menu
 		if menu == 3 then BUGSHOPHOANGKIM() end -- menu 1
 		if menu == 4 then TANGKNBTUQUAI() end -- menu 1
 		if menu == 5 then TANGDMG() end -- menu 3	
-		if menu == 6 then BUGSHOPHOANGKIM() end -- menu 3	
-		if menu == 7 then PETFREE() end -- menu 3	
-		if menu == 8 then LIENHE() end -- menu 3	
-		-- if menu == 8 then NHANVATPHAMTUYCHON() end -- menu 3	
-		-- if menu == 9 then SHOPTRANGBI() end -- menu 3	
-		-- if menu == 10 then PET() end -- menu 3	
-		-- if menu == 11 then CACCHUCNANGKHAC() end -- menu 3	
-		if menu == 9 then EXIT() end --/thoat
+		if menu == 6 then PETFREE() end -- menu 3	
+		if menu == 7 then LIENHE() end -- menu 3	
+		if menu == 8 then EXIT() end --/thoat
 HOMEDM=-1
 end
 
@@ -262,7 +256,7 @@ if addshop == 0 then
 				"🔰 Tăng Hồi Máu",	--3
 				"🔰 Tăng Thời Gian TTL 1h",
 				"🆕 Tăng Bình TLHL 1000 => 100k",
-				"🔰 Quay lại",
+				"🔰 Không có nhu cầu",
 				},nil,"─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
 				if TANGDMG1 == 1 then TANGDMGVAMAU() end -- menu 1
 				if TANGDMG1 == 2 then TANGTOCDOCHAY() end -- menu 2
