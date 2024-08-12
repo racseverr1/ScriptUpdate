@@ -181,7 +181,7 @@ end
 			 gg.searchNumber("25;2000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
 			 gg.sleep(3000) -- THỜI GIAN CHỜ
 			 gg.refineNumber("25" , gg.TYPE_DWORD) -- lọc giá trị 3	 
-			gg.getResults(20) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.getResults(50) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 			 gg.editAll("300000" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 			 gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhật thành công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Đánh quái có tỷ lệ nhận 30 vạn KNB⚜☾₊‧⁺˖⋆")  -- thong bao	 
 			 gg.clearResults()
