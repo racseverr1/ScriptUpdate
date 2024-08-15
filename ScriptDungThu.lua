@@ -22,10 +22,10 @@ for i=0, 6, 1 do
 end
 -----------------------------------------    
 HOME = 1
-Date = "20240812"
+Date = "20240816"
 date = os.date("%Y%m%d")
 if date >= Date then
-  gg.alert("[[⚠ THÔNG TIN UPDATE ⚠]]\n - Cập nhật bug sự kiện.\n - Fix Hack Speed.\n\n == Bug sự kiện vui lòng đọc kỹ hướng dẫn trước khi dùng tránh lỗi ==","✔️Đã Đọc")
+  gg.alert("[[⚠ THÔNG TIN UPDATE 15-8-2024⚠]]\n\n\n - Cập nhật bug Kinh nghiệm từ rương Dã Tẩu","✔️Đã Đọc")
   HOME=-1
   else
   end
@@ -42,6 +42,7 @@ gg.setVisible(true)
 HOME = 1
 function HOME()
 menu=gg.choice({	-- menu
+		"[🆓]	Bug Exp",		-- ok		
 		"[🆓]	Bug Speed",		-- ok		
 		"[🆓]	Event",		-- ok		
 		"[🆓]	Bug Shop HKMP",		-- ok		
@@ -51,16 +52,44 @@ menu=gg.choice({	-- menu
 		"Các tính năng khác",	
 		"❌Thoát❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") -- tieu de	
-		if menu == 1 then SPEED() end -- menu 1
-		if menu == 2 then EVENT() end -- menu 1
-		if menu == 3 then BUGSHOPHOANGKIM() end -- menu 1
-		if menu == 4 then TANGKNBTUQUAI() end -- menu 1
-		if menu == 5 then TANGDMG() end -- menu 3	
-		if menu == 6 then PETFREE() end -- menu 3	
-		if menu == 7 then LIENHE() end -- menu 3	
-		if menu == 8 then EXIT() end --/thoat
+		if menu == 1 then BUGEXP() end -- menu 1
+		if menu == 2 then SPEED() end -- menu 1
+		if menu == 3 then EVENT() end -- menu 1
+		if menu == 4 then BUGSHOPHOANGKIM() end -- menu 1
+		if menu == 5 then TANGKNBTUQUAI() end -- menu 1
+		if menu == 6 then TANGDMG() end -- menu 3	
+		if menu == 7 then PETFREE() end -- menu 3	
+		if menu == 8 then LIENHE() end -- menu 3	
+		if menu == 9 then EXIT() end --/thoat
 HOMEDM=-1
 end
+
+	function BUGEXP()
+		gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("600000" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("1000000000" , gg.TYPE_DWORD) 
+				gg.clearResults()
+				
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("5;800000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("800000" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("1000000000" , gg.TYPE_DWORD) 
+				gg.clearResults()
+
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("5;1000000;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+				gg.sleep(1000) -- THỜI GIAN CHỜ
+				gg.refineNumber("1000000" , gg.TYPE_DWORD) -- lọc giá trị 3		
+				gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("1000000000" , gg.TYPE_DWORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Bug Kinh nghiệm thành công⚜ ☾₊‧⁺˖⋆\n\n ⋆˖⁺‧₊☽ ⚜Dùng Rương Dã Tẩu nhận được exp⚜ ☾₊‧⁺˖⋆") 
+				gg.clearResults()		
+	end
 
 ------ Bug tốc ---------
 function SPEED()
