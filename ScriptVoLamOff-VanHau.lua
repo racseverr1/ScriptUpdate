@@ -501,6 +501,7 @@ end
 		TANGKNBTRUCTIEP1=gg.choice({
 			"🔰 Lấy giá trị",	--1
 			"🔰 Lấy rương sách TL DB",	--1
+			"🔰 Kinh Nghiệm",
 			"🔰 Bạc khóa",	--2
 			"🔰 Bạc",	--2
 			"🔰 KNB",
@@ -509,10 +510,11 @@ end
 			
 				if TANGKNBTRUCTIEP1 == 1 then LAYGIATRI1() end -- menu 1
 				if TANGKNBTRUCTIEP1 == 2 then RUONGSACHTINHLINHDACBIET() end -- menu 2
-				if TANGKNBTRUCTIEP1 == 3 then BACKHOA1() end -- menu 2
-				if TANGKNBTRUCTIEP1 == 4 then BAC1() end -- menu 2
-				if TANGKNBTRUCTIEP1 == 5 then KNB1() end -- menu 3
-                if TANGKNBTRUCTIEP1 == 6 then HOME() end -- menu 3	
+				if TANGKNBTRUCTIEP1 == 3 then KINHNGHIEM() end
+				if TANGKNBTRUCTIEP1 == 4 then BACKHOA1() end -- menu 2
+				if TANGKNBTRUCTIEP1 == 5 then BAC1() end -- menu 2
+				if TANGKNBTRUCTIEP1 == 6 then KNB1() end -- menu 3
+                if TANGKNBTRUCTIEP1 == 7 then HOME() end -- menu 3	
 		 end 	
 	function LAYGIATRI1()
 		if a == 0 then
@@ -640,7 +642,32 @@ end
 			end	
 		TANGKNBTRUCTIEP()	
 	end
-	
+	function KINHNGHIEM()
+	gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("5;600000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("600000" , gg.TYPE_DWORD) -- lọc giá trị 3		
+			gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("1000000000" , gg.TYPE_DWORD) 
+			gg.clearResults()
+			
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("5;800000;3500" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("800000" , gg.TYPE_DWORD) -- lọc giá trị 3		
+			gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("1000000000" , gg.TYPE_DWORD) 
+			gg.clearResults()
+
+			gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+			gg.searchNumber("5;1000000;3000" , gg.TYPE_DWORD)      -- Tìm giá trị 1 2 3
+			gg.sleep(1000) -- THỜI GIAN CHỜ
+			gg.refineNumber("1000000" , gg.TYPE_DWORD) -- lọc giá trị 3		
+			gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+			gg.editAll("1000000000" , gg.TYPE_DWORD) 
+	gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Bug Kinh nghiệm thành công⚜☾₊‧⁺˖⋆") 
+			gg.clearResults()		
+end
 		function BACKHOA1()
 			if a == 0 then
 				gg.alert("\n「 ✦ Hạn sử dụng:  "..wholedays.."  Ngày ✦ 」\n\n⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  -- thong bao	
