@@ -84,20 +84,19 @@ end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-function TOCDO()
-		gg.searchNumber("h2734C8148",4,false,gg.SIGN_EQUAL)      
-		-- gg.searchNumber("10036;200;8;20" , 4)      
+function TOCDO()    
+		gg.searchNumber("10036;200;8;20" , 4)      
 		gg.sleep(1000) 
-		gg.refineNumber("hC8" , 4) 		
+		gg.refineNumber("20" , 4) 		
 		gg.getResults(30) 
 		gg.editAll("0"  , 4)
 		gg.clearResults()
 end
 
 function TYLE()     
-		gg.searchNumber("1024;20000" , 4)      
+		gg.searchNumber("1024~1026;20000" , 4)      
 		gg.sleep(1000) 
-		gg.refineNumber("1024" , 4) 		
+		gg.refineNumber("1024~1026" , 4) 		
 		tyle1 = gg.getResults(30) 
 		gg.addListItems(tyle1)
 		gg.clearResults()	
