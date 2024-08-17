@@ -26,7 +26,7 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
 	else gg.toast("✅ Kết nối thành công !✅") end
 -----------------------------------------   
-Date = "20240817"
+Date = "20240818"
 date = os.date("%Y%m%d")
 if date == Date then
   gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
