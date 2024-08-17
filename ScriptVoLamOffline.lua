@@ -51,9 +51,12 @@ nhht = 0
 lbbhd = 0
 lbphlt = 0
 kinhnghiem = 0
+gg.setRanges(gg.REGION_ANONYMOUS) 
 function HOME()
 menu=gg.choice({
 		"🆕	Event",		
+		"🆕	Bug tỷ lệ quái",		
+		"🆕	Bug tốc độ quái",		
 		"🔰 Bug Speed",	
 		"🔰 Tăng KNB,Bạc (Trực tiếp)",	-- ruong dã tẩu mua tại hiệu thuốc
 		"🔰 Vật phẩm xếp chồng",		-- ruong nhht
@@ -65,22 +68,122 @@ menu=gg.choice({
 		"❌Exit❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
 		if menu == 1 then EVENT() end 
-		if menu == 2 then SPEED() end 
-		if menu == 3 then TANGKNBTRUCTIEP() end 
-		if menu == 4 then VATPHAMXEPCHONG() end 
-		if menu == 5 then VATPHAMKHONGXEPCHONG() end 
-		if menu == 6 then SHOP() end 
-		if menu == 7 then PET() end 
-		if menu == 8 then TANGDMG() end
-		if menu == 9 then CACCHUCNANGKHAC() end 	
-		if menu == 10 then EXIT() end 
+		if menu == 2 then TYLE() end 
+		if menu == 3 then TOCDO() end 
+		if menu == 4 then SPEED() end 
+		if menu == 5 then TANGKNBTRUCTIEP() end 
+		if menu == 6 then VATPHAMXEPCHONG() end 
+		if menu == 7 then VATPHAMKHONGXEPCHONG() end 
+		if menu == 8 then SHOP() end 
+		if menu == 9 then PET() end 
+		if menu == 10 then TANGDMG() end
+		if menu == 11 then CACCHUCNANGKHAC() end 	
+		if menu == 12 then EXIT() end 
 HOMEDM=-1
 end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function TYLE()     
+		gg.searchNumber("1024;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1024" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1034;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1034" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.searchNumber("1044;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1044" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1054;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1054" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1064;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1064" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1074;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1074" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.searchNumber("1084;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1084" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.searchNumber("1094;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1094" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.searchNumber("1104;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1104" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1114;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1114" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1124;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1124" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1134;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1134" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1144;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1144" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("1154;20000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1154" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.searchNumber("337;200000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("337" , 4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
 
 
+		gg .loadResults( gg .getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1026"  , 4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công\n Sử dụng rương NHHTx1000 để nhận ⚜☾₊‧⁺˖⋆")
+		
+	
+end
 ---------- event------------
 function EVENT()
 	if event == 0 then
@@ -1754,7 +1857,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng bình 1000 tại Kỳ trân các⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		gg.clearResults()	
 		CACCHUCNANGKHAC()				
-	end				
+	end			
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
