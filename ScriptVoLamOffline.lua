@@ -95,7 +95,7 @@ function TOCDO()
 		gg.getResults(300) 
 		gg.editAll("0"  , 4)
 		gg.clearResults()
-		
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
 end
 
 function TYLE()     
