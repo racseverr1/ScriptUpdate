@@ -85,10 +85,10 @@ end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function TOCDO()
-		gg.searchNumber(h2734C8148,4,false,gg.SIGN_EQUAL)      
+		gg.searchNumber("h2734C8148",4,false,gg.SIGN_EQUAL)      
 		-- gg.searchNumber("10036;200;8;20" , 4)      
 		gg.sleep(1000) 
-		gg.refineNumber(hC8 , 4) 		
+		gg.refineNumber("hC8" , 4) 		
 		gg.getResults(30) 
 		gg.editAll("0"  , 4)
 		gg.clearResults()
