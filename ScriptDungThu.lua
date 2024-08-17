@@ -195,7 +195,7 @@ end
 			end	
 
 --- edit shop hkmp -----
-function BUGSHOPVUKHIHOANGKIM()
+function BUGSHOPVUKHIHKMP()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("10470;10", gg.TYPE_DWORD)
 				gg.sleep(2000) -- THỜI GIAN CHỜ
@@ -206,7 +206,7 @@ function BUGSHOPVUKHIHOANGKIM()
 				gg.clearResults()
 end
 --- edit shop ÁO hkmp -----
-function BUGSHOPAOHOANGKIM()
+function BUGSHOPAOHKMP()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("110002;10", gg.TYPE_DWORD)
 				gg.sleep(2000) -- THỜI GIAN CHỜ
