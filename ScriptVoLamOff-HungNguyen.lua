@@ -630,7 +630,7 @@ end
 	end	
 	end		
 
-function LAYGIATRI2()
+function LAYGIATRI3()
 	if giatri3 == 0 then
 		gg.alert("\n─⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Đợi đến khi nào hiện thông báo💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Chưa hiện thông báo đừng bấm gì tránh lôi khi bug💥 ☾₊‧⁺˖⋆─\n") 	 	
 		gg.setRanges(gg.REGION_ANONYMOUS)      
