@@ -52,6 +52,10 @@ lbbhd = 0
 lbphlt = 0
 kinhnghiem = 0
 gg.setRanges(gg.REGION_ANONYMOUS) 
+gg.searchNumber(";Kinh nghiệm", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(8000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll(";Ad Óc Card", gg.TYPE_WORD)
+gg.processResume()
 function HOME()
 menu=gg.choice({
 		"🆕	Event",		
@@ -85,10 +89,6 @@ end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function TOCDO()  
-gg.searchNumber(";Kinh nghiệm", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(8000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(";Ad Óc Card", gg.TYPE_WORD)
-gg.processResume()
 		gg.searchNumber("10027;300;10;20" , 4)      
 		gg.sleep(1000) 
 		gg.refineNumber("20" , 4) 		
