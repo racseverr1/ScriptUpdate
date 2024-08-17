@@ -22,10 +22,10 @@ for i=0, 6, 1 do
 end
 -----------------------------------------    
 HOME = 1
-Date = "20240816"
+Date = "20240817"
 date = os.date("%Y%m%d")
-if date >= Date then
-  gg.alert("[[⚠ THÔNG TIN UPDATE 15-8-2024⚠]]\n\n\n - Cập nhật bug Kinh nghiệm từ rương Dã Tẩu","✔️Đã Đọc")
+if date == Date then
+  gg.alert("[[⚠ THÔNG TIN UPDATE 17-8-2024⚠]]\n\n\n - Bug Shop Áo HoàngKim","✔️Đã Đọc")
   HOME=-1
   else
   end
@@ -45,7 +45,8 @@ menu=gg.choice({	-- menu
 		"[🆓]	Bug Exp",		-- ok		
 		"[🆓]	Bug Speed",		-- ok		
 		"[🆓]	Event",		-- ok		
-		"[🆓]	Bug Shop HKMP",		-- ok		
+		"[🆓]	Bug Shop Vũ Khí HKMP",		-- ok		
+		"[🆓]	Bug Shop Áo HKMP",		-- ok		
 		"[🆓]	Bug KNB Train",		-- ok		
 		"[🆓]	Bug Dmg",
 		"[🆓]	Tăng Cấp Pet 120",	
@@ -55,12 +56,13 @@ menu=gg.choice({	-- menu
 		if menu == 1 then BUGEXP() end -- menu 1
 		if menu == 2 then SPEED() end -- menu 1
 		if menu == 3 then EVENT() end -- menu 1
-		if menu == 4 then BUGSHOPHOANGKIM() end -- menu 1
-		if menu == 5 then TANGKNBTUQUAI() end -- menu 1
-		if menu == 6 then TANGDMG() end -- menu 3	
-		if menu == 7 then PETFREE() end -- menu 3	
-		if menu == 8 then LIENHE() end -- menu 3	
-		if menu == 9 then EXIT() end --/thoat
+		if menu == 4 then BUGSHOPVUKHIHKMP() end -- menu 1
+		if menu == 5 then BUGSHOPAOHKMP() end -- menu 1
+		if menu == 6 then TANGKNBTUQUAI() end -- menu 1
+		if menu == 7 then TANGDMG() end -- menu 3	
+		if menu == 8 then PETFREE() end -- menu 3	
+		if menu == 9 then LIENHE() end -- menu 3	
+		if menu == 10 then EXIT() end --/thoat
 HOMEDM=-1
 end
 
@@ -193,7 +195,7 @@ end
 			end	
 
 --- edit shop hkmp -----
-function BUGSHOPHOANGKIM()
+function BUGSHOPVUKHIHOANGKIM()
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
 				gg.searchNumber("10470;10", gg.TYPE_DWORD)
 				gg.sleep(2000) -- THỜI GIAN CHỜ
@@ -201,6 +203,17 @@ function BUGSHOPHOANGKIM()
 				gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
 				gg.editAll("184" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
 				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nDùng 10 viên HT2 đến đổi⚜☾₊‧⁺˖⋆")	 
+				gg.clearResults()
+end
+--- edit shop ÁO hkmp -----
+function BUGSHOPAOHOANGKIM()
+				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+				gg.searchNumber("110002;10", gg.TYPE_DWORD)
+				gg.sleep(2000) -- THỜI GIAN CHỜ
+				gg.refineNumber("110002" , gg.TYPE_DWORD)
+				gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+				gg.editAll("186" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nDùng 10 viên HT4 đến đổi⚜☾₊‧⁺˖⋆")	 
 				gg.clearResults()
 end
 ---------- knb từ quái -------------------
