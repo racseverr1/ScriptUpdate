@@ -80,6 +80,7 @@ end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
 ---------- event------------
 function EVENT()
 	if event == 0 then
@@ -499,9 +500,9 @@ function VATPHAMKHONGXEPCHONG()
 	"Quay Lại",
 	},nil,"─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
 		if VATPHAMKHONGXEPCHONG1 == 1 then LAYGIATRI3() end 
-		if VATPHAMKHONGXEPCHONG1 == 2 then SKILLPET() end 
-		if VATPHAMKHONGXEPCHONG1 == 3 then SACHEXP120() end 
-		if VATPHAMKHONGXEPCHONG1 == 4 then SACHEXP150() end 
+		if VATPHAMKHONGXEPCHONG1 == 2 then SACHEXP120() end 
+		if VATPHAMKHONGXEPCHONG1 == 3 then SACHEXP150() end 		
+		if VATPHAMKHONGXEPCHONG1 == 4 then SKILLPET() end 
 		if VATPHAMKHONGXEPCHONG1 == 5 then RUONGSKILL120() end 
 		if VATPHAMKHONGXEPCHONG1 == 6 then RUONGSKILL150() end 
 		if VATPHAMKHONGXEPCHONG1 == 7 then DAITHANH150() end 
@@ -1097,17 +1098,29 @@ end
 function SHOP()
 	SHOP1=gg.choice({
 		"🔰 Giảm Giá Toàn Bộ Shop",
-		"🔰 VK Hoàng Kim(🔥nguy cơ ban cao🔥)",
+		"🔰 VK Hoàng Kim Vàng(🔥nguy cơ ban cao🔥)",
+		"🔰 VK Hoàng Kim Cam",
 		"🔰 Nhận Vô Danh",
 		"🔰 Vật Phẩm Khác",
 		"🔰 Quay Lại",
 		},nil,"⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")
 		if SHOP1 == 1 then GIAMGIATOANBOSHOP() end 
 		if SHOP1 == 2 then HOANGKIMMONPHAI() end 
-		if SHOP1 == 3 then NHANVODANH() end 
-		if SHOP1 == 4 then VATPHAMKHAC() end  
-		if SHOP1 == 5 then HOME() end  
+		if SHOP1 == 3 then HOANGKIMMONPHAI1() end 
+		if SHOP1 == 4 then NHANVODANH() end 
+		if SHOP1 == 5 then VATPHAMKHAC() end  
+		if SHOP1 == 6 then HOME() end  
 end
+	function HOANGKIMMONPHAI1()
+					gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
+					gg.searchNumber("10470;10", gg.TYPE_DWORD)
+					gg.sleep(2000) -- THỜI GIAN CHỜ
+					gg.refineNumber("10470" , gg.TYPE_DWORD)
+					gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
+					gg.editAll("184" , gg.TYPE_DWORD) -- chỉnh sửa giá trị 3
+					gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nDùng 10 viên HT2 đến đổi⚜☾₊‧⁺˖⋆")	 
+					gg.clearResults()
+	end
 	function GIAMGIATOANBOSHOP()
 		gg.searchNumber("888888888" , gg.TYPE_DWORD)      
 		gg.sleep(1000) 
@@ -1741,7 +1754,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng bình 1000 tại Kỳ trân các⚜☾₊‧⁺˖⋆")  -- thong bao	 
 		gg.clearResults()	
 		CACCHUCNANGKHAC()				
-	end			
+	end				
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
