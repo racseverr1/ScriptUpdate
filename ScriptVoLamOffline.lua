@@ -422,6 +422,25 @@ function TYLE()
 	HOMEDM=-1		
 	
 end
+
+function NONNAM()
+		gg .loadResults( gg .getListItems()) 
+		gg.getResults(30)
+		gg.editAll("7947"  , gg.TYPE_DWORD)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function AONAM()
+		gg .loadResults( gg .getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1026"  , gg.TYPE_DWORD)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function GIAYNAM()
+		gg .loadResults( gg .getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1336"  , gg.TYPE_DWORD)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
 ---------- event------------
 function EVENT()
 	if event == 0 then
