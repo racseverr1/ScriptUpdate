@@ -28,7 +28,7 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 -----------------------------------------   
 Date = "20240817"
 date = os.date("%Y%m%d")
-if date = Date then
+if date == Date then
   gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 17-8-2024\n\t\t\t\t\t\t----------------------------\n「 ✦ THAY ĐỔI CƠ CẤU SCRIPT ✦ 」\n🔥1:Bug KNB, Bạc, Exp \nNhận bằng rương dã tẩu(mua hiệu thuốc)\n\n🔥2:Vật phẩm xếp chồng \nNhận bằng Rương NHHTx100 (mua Kỳ Trân Các)\n\n🔥3:Vật phẩm không xếp chồng \nNhận bằng Rương sách tinh linh đặc biệt(nhận tại mục <Vật Phẩm Xếp Chồng>)","✔️Đã Đọc")
   HOME=-1
   else
