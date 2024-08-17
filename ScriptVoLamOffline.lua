@@ -85,9 +85,9 @@ end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function TOCDO()  
-gg.searchNumber(";Kinhnghiệm", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.searchNumber(";Kinh nghiệm", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(8000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(";AdÓcCard", gg.TYPE_WORD)
+gg.editAll(";Ad Óc Card", gg.TYPE_WORD)
 gg.processResume()
 		gg.searchNumber("10027;300;10;20" , 4)      
 		gg.sleep(1000) 
