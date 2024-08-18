@@ -340,7 +340,7 @@ end
 		     
 		gg.searchNumber("100;1000;506" , 4)      
 		gg.sleep(3000) 
-		gg.refineNumber("100" , 4) 
+		gg.refineNumber("100;1000" , 4) 
 		gg.getResults(400) 
 		gg.editAll("100000" , 4) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng rương Ngũ Hành Hồn Thạch 100⚜☾₊‧⁺˖⋆")  
