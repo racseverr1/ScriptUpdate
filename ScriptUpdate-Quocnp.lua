@@ -26,7 +26,7 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
 	else gg.toast("✅ Kết nối thành công !✅") end
 -----------------------------------------   
-Date = "20240818"
+Date = "20240817"
 date = os.date("%Y%m%d")
 if date == Date then
   gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
@@ -51,6 +51,8 @@ nhht = 0
 lbbhd = 0
 lbphlt = 0
 kinhnghiem = 0
+ruongdatau = 0
+gg.setRanges(gg.REGION_ANONYMOUS) 
 function HOME()
 menu=gg.choice({
 		"🔰	Event",		
@@ -191,6 +193,7 @@ end
 
 ---------- knb nhan truc tiep từ ruong dã tẩu ---------------
 function TANGKNBTRUCTIEP()
+	if ruongdatau = 0 then
 	-- RUONG DA TAU
 	 gg.searchNumber("20770" , 4)      
 	 gg.sleep(500) 
@@ -199,6 +202,9 @@ function TANGKNBTRUCTIEP()
 	 gg.sleep(1000)
 	 gg.clearResults()
 	 gg.clearList()		
+	 ruongdatau = 1
+	 else
+	 end
 		gg.alert("\n╰┈➤⚜Chọn mục [ LẤY GIÁ TRỊ TRƯỚC ] để tránh lỗi\n╰┈➤⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!\n")
 		TANGKNBTRUCTIEP1=gg.choice({
 	"🔰 Kinh Nghiệm",	
@@ -340,7 +346,7 @@ end
 		     
 		gg.searchNumber("100;1000;506" , 4)      
 		gg.sleep(3000) 
-		gg.refineNumber("100" , 4) 
+		gg.refineNumber("100;1000" , 4) 
 		gg.getResults(400) 
 		gg.editAll("100000" , 4) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng rương Ngũ Hành Hồn Thạch 100⚜☾₊‧⁺˖⋆")  
@@ -1106,7 +1112,7 @@ function SHOP()
 		if SHOP1 == 7 then HOME() end  
 end
 		--- edit shop ÁO hkmp -----
-	function HOANGKIMMONPHAI2()
+	function HOANGKIMMONPHAI1()
 	     -- phạm vi tìm kiếm
 					gg.searchNumber("110002;10", 4)
 					gg.sleep(2000) -- THỜI GIAN CHỜ
@@ -1718,7 +1724,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng bình 1000 tại Kỳ trân các⚜☾₊‧⁺˖⋆")  
 		gg.clearResults()	
 		CACCHUCNANGKHAC()				
-	end		
+	end					
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
