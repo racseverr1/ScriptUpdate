@@ -193,7 +193,7 @@ end
 
 ---------- knb nhan truc tiep từ ruong dã tẩu ---------------
 function TANGKNBTRUCTIEP()
-	if ruongdatau = 0 then
+	if ruongdatau == 0 then
 	-- RUONG DA TAU
 	 gg.searchNumber("20770" , 4)      
 	 gg.sleep(500) 
