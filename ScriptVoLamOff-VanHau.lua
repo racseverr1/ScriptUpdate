@@ -52,6 +52,7 @@ nhht = 0
 lbbhd = 0
 lbphlt = 0
 kinhnghiem = 0
+ruongdatau = 0
 gg.setRanges(gg.REGION_ANONYMOUS) 
 function HOME()
 menu=gg.choice({
@@ -193,6 +194,7 @@ end
 
 ---------- knb nhan truc tiep từ ruong dã tẩu ---------------
 function TANGKNBTRUCTIEP()
+	if ruongdatau = 0 then
 	-- RUONG DA TAU
 	 gg.searchNumber("20770" , 4)      
 	 gg.sleep(500) 
@@ -201,6 +203,9 @@ function TANGKNBTRUCTIEP()
 	 gg.sleep(1000)
 	 gg.clearResults()
 	 gg.clearList()		
+	 ruongdatau = 1
+	 else
+	 end
 		gg.alert("\n╰┈➤⚜Chọn mục [ LẤY GIÁ TRỊ TRƯỚC ] để tránh lỗi\n╰┈➤⚜Sử dụng [RƯƠNG DÃ TẨU] mua tại [HIỆU THUỐC] để nhận!\n")
 		TANGKNBTRUCTIEP1=gg.choice({
 	"🔰 Kinh Nghiệm",	
@@ -342,7 +347,7 @@ end
 		     
 		gg.searchNumber("100;1000;506" , 4)      
 		gg.sleep(3000) 
-		gg.refineNumber("100" , 4) 
+		gg.refineNumber("100;1000" , 4) 
 		gg.getResults(400) 
 		gg.editAll("100000" , 4) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng rương Ngũ Hành Hồn Thạch 100⚜☾₊‧⁺˖⋆")  
