@@ -40,10 +40,10 @@ gg.sleep(100)
 gg.setVisible(true)
 --------------------------------------------------------
 HOME = 1
-gg.searchNumber(";Kinh nghiệm", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.getResults(8000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(";Ad Óc Card", gg.TYPE_WORD)
-gg.processResume()
+-- gg.searchNumber(";Kinh nghiệm", gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+-- gg.getResults(8000, nil, nil, nil, nil, nil, nil, nil, nil)
+-- gg.editAll(";Ad Óc Card", gg.TYPE_WORD)
+-- gg.processResume()
 function HOME()
 menu=gg.choice({	-- menu
 		"[🆓]	Bug Exp",		-- ok		
