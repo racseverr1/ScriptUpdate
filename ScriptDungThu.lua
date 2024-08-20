@@ -78,7 +78,7 @@ end
 				gg.sleep(1000) -- THỜI GIAN CHỜ
 				gg.refineNumber("600000" , gg.TYPE_DWORD) -- lọc giá trị 3		
 				gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-				gg.editAll("1000000000" , gg.TYPE_DWORD) 
+				gg.editAll("100000000" , gg.TYPE_DWORD) 
 				gg.clearResults()
 				
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -86,7 +86,7 @@ end
 				gg.sleep(1000) -- THỜI GIAN CHỜ
 				gg.refineNumber("800000" , gg.TYPE_DWORD) -- lọc giá trị 3		
 				gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-				gg.editAll("1000000000" , gg.TYPE_DWORD) 
+				gg.editAll("100000000" , gg.TYPE_DWORD) 
 				gg.clearResults()
 
 				gg.setRanges(gg.REGION_ANONYMOUS)      -- phạm vi tìm kiếm
@@ -94,7 +94,7 @@ end
 				gg.sleep(1000) -- THỜI GIAN CHỜ
 				gg.refineNumber("1000000" , gg.TYPE_DWORD) -- lọc giá trị 3		
 				gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-				gg.editAll("1000000000" , gg.TYPE_DWORD) 
+				gg.editAll("100000000" , gg.TYPE_DWORD) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜Bug Kinh nghiệm thành công⚜ ☾₊‧⁺˖⋆\n\n ⋆˖⁺‧₊☽ ⚜Dùng Rương Dã Tẩu nhận được exp⚜ ☾₊‧⁺˖⋆") 
 				gg.clearResults()		
 	end
