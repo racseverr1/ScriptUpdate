@@ -101,8 +101,8 @@ function TYLE2()
 				} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
 			if TYLE21 == 1 then TIMLAN3() end 
 			if TYLE21 == 2 then TIMLAN4() end 
-			if TYLE21 == 5 then CHONDO2() end 
-			if TYLE21 == 6 then HOME() end 
+			if TYLE21 == 3 then CHONDO2() end 
+			if TYLE21 == 4 then HOME() end 
 			HOMEDM=-1
 end
 function TIMLAN3()
@@ -369,8 +369,8 @@ function TYLE()
 				} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
 			if TYLE1 == 1 then TIMLAN1() end 
 			if TYLE1 == 2 then TIMLAN2() end 
-			if TYLE1 == 5 then CHONDO() end 
-			if TYLE1 == 6 then HOME() end 
+			if TYLE1 == 3 then CHONDO() end 
+			if TYLE1 == 4 then HOME() end 
 end
 function TIMLAN1()
 	if lan1 == 0 then			
