@@ -52,11 +52,18 @@ lbbhd = 0
 lbphlt = 0
 kinhnghiem = 0
 ruongdatau = 0
+lan1 = 0
+lan2 = 0
+lan3 = 0
+lan4 = 0
+lan5 = 0
 gg.setRanges(gg.REGION_ANONYMOUS) 
 function HOME()
 menu=gg.choice({
 		"🔰	Event",		
 		"🔰 Bug Speed",	
+		"🆕	Bug Đồ TDD - KNVC",		
+		"🆕	Bug Đồ TDD - KNVC2",		
 		"🆕 Bug Hồi Sinh Quái",	
 		"🔰 Tăng KNB,Bạc (Trực tiếp)",	-- ruong dã tẩu mua tại hiệu thuốc
 		"🔰 Vật phẩm xếp chồng",		-- ruong nhht
@@ -69,20 +76,673 @@ menu=gg.choice({
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
 		if menu == 1 then EVENT() end 
 		if menu == 2 then SPEED() end 
-		if menu == 3 then TOCDO() end 
-		if menu == 4 then TANGKNBTRUCTIEP() end 
-		if menu == 5 then VATPHAMXEPCHONG() end 
-		if menu == 6 then VATPHAMKHONGXEPCHONG() end 
-		if menu == 7 then SHOP() end 
-		if menu == 8 then PET() end 
-		if menu == 9 then TANGDMG() end
-		if menu == 10 then CACCHUCNANGKHAC() end 	
-		if menu == 11 then EXIT() end 
+		if menu == 3 then TYLE() end 
+		if menu == 4 then TYLE2() end 		
+		if menu == 5 then TOCDO() end 
+		if menu == 6 then TANGKNBTRUCTIEP() end 
+		if menu == 7 then VATPHAMXEPCHONG() end 
+		if menu == 8 then VATPHAMKHONGXEPCHONG() end 
+		if menu == 9 then SHOP() end 
+		if menu == 10 then PET() end 
+		if menu == 11 then TANGDMG() end
+		if menu == 12 then CACCHUCNANGKHAC() end 	
+		if menu == 13 then EXIT() end 
 HOMEDM=-1
 end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function TYLE2()
+			TYLE21=gg.choice({
+			"🔰 Lấy giá trị lần 1",			
+			"🔰 Lấy giá trị lần 2",								
+			"🔰 Chọn đồ",			
+			"🔰 Quay Lại",
+				} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
+			if TYLE21 == 1 then TIMLAN3() end 
+			if TYLE21 == 2 then TIMLAN4() end 
+			if TYLE21 == 3 then CHONDO2() end 
+			if TYLE21 == 4 then HOME() end 
+			HOMEDM=-1
+end
+function TIMLAN3()
+	if lan3 == 0 then			
+		gg.searchNumber("1024;20000;1034;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1024;1034",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅...10✅")
+
+		gg.searchNumber("1044;20000;1054;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1044;1054",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...9✅")
+
+		gg.searchNumber("1064;20000;1074;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1064;1074",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...8✅")
+
+		gg.searchNumber("1084;20000;1094;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1084;1094",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...7✅")
+
+		gg.searchNumber("1104;20000;1114;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1104;1114",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...6✅")
+
+		gg.searchNumber("1124;20000;1134;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1124;1134",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...5✅")
+
+		gg.searchNumber("1144;20000;1154;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1144;1154",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...4✅")
+												
+		gg.searchNumber("7945;20000;7955;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("7945;7955",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.toast("✅...3✅")
+		
+		gg.searchNumber("7965;20000;7975;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("7965;7975",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...2✅")	
+
+		gg.searchNumber("7986;20000;7996;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("7986;7996",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...1✅")		
+		lan3 = 1	
+		gg.alert("________「 ✦ Xong lần 1 ✦ 」_______")	
+	else
+			gg.alert("________「 ✦ Thất bại .... Thoát game ra vào lại ✦ 」_______")	
+	end	
+end
+function TIMLAN4()
+	if lan4 == 0 then			
+		gg.searchNumber("7985;20000;7995;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("7985;7995",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅....Số lần tìm còn 15...✅")				
+				
+		gg.searchNumber("8005;20000;1334;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8005;1334",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅....Số lần tìm còn 14...✅")				
+				
+		gg.searchNumber("1344;20000;1014;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1344;1014",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 13...✅")
+						
+		gg.searchNumber("1314;20000;1384;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1314;1384",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 12...✅")
+
+		gg.searchNumber("14780;20000;20853;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14780;20853",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.toast("✅....Số lần tìm còn 11...✅")
+		
+		gg.searchNumber("1324;20000;1374;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1324;1374",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 10...✅")
+
+		gg.searchNumber("1364;20000;1004;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1364;1004",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 9...✅")
+				
+		gg.searchNumber("8015;20000;8025;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8015;8025",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 8...✅")	
+
+		gg.searchNumber("8035;20000;8045;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8035;8045",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 7...✅")				
+				
+		gg.searchNumber("8055;20000;8065;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8055;8065",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 6...✅")
+
+		gg.searchNumber("8075;20000;1354;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8075;1354",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 5...✅")				
+				
+		gg.searchNumber("8016;10000;8026;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8016;8026",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 4...✅")
+
+		gg.searchNumber("14770;20000;14710;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14770;14710",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 3...✅")				
+				
+		gg.searchNumber("14720;20000;30025;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14720;30025",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 2...✅")
+
+		gg.searchNumber("14730;20000;14740;20000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14730;14740",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+
+		gg.searchNumber("337;200000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("337",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		
+		gg.searchNumber("183;200000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("183",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+				
+		gg.searchNumber("184;200000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("184",4) 		
+		tyle1 = gg.getResults(999) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+				
+		gg.toast("✅....Số lần tìm còn 1...✅")		
+		lan4 = 1	
+		gg.alert("________「 ✦ Xong lần 2 ✦ 」_______")	
+	else
+			gg.alert("________「 ✦ Thất bại .... Thoát game ra vào lại ✦ 」_______")		
+	end	
+end
+function CHONDO2()
+	if lan3 == 0 then
+		gg.alert("Chưa chạy giá trị lần 1")
+		else
+		if lan4 == 0 then
+			gg.alert("Chưa chạy giá trị lần 2")
+			else
+				CHONDO21=gg.choice({
+				"🔰 Nam",		
+				"🔰 Nữ",			
+				"🔰 Quay Lại",
+					} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
+					if CHONDO21 == 1 then NAM() end 
+					if CHONDO21 == 2 then NU() end 
+					if CHONDO21 == 3 then HOME() end 
+					HOMEDM=-1 
+	end	end	
+end
+
+function TYLE()
+			TYLE1=gg.choice({
+			"🔰 Lấy giá trị lần 1",			
+			"🔰 Lấy giá trị lần 2",								
+			"🔰 Chọn đồ",			
+			"🔰 Quay Lại",
+				} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
+			if TYLE1 == 1 then TIMLAN1() end 
+			if TYLE1 == 2 then TIMLAN2() end 
+			if TYLE1 == 3 then CHONDO() end 
+			if TYLE1 == 4 then HOME() end 
+end
+function TIMLAN1()
+	if lan1 == 0 then			
+		gg.searchNumber("20844;10000;30016;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("20844;30016",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅...10✅")
+
+		gg.searchNumber("20824;10000;20834;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("20824;20834",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...9✅")
+
+		gg.searchNumber("14751;10000;14761;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14751;14761",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...8✅")
+
+		gg.searchNumber("14731;10000;14741;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14731;14741",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...7✅")
+
+		gg.searchNumber("30026;10000;30026;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("30026;30026",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...6✅")
+
+		gg.searchNumber("14721;10000;14721;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14721;14721",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...5✅")
+
+		gg.searchNumber("1365;10000;1005;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1365;1005",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...4✅")
+												
+		gg.searchNumber("1325;10000;1375;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1325;1375",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.toast("✅...3✅")
+		
+		gg.searchNumber("14771;10000;14711;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14771;14711",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...2✅")	
+
+		gg.searchNumber("8076;10000;1355;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8076;1355",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅...1✅")		
+		lan1 = 1	
+		gg.alert("________「 ✦ Xong lần 1 ✦ 」_______")	
+	else
+			gg.alert("________「 ✦ Thất bại .... Thoát game ra vào lại ✦ 」_______")	
+	end	
+end
+function TIMLAN2()
+	if lan2 == 0 then			
+		gg.searchNumber("8056;10000;8066;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8056;8066",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅....Số lần tìm còn 15...✅")				
+				
+		gg.searchNumber("8036;10000;8046;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8036;8046",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅....Số lần tìm còn 14...✅")				
+				
+		gg.searchNumber("1315;10000;1385;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1315;1385",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 13...✅")
+						
+		gg.searchNumber("14781;10000;20854;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("14781;20854",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 12...✅")
+
+		gg.searchNumber("8006;10000;1335;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("8006;1335",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()	
+		gg.toast("✅....Số lần tìm còn 11...✅")
+		
+		gg.searchNumber("1345;10000;1015;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1345;1015",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 10...✅")
+
+		gg.searchNumber("7946;10000;7956;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("7946;7956",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 9...✅")
+				
+		gg.searchNumber("7966;10000;7976;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("7966;7976",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()
+		gg.toast("✅....Số lần tìm còn 8...✅")	
+
+		gg.searchNumber("1125;10000;1135;10000::",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1125;1135",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 7...✅")				
+				
+		gg.searchNumber("1145;10000;1155;10000::",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1145;1155",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 6...✅")
+
+		gg.searchNumber("1085;10000;1095;10000::",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1085;1095",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 5...✅")				
+				
+		gg.searchNumber("1105;10000;1115;10000::",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1105;1115",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 4...✅")
+
+		gg.searchNumber("1045;10000;1055;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1045;1055",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 3...✅")				
+				
+		gg.searchNumber("1065;10000;1075;10000::",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1065;1075",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()			
+		gg.toast("✅....Số lần tìm còn 2...✅")
+
+		gg.searchNumber("1025;10000;1035;10000",4)      
+		gg.sleep(1000) 
+		gg.refineNumber("1025;1035",4) 		
+		tyle1 = gg.getResults(30) 
+		gg.addListItems(tyle1)
+		gg.clearResults()		
+		gg.toast("✅....Số lần tìm còn 1...✅")		
+		lan2 = 1	
+		gg.alert("________「 ✦ Xong lần 2 ✦ 」_______")	
+	else
+			gg.alert("________「 ✦ Thất bại .... Thoát game ra vào lại ✦ 」_______")		
+	end	
+end
+function CHONDO()
+	if lan1 == 0 then
+		gg.alert("Chưa chạy giá trị lần 1")
+		else
+		if lan2 == 0 then
+			gg.alert("Chưa chạy giá trị lần 2")
+			else
+				CHONDO1=gg.choice({
+				"🔰 Nam",		
+				"🔰 Nữ",			
+				"🔰 Quay Lại",
+					} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
+					if CHONDO1 == 1 then NAM() end 
+					if CHONDO1 == 2 then NU() end 
+					if CHONDO1 == 3 then HOME() end 
+	end	end	
+end
+
+function NAM()
+	CHONDO1=gg.choice({
+	"🔰 Nón",		
+	"🔰 Áo",			
+	"🔰 Lưng",			
+	"🔰 Tay",			
+	"🔰 Giày",			
+	"🔰 Nhẫn",			
+	"🔰 Bội",			
+	"🔰 Dây Chuyền",			
+	"🔰 Quay Lại",
+	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
+	if CHONDO1 == 1 then NONNAM() end 
+	if CHONDO1 == 2 then AONAM() end 
+	if CHONDO1 == 3 then LUNGNAM() end 
+	if CHONDO1 == 4 then GIAYNAM() end 
+	if CHONDO1 == 5 then NHANNAM() end 
+	if CHONDO1 == 6 then BOINAM() end 
+	if CHONDO1 == 7 then DAYCHUYENNAM() end 
+	if CHONDO1 == 8 then CHONDO() end 
+end
+function NONNAM()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(9999)
+		gg.editAll("7947;7957;7967;7977;7987;7997;8007" ,4)
+		-- gg.editAll("8017;8027;8037;8047;8057;8067;8077" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function AONAM()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1026;1036;1046;1056;1066;1076;1086" ,4)
+		-- gg.editAll("1126;1136;1146;1156;1166;1176;1186" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function LUNGNAM()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1316;1326" ,4)
+		-- gg.editAll("1356;1366" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function GIAYNAM()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1336;1346" ,4)
+		-- gg.editAll("1356;1366" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function NHANNAM()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("20855" ,4)
+		-- gg.editAll("1356;1366" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function BOINAM()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("14782" ,4)
+		-- gg.editAll("14772" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function DAYCHUYENNAM()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1016" ,4)
+		-- gg.editAll("1006" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+
+function NU()
+	CHONDO1=gg.choice({
+	"🔰 Nón",		
+	"🔰 Áo",			
+	"🔰 Lưng",			
+	"🔰 Tay",			
+	"🔰 Giày",			
+	"🔰 Nhẫn",			
+	"🔰 Bội",			
+	"🔰 Dây Chuyền",			
+	"🔰 Quay Lại",
+	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
+	if CHONDO1 == 1 then NONNU() end 
+	if CHONDO1 == 2 then AONU() end 
+	if CHONDO1 == 3 then LUNGNU() end 
+	if CHONDO1 == 4 then GIAYNU() end 
+	if CHONDO1 == 5 then NHANNU() end 
+	if CHONDO1 == 6 then BOINU() end 
+	if CHONDO1 == 7 then DAYCHUYENNU() end 
+	if CHONDO1 == 8 then CHONDO() end 
+end
+function NONNU()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(9999)
+		-- gg.editAll("7947;7957;7967;7977;7987;7997;8007" ,4)
+		gg.editAll("8017;8027;8037;8047;8057;8067;8077" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function AONU()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		-- gg.editAll("1026;1036;1046;1056;1066;1076;1086" ,4)
+		gg.editAll("1126;1136;1146;1156;1166;1176;1186" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function LUNGNU()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("1316;1326" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function GIAYNU()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		-- gg.editAll("1336;1346" ,4)
+		gg.editAll("1356;1366" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function NHANNU()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		gg.editAll("20855" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function BOINU()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		-- gg.editAll("14782" ,4)
+		gg.editAll("14772" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
+function DAYCHUYENNU()
+		gg .loadResults(gg.getListItems()) 
+		gg.getResults(30)
+		-- gg.editAll("1016" ,4)
+		gg.editAll("1006" ,4)
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+end
 
 ---------- event------------
 function TOCDO()  
