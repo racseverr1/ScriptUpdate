@@ -371,7 +371,6 @@ function TYLE()
 			if TYLE1 == 2 then TIMLAN2() end 
 			if TYLE1 == 5 then CHONDO() end 
 			if TYLE1 == 6 then HOME() end 
-			HOMEDM=-1
 end
 function TIMLAN1()
 	if lan1 == 0 then			
@@ -602,7 +601,6 @@ function CHONDO()
 					if CHONDO1 == 1 then NAM() end 
 					if CHONDO1 == 2 then NU() end 
 					if CHONDO1 == 3 then HOME() end 
-					HOMEDM=-1 
 	end	end	
 end
 
@@ -715,8 +713,7 @@ end
 function LUNGNU()
 		gg .loadResults(gg.getListItems()) 
 		gg.getResults(30)
-		-- gg.editAll("1316;1326" ,4)
-		gg.editAll("1356;1366" ,4)
+		gg.editAll("1316;1326" ,4)
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
 end
 function GIAYNU()
