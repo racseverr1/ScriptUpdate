@@ -1772,7 +1772,7 @@ function SHOP()
 		if SHOP1 == 7 then HOME() end  
 end
 		--- edit shop ÁO hkmp -----
-	function HOANGKIMMONPHAI1()
+	function HOANGKIMMONPHAI2()
 	     -- phạm vi tìm kiếm
 					gg.searchNumber("110002;10", 4)
 					gg.sleep(2000) -- THỜI GIAN CHỜ
