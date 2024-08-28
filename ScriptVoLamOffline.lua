@@ -17,7 +17,7 @@ for i=0, 6, 1 do
 end
 --------------------------------------------------------
 
-local Passwords = {"nguyenvinh"}
+local Passwords = {"luan"}
 local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	if not Menu then return end
 	for l , I in pairs(Passwords) do
