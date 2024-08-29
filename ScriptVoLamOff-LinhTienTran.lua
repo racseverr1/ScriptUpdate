@@ -26,11 +26,13 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
 	else gg.toast("✅ Kết nối thành công !✅") end
 -----------------------------------------   
-Date = "20240817"
+Date = "20240829"
 date = os.date("%Y%m%d")
 if date == Date then
-  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
-  HOME=-1
+  -- gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
+  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 29-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Huyền Tinh 9( phần vật phẩm xếp chồng) \n\n🔥2:Bug Thỏi bạc (nhận lần 5 ức)\n\n🔥3:\n\n🔥4:","✔️Đã Đọc")
+ 
+ HOME=-1
   else
   end 
 modbyfami = os.date ("\n\t─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n\t➤ 📅Ngày: %x📅\n\t➤ 📜Phiên Bản : 0.8📜\n\t➤ 📲Script by Nguyễn Vinh📲\n\t➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘")
@@ -62,6 +64,7 @@ function HOME()
 menu=gg.choice({
 		"🔰	Event",		
 		"🔰 Bug Speed",	
+		"🔰 Bug Thỏi Bạc",	
 		"🆕	Bug Đồ TDD - KNVC",		
 		"🆕	Bug Đồ TDD - KNVC2",		
 		"🆕 Bug Hồi Sinh Quái",	
@@ -76,22 +79,33 @@ menu=gg.choice({
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
 		if menu == 1 then EVENT() end 
 		if menu == 2 then SPEED() end 
-		if menu == 3 then TYLE() end 
-		if menu == 4 then TYLE2() end 		
-		if menu == 5 then TOCDO() end 
-		if menu == 6 then TANGKNBTRUCTIEP() end 
-		if menu == 7 then VATPHAMXEPCHONG() end 
-		if menu == 8 then VATPHAMKHONGXEPCHONG() end 
-		if menu == 9 then SHOP() end 
-		if menu == 10 then PET() end 
-		if menu == 11 then TANGDMG() end
-		if menu == 12 then CACCHUCNANGKHAC() end 	
-		if menu == 13 then EXIT() end 
+		if menu == 3 then THOIBAC() end 
+		if menu == 4 then TYLE() end 
+		if menu == 5 then TYLE2() end 		
+		if menu == 6 then TOCDO() end 
+		if menu == 7 then TANGKNBTRUCTIEP() end 
+		if menu == 8 then VATPHAMXEPCHONG() end 
+		if menu == 9 then VATPHAMKHONGXEPCHONG() end 
+		if menu == 10 then SHOP() end 
+		if menu == 11 then PET() end 
+		if menu == 12 then TANGDMG() end
+		if menu == 13 then CACCHUCNANGKHAC() end 	
+		if menu == 14 then EXIT() end 
 HOMEDM=-1
 end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function THOIBAC()
+		gg.searchNumber("2;2000000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("2000000" , 4) 		
+		gg.getResults(300) 
+		gg.editAll("300000000"  , 4)
+		gg.clearResults()
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Sử dụng thỏi bạc trên kỳ trân các⚜☾₊‧⁺˖⋆")
+end
+
 function TYLE2()
 			TYLE21=gg.choice({
 			"🔰 Lấy giá trị lần 1",			
@@ -726,7 +740,8 @@ end
 function NHANNU()
 		gg .loadResults(gg.getListItems()) 
 		gg.getResults(30)
-		gg.editAll("20855" ,4)
+		-- gg.editAll("20855" ,4)
+		gg.editAll("1356;1366" ,4)
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
 end
 function BOINU()
@@ -743,7 +758,6 @@ function DAYCHUYENNU()
 		gg.editAll("1006" ,4)
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
 end
-
 ---------- event------------
 function TOCDO()  
 		gg.searchNumber("10027;300;10;20" , 4)      
@@ -1058,6 +1072,7 @@ end
 	"🔰 Huyền Tinh 6",		
 	"🔰 Huyền Tinh 7",		
 	"🔰 Huyền Tinh 8",
+	"🔰 Huyền Tinh 9",
 	"🔰 Quay lại",
 	},nil,"─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")	
 		if HUYENTINH1 == 1 then HUYENTINH1() end 
@@ -1068,7 +1083,8 @@ end
 		if HUYENTINH1 == 6 then HUYENTINH6() end 
 		if HUYENTINH1 == 7 then HUYENTINH7() end 
 		if HUYENTINH1 == 8 then HUYENTINH8() end	 
-		if HUYENTINH1 == 9 then VATPHAMXEPCHONG() end 
+		if HUYENTINH1 == 9 then HUYENTINH9() end	 
+		if HUYENTINH1 == 10 then VATPHAMXEPCHONG() end 
 	end		
 	end	
 		function HUYENTINH1()
@@ -1132,6 +1148,14 @@ end
 		gg.getResults(30)
 		gg.editAll("190" , 4) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 8 thành công⚜☾₊‧⁺˖⋆")  
+		gg.clearResults()	
+		HUYENTINH()		
+	end
+		function HUYENTINH9()
+		gg .loadResults( gg .getListItems())
+		gg.getResults(30)
+		gg.editAll("110100" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 9 thành công⚜☾₊‧⁺˖⋆")  
 		gg.clearResults()	
 		HUYENTINH()		
 	end
@@ -1772,7 +1796,7 @@ function SHOP()
 		if SHOP1 == 7 then HOME() end  
 end
 		--- edit shop ÁO hkmp -----
-	function HOANGKIMMONPHAI2()
+	function HOANGKIMMONPHAI1()
 	     -- phạm vi tìm kiếm
 					gg.searchNumber("110002;10", 4)
 					gg.sleep(2000) -- THỜI GIAN CHỜ
