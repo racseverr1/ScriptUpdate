@@ -25,15 +25,15 @@ for i=0, 6, 1 do
 end
 -----------------------------------------    
 HOME = 1
-Date = "20240822"
+Date = "20240829"
 date = os.date("%Y%m%d")
 if date == Date then
-  gg.alert("[[⚠ THÔNG TIN UPDATE 22-8-2024⚠]]\n\n\n - Bug Tăng Tỷ Lệ Trang Bị Cấp 7 lên 50% và Thuộc Tính TDD \n- Áp dụng tất cả Quái cấp 65.\n\n- Script Lỏ Nên Chạy Hơi Lâu Ae Thông Cảm.","✔️Đã Đọc")
+  gg.alert("[[⚠ THÔNG TIN UPDATE 29-8-2024⚠]]\n\n\n - Bug Bạc Từ Thỏi Bạc.\n\n- Bug Huyền Tinh 9.","✔️Đã Đọc")
   HOME=-1
   else
   end
 -----------------------------------------    
-modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 0.9 (22/8)📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n","Tiếp Tục")
+modbyfami = os.date ("\n─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n➤ 📅Ngày: %x📅\n➤ 📜Phiên Bản : 1.0 (29/8)📜\n➤ 📲Script by Nguyễn Vinh📲\n ➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘\n─\n","Tiếp Tục")
 gg.alert(modbyfami)  							
 gg.clearResults()
 gg.clearList()
@@ -49,29 +49,58 @@ HOME = 1
 function HOME()
 menu=gg.choice({	
 		"[🆓]	Bug Exp",			
+		"[🆓]	Bug Bạc Từ Thỏi Bạc",			
+		"[🆓]	Bug Huyền Tinh 9",			
 		"[🆓]	Bug Speed",		
-		"[🆓]	Bỏ delay",
-		"[🆓]	Bug Đồ TDD - KNVC",		
+		-- "[🆓]	Bỏ delay",
+		-- "[🆓]	Bug Đồ TDD - KNVC",		
 		"[🆓]	Bug Shop Vũ Khí HKMP",	
-		"[🆓]	Bug Shop Áo HKMP",		
-		"[🆓]	Bug KNB Train",		
+		"[🆓]	Bug Shop Áo HKMP",			
 		"[🆓]	Bug Dmg",
 		"[🆓]	Tăng Cấp Pet 120",	
 		"Các tính năng khác",	
 		"❌Thoát❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 	
 		if menu == 1 then BUGEXP() end 
-		if menu == 2 then SPEED() end 
-		if menu == 3 then TOCDO() end 
-		if menu == 4 then TYLE() end 
+		if menu == 2 then THOIBAC() end 
+		if menu == 3 then HUYENTINH9() end 
+		if menu == 4 then SPEED() end 
+		-- if menu == 3 then TOCDO() end 
+		-- if menu == 4 then TYLE() end 
 		if menu == 5 then BUGSHOPVUKHIHKMP() end 
 		if menu == 6 then BUGSHOPAOHKMP() end 
-		if menu == 7 then TANGKNBTUQUAI() end 
-		if menu == 8 then TANGDMG() end 	
-		if menu == 9 then PETFREE() end 	
-		if menu == 10 then LIENHE() end 	
-		if menu == 11 then EXIT() end 
+		if menu == 7 then TANGDMG() end 	
+		if menu == 8 then PETFREE() end 	
+		if menu == 9 then LIENHE() end 	
+		if menu == 10 then EXIT() end 
 HOMEDM=-1
+end
+------------ Bug Thỏi Bạc
+function THOIBAC()
+		gg.searchNumber("2;2000000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("2000000" , 4) 		
+		gg.getResults(300) 
+		gg.editAll("300000000"  , 4)
+		gg.clearResults()
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Sử dụng thỏi bạc trên kỳ trân các⚜☾₊‧⁺˖⋆")
+end
+------------ Bug HUYENTINH9
+function HUYENTINH9()
+		gg.toast("✅Đang check ID Item Huyền Tinh 9 ... Còn 5s")
+		gg.sleep(3000) 		
+		gg.toast("✅Đang check ID Item Huyền Tinh 9 ... Còn 4s")
+		gg.sleep(3000) 		
+		gg.toast("✅Đang check ID Item Huyền Tinh 9 ... Còn 3s")
+		gg.sleep(3000) 				
+		gg.toast("✅Đang check ID Item Huyền Tinh 9 ... Còn 2s")
+		gg.sleep(3000) 				
+		gg.toast("✅Đang check ID Item Huyền Tinh 9 ... Còn 1s")
+		gg.sleep(3000) 		
+gg.alert("⋆˖⁺‧₊☽ ⚜ID : 110100⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Xem clip trên Youtube để tự bug.⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Bấm Coppy và dán vào trình duyệt để xem clip.⚜☾₊‧⁺˖⋆","Coppy")
+gg.copyText("https://youtu.be/R-uD5IkyOlg?si=GKQrsimqFdbmMjn3")
+-- gg.alert("⋆˖⁺‧₊☽ ⚜ID : 110100⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Xem clip trên Youtube để tự bug.⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Bấm Coppy và dán vào trình duyệt để xem clip.⚜☾₊‧⁺˖⋆")
+		
 end
 ----------- Bug drop
 function TYLE()
