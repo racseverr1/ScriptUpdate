@@ -1,2 +1,2 @@
-gg.alre(" Script Bảo Trì ")
+gg.alert(" Script Bảo Trì ")
 os.exit
