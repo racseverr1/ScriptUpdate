@@ -426,7 +426,7 @@ end
 	else
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
-		gg.editAll("183" , 4) 
+		gg.editAll("2444" , 4) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Hòa Thị Ngọc thành công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()
 		VATPHAMXEPCHONG()
