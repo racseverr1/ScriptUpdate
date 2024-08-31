@@ -26,11 +26,11 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
 	else gg.toast("✅ Kết nối thành công !✅") end
 -----------------------------------------   
-Date = "20240829"
+Date = "20240831"
 date = os.date("%Y%m%d")
 if date == Date then
   -- gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
-  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 29-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Huyền Tinh 9( phần vật phẩm xếp chồng) \n\n🔥2:Bug Thỏi bạc (nhận lần 5 ức)\n\n🔥3:\n\n🔥4:","✔️Đã Đọc")
+  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 31-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Hòa Thị Ngọc (vật phẩm xếp chồng) \n\n🔥2:Thêm Sát Thủ Lệnh (vật phẩm xếp chồng)\n\n🔥3:Thêm VLMT - TTK(vật phẩm không xếp chồng)\n\n🔥4:","✔️Đã Đọc")
  
  HOME=-1
   else
@@ -346,7 +346,9 @@ function TANGKNBTRUCTIEP()
 function VATPHAMXEPCHONG()	
 		VATPHAMXEPCHONG1=gg.choice({
 	"🔰 Ngũ Hành Hồn Thạch\n<<không cần lấy dữ liệu>>",		
-	"🔰 Lấy Giá Trị",		
+	"🔰 Lấy Giá Trị",
+	"🔰 Hòa Thị Ngọc",	
+	"🔰 Sát Thủ Lệnh",	
 	"🔰 Huyền Tinh",	
 	"🔰 Rương Sách Tinh linh Đặc Biệt",	
 
@@ -354,9 +356,11 @@ function VATPHAMXEPCHONG()
 	},nil,"─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")	
 		if VATPHAMXEPCHONG1 == 1 then NGUHANHHONTHACH() end 
 		if VATPHAMXEPCHONG1 == 2 then LAYGIATRI2() end 
-		if VATPHAMXEPCHONG1 == 3 then HUYENTINH() end 
-		if VATPHAMXEPCHONG1 == 4 then SACHTINHLINHDACBIET() end 
-		if VATPHAMXEPCHONG1 == 5 then HOME() end 	
+		if VATPHAMXEPCHONG1 == 3 then HOATHINGOC() end 
+		if VATPHAMXEPCHONG1 == 4 then SATTHULENH() end 
+		if VATPHAMXEPCHONG1 == 5 then HUYENTINH() end 
+		if VATPHAMXEPCHONG1 == 6 then SACHTINHLINHDACBIET() end 
+		if VATPHAMXEPCHONG1 == 7 then HOME() end 	
 end 
 	function NGUHANHHONTHACH()
 		if nhht == 0 then
@@ -402,6 +406,32 @@ end
 		end	
 	end
 
+	function SATTHULENH()
+	if giatri2 == 0 then
+	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
+	VATPHAMKHONGXEPCHONG()
+	else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(30)
+		gg.editAll("8810" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Sát Thủ Lệnh thành công⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		VATPHAMXEPCHONG()
+	end	
+	end
+	function HOATHINGOC()
+	if giatri2 == 0 then
+	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
+	VATPHAMKHONGXEPCHONG()
+	else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(30)
+		gg.editAll("183" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Hòa Thị Ngọc thành công⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		VATPHAMXEPCHONG()
+	end	
+	end
 	function HUYENTINH()
 	if giatri2 == 0 then
 		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  
@@ -523,7 +553,6 @@ function VATPHAMKHONGXEPCHONG()
 	"🔰 Lấy Giá Trị",		
 	"🔰 Võ Lâm Mật Tịch",	
 	"🔰 Tẩy Tủy Kinh",	
-	"🔰 Hòa Thị Ngọc",	
 	"🔰 Sách Exp 120",	
 	"🔰 Sách Exp 150",	
 	"🔰 Skill Pet",	
@@ -540,32 +569,19 @@ function VATPHAMKHONGXEPCHONG()
 		if VATPHAMKHONGXEPCHONG1 == 1 then LAYGIATRI3() end 
 		if VATPHAMKHONGXEPCHONG1 == 2 then VOLAMMATTICH() end 
 		if VATPHAMKHONGXEPCHONG1 == 3 then TAYTUYKINH() end 
-		if VATPHAMKHONGXEPCHONG1 == 4 then HOATHINGOC() end 
-		if VATPHAMKHONGXEPCHONG1 == 5 then SACHEXP120() end 
-		if VATPHAMKHONGXEPCHONG1 == 6 then SACHEXP150() end 		
-		if VATPHAMKHONGXEPCHONG1 == 7 then SKILLPET() end 
-		if VATPHAMKHONGXEPCHONG1 == 8 then RUONGSKILL120() end 
-		if VATPHAMKHONGXEPCHONG1 == 9 then RUONGSKILL150() end 
-		if VATPHAMKHONGXEPCHONG1 == 10 then DAITHANH150() end 
-		if VATPHAMKHONGXEPCHONG1 == 11 then SIEUQUANG() end	 
-		if VATPHAMKHONGXEPCHONG1 == 12 then KIMHOVUONG() end 
-		if VATPHAMKHONGXEPCHONG1 == 13 then BACHHOVUONG() end 
-		if VATPHAMKHONGXEPCHONG1 == 14 then HACHOVUONG() end 		
-		if VATPHAMKHONGXEPCHONG1 == 15 then HOME() end 
+		if VATPHAMKHONGXEPCHONG1 == 4 then SACHEXP120() end 
+		if VATPHAMKHONGXEPCHONG1 == 5 then SACHEXP150() end 		
+		if VATPHAMKHONGXEPCHONG1 == 6 then SKILLPET() end 
+		if VATPHAMKHONGXEPCHONG1 == 7 then RUONGSKILL120() end 
+		if VATPHAMKHONGXEPCHONG1 == 8 then RUONGSKILL150() end 
+		if VATPHAMKHONGXEPCHONG1 == 9 then DAITHANH150() end 
+		if VATPHAMKHONGXEPCHONG1 == 10 then SIEUQUANG() end	 
+		if VATPHAMKHONGXEPCHONG1 == 11 then KIMHOVUONG() end 
+		if VATPHAMKHONGXEPCHONG1 == 12 then BACHHOVUONG() end 
+		if VATPHAMKHONGXEPCHONG1 == 13 then HACHOVUONG() end 		
+		if VATPHAMKHONGXEPCHONG1 == 14 then HOME() end 
 end 
-	function HOATHINGOC()
-	if giatri3 == 0 then
-	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
-	VATPHAMKHONGXEPCHONG()
-	else
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("2444" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Hòa Thị Ngọc thành công⚜ ☾₊‧⁺˖⋆") 	 
-		gg.clearResults()
-	VATPHAMKHONGXEPCHONG()	
-	end	
-	end
+
 	function TAYTUYKINH()
 	if giatri3 == 0 then
 	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
