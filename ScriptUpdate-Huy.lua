@@ -589,7 +589,7 @@ end
 	else
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
-		gg.editAll("8437" , 4) 
+		gg.editAll("8434" , 4) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Tẩy Tủy Kinh thành công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()
 	VATPHAMKHONGXEPCHONG()	
