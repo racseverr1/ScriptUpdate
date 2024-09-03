@@ -25,17 +25,20 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	end
 	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
 	else gg.toast("✅ Kết nối thành công !✅") end
------------------------------------------   
-Date = "20240831"
+-----------------------------------------
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   
+Date = "20240903"
 date = os.date("%Y%m%d")
 if date == Date then
   -- gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
-  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 31-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Hòa Thị Ngọc (vật phẩm xếp chồng) \n\n🔥2:Thêm Sát Thủ Lệnh (vật phẩm xếp chồng)\n\n🔥3:Thêm VLMT - TTK(vật phẩm không xếp chồng)\n\n🔥4:","✔️Đã Đọc")
+  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 3-9-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Delay quái Tần Lăng \n\n🔥2:\n\n🔥3:\n\n🔥4:","✔️Đã Đọc")
  
  HOME=-1
   else
   end 
-modbyfami = os.date ("\n\t─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n\t➤ 📅Ngày: %x📅\n\t➤ 📜Phiên Bản : 0.8📜\n\t➤ 📲Script by Nguyễn Vinh📲\n\t➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘")
+modbyfami = os.date ("\n\t─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n\t➤ 📅Ngày: %x📅\n\t➤ 📜Phiên Bản : 1.2📜\n\t➤ 📲Script by Nguyễn Vinh📲\n\t➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘")
 gg.alert(modbyfami)  	
 gg.clearResults()
 gg.clearList()
@@ -101,67 +104,17 @@ function THOIBAC()
 		gg.clearResults()
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Sử dụng thỏi bạc trên kỳ trân các⚜☾₊‧⁺˖⋆")
 end
-
----------- event------------
+---------- bỏ delay------------
 function TOCDO()  
-		gg.searchNumber("10027;300;10;20" , 4)      
+		gg.searchNumber("100000;40000" , 4)      
 		gg.sleep(1000) 
-		gg.refineNumber("20" , 4) 		
-		gg.getResults(300) 
+		gg.refineNumber("40000" , 4) 		
+		gg.getResults(500) 
 		gg.editAll("0"  , 4)
 		gg.clearResults()
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆")
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Bỏ Delay Quái Tần Lăng Thành Công⚜☾₊‧⁺˖")
 end
-function EVENT()
-	if event == 0 then
-		gg.searchNumber("100;1000;506" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("506" , 4) 		
-		event = gg.getResults(30) 
-		gg.addListItems(event)
-		gg.clearResults()	
-		event = 1		
-	end	
-	if event == 1 then	
-	EVENT1=gg.choice({
-	"🔰 ==> Hướng dẫn <==",		
-	"🔰 Mâm Chay",		
-	"🔰 Mâm Mặn",
-	"🔰 Mâm Đặc Biệt",
-	"🔰 Quay Lại",
-		} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─") 	
-	if EVENT1 == 1 then HUONGDAN() end 
-	if EVENT1 == 2 then MAMCHAY() end 
-	if EVENT1 == 3 then MAMMAN() end 
-	if EVENT1 == 4 then MAMDACBIET() end 
-	if EVENT1 == 5 then HOME() end 
-	HOMEDM=-1		
-	else	
-	end	
-end
-function HUONGDAN()
-	gg.alert("⋆˖⁺‧₊☽ ⚜ Hướng dẫn⚜☾₊‧⁺˖⋆\n - Sau khi chọn loại event cần thì dùng rương NHHT(1000) bán tại Kỳ Trân Các click nhận\n - Sau khi nhận bấm vào vật phẩm vừa nhận và tách ra 1.\n - Bắt buộc phải tách ra để tránh lỗi khi nhận vật phẩm event loại tiếp theo.",nil,"Đã đọc và hiểu")
-EVENT()
-end
-	function MAMCHAY()
-		gg .loadResults( gg .getListItems()) 
-		gg.getResults(30)
-		gg.editAll("8871"  , 4)
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công\n Sử dụng rương NHHTx1000 để nhận ⚜☾₊‧⁺˖⋆")
-	end	
-	function MAMMAN()
-		gg .loadResults( gg .getListItems()) 
-		gg.getResults(30)
-		gg.editAll("8872"  , 4)
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công\n Sử dụng rương NHHTx1000 để nhận ⚜☾₊‧⁺˖⋆")
-	end		
-	function MAMDACBIET()
-		gg .loadResults( gg .getListItems()) 
-		gg.getResults(30)
-		gg.editAll("8873"  , 4)
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công\n Sử dụng rương NHHTx1000 để nhận ⚜☾₊‧⁺˖⋆")
-	end	
-	
+
 ------ Bug tốc ---------
 function SPEED()
 	if speed == 0 then
@@ -247,22 +200,22 @@ function TANGKNBTRUCTIEP()
 				gg.sleep(1000) 
 				gg.refineNumber("600000" , 4) 		
 				gg.getResults(30) 
-				gg.editAll("1000000000" , 4) 
+				gg.editAll("2000000000" , 4) 
 				gg.clearResults()
 				 
 				gg.searchNumber("5;800000;3500" , 4)    
 				gg.sleep(1000) 
 				gg.refineNumber("800000" , 4) 	
 				gg.getResults(30) 
-				gg.editAll("1000000000" , 4) 
+				gg.editAll("2000000000" , 4) 
 				gg.clearResults()
 
 				gg.searchNumber("5;1000000;3000" , 4)    
 				gg.sleep(1000) -- THỜI GIAN CHỜ
 				gg.refineNumber("1000000" , 4) -- lọc giá trị 3		
 				gg.getResults(30) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-				gg.editAll("1000000000" , 4) 
-				gg.alert("⋆˖⁺‧₊☽ ⚜Bug Kinh nghiệm thành công⚜☾₊‧⁺˖⋆") 
+				gg.editAll("2000000000" , 4) 
+				gg.alert("⋆˖⁺‧₊☽ ⚜Sử dụng rương dã tẩu để nhận exp. Bug xong thoát game ra vào lại tránh lỗi⚜☾₊‧⁺˖⋆") 
 				kinhnghiem = 1
 				gg.clearResults()	
 			else
@@ -1813,6 +1766,7 @@ end
 		gg.clearResults()	
 		CACCHUCNANGKHAC()				
 	end					
+
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
