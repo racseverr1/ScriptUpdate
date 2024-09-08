@@ -75,17 +75,17 @@ menu=gg.choice({
 		"🔰 Các Chức Năng Khác",
 		"❌Exit❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
-		if menu == 2 then SPEED() end 
-		if menu == 3 then THOIBAC() end 		
-		if menu == 4 then TOCDO() end 
-		if menu == 5 then TANGKNBTRUCTIEP() end 
-		if menu == 6 then VATPHAMXEPCHONG() end 
-		if menu == 7 then VATPHAMKHONGXEPCHONG() end 
-		if menu == 8 then SHOP() end 
-		if menu == 9 then PET() end 
-		if menu == 10 then TANGDMG() end
-		if menu == 11 then CACCHUCNANGKHAC() end 	
-		if menu == 12 then EXIT() end 
+		if menu == 1 then SPEED() end 
+		if menu == 2 then THOIBAC() end 		
+		if menu == 3 then TOCDO() end 
+		if menu == 4 then TANGKNBTRUCTIEP() end 
+		if menu == 5 then VATPHAMXEPCHONG() end 
+		if menu == 6 then VATPHAMKHONGXEPCHONG() end 
+		if menu == 7 then SHOP() end 
+		if menu == 8 then PET() end 
+		if menu == 9 then TANGDMG() end
+		if menu == 10 then CACCHUCNANGKHAC() end 	
+		if menu == 11 then EXIT() end 
 HOMEDM=-1
 end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
