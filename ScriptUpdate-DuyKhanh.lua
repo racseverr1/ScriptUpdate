@@ -15,8 +15,7 @@ for i=0, 6, 1 do
 		gg.toast('🛠Tải Script Thành Công!🛠')
 	end
 end
---------------------------------------------------------
-
+------ Pass -------------
 local Passwords = {"duykhanh"}
 local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	if not Menu then return end
@@ -25,25 +24,26 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	end
 	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
 	else gg.toast("✅ Kết nối thành công !✅") end
------------------------------------------   
-Date = "20240903"
+	------- Thông báo update
+Date = "20240908"
 date = os.date("%Y%m%d")
 if date == Date then
   -- gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
-  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 3-9-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Delay quái Tần Lăng \n\n🔥2:\n\n🔥3:\n\n🔥4:","✔️Đã Đọc")
+  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 8-9-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Bug Delay quái Map Thanh Loa Đảo (100)\n\n🔥2:Bug Delay quái Map  Dược Vương Cốc (60)\n\n🔥3:Bug Delay quái Map Tần Lăng\n\n🔥4:Bug Điểm May Mắn (đọc hướng dẫn kỹ)","✔️Đã Đọc")
  
  HOME=-1
   else
   end 
-modbyfami = os.date ("\n\t─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n\t➤ 📅Ngày: %x📅\n\t➤ 📜Phiên Bản : 1.2📜\n\t➤ 📲Script by Nguyễn Vinh📲\n\t➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘")
+---------------------------
+modbyfami = os.date ("\n\t─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n\t➤ 📅Ngày: %x📅\n\t➤ 📜Phiên Bản : 1.3📜\n\t➤ 📲Script by Nguyễn Vinh📲\n\t➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘")
 gg.alert(modbyfami)  	
 gg.clearResults()
 gg.clearList()
 gg.sleep(100)
 --------------------------------------------------------
 gg.setVisible(true)
---------------------------------------------------------
-HOME = 1
+-------------------Biến-----------------------------
+ HOME = 1
 event = 0
 speed = 0
 giatri1 = 0
@@ -59,13 +59,13 @@ lan2 = 0
 lan3 = 0
 lan4 = 0
 lan5 = 0
-gg.setRanges(gg.REGION_ANONYMOUS) 
+gg.setRanges(gg.REGION_ANONYMOUS)
+------------ Main ----------------------
 function HOME()
-menu=gg.choice({
-		"🔰	Event",		
+menu=gg.choice({	
 		"🔰 Bug Speed",	
 		"🔰 Bug Thỏi Bạc",	
-		"🆕 Bug Hồi Sinh Quái",	
+		"🆕 Bug Delay Quái",	
 		"🔰 Tăng KNB,Bạc (Trực tiếp)",	-- ruong dã tẩu mua tại hiệu thuốc
 		"🔰 Vật phẩm xếp chồng",		-- ruong nhht
 		"🔰 Vật phẩm không xếp chồng",	-- ruong sách linh tinh
@@ -75,7 +75,6 @@ menu=gg.choice({
 		"🔰 Các Chức Năng Khác",
 		"❌Exit❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
-		if menu == 1 then EVENT() end 
 		if menu == 2 then SPEED() end 
 		if menu == 3 then THOIBAC() end 		
 		if menu == 4 then TOCDO() end 
@@ -92,26 +91,6 @@ end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-function THOIBAC()
-		gg.searchNumber("2;2000000" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("2000000" , 4) 		
-		gg.getResults(300) 
-		gg.editAll("300000000"  , 4)
-		gg.clearResults()
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Sử dụng thỏi bạc trên kỳ trân các⚜☾₊‧⁺˖⋆")
-end
----------- bỏ delay------------
-function TOCDO()  
-		gg.searchNumber("100000;40000" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("40000" , 4) 		
-		gg.getResults(500) 
-		gg.editAll("0"  , 4)
-		gg.clearResults()
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Bỏ Delay Quái Tần Lăng Thành Công⚜☾₊‧⁺˖")
-end
-
 ------ Bug tốc ---------
 function SPEED()
 	if speed == 0 then
@@ -158,7 +137,76 @@ function SPEED()
 	gg.alert("⋆˖⁺‧₊☽⚜Tính năng đã bật.!!!⚜☾₊‧⁺˖⋆\t⋆˖⁺‧₊☽ ⚜Không thể kích hoạt lần nữa⚜☾₊‧⁺˖⋆\v⋆˖⁺‧₊☽ ⚜Nếu chưa tác dụng thoát game ra vào lại⚜☾₊‧⁺˖⋆") 
 	end
 end
-
+function THOIBAC()
+		gg.searchNumber("2;2000000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("2000000" , 4) 		
+		gg.getResults(300) 
+		gg.editAll("300000000"  , 4)
+		gg.clearResults()
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Sử dụng thỏi bạc trên kỳ trân các⚜☾₊‧⁺˖⋆")
+end
+---------- bỏ delay------------
+function TOCDO()  
+	TOCDO1=gg.choice({	
+		"🔰 (60) Dược Vương Cốc",	
+		"🔰 (100) Thanh Loa Đảo",	
+		"🔰 (999) Tần Lăng",	
+		"❌Exit❌",
+	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
+		if TOCDO1 == 1 then DUOCVUONGCOC() end 
+		if TOCDO1 == 2 then THANHLOADAO() end 		
+		if TOCDO1 == 3 then TANLANG() end 
+		if TOCDO1 == 4 then EXIT() end 
+	HOMEDM=-1
+end
+function DUOCVUONGCOC()  
+		gg.searchNumber(":Khỉ Ngựa", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+		revert = gg.getResults(60000, nil, nil, nil, nil, nil, nil, nil, nil)
+		gg.editAll(":Ad ĐítĐỏ", gg.TYPE_BYTE)
+		gg.processResume()
+		gg.clearResults()
+		gg.searchNumber("10027;300;20" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("20" , 4) 		
+		gg.getResults(500) 
+		gg.editAll("0"  , 4)
+		gg.clearResults()
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập nhật thành công\n Phang con Ad ĐítĐỏ⚜☾₊‧⁺˖")
+end
+function THANHLOADAO() 
+		gg.searchNumber(":Hành Giả", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+		revert = gg.getResults(60000, nil, nil, nil, nil, nil, nil, nil, nil)
+		gg.editAll(":Admin Lỏ", gg.TYPE_BYTE)
+		gg.processResume()
+		gg.clearResults()	
+		gg.searchNumber("10077;300;20" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("20" , 4) 		
+		gg.getResults(500) 
+		gg.editAll("0;20"  , 4)
+		gg.clearResults()
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập nhật thành công\n Phang thằng Admin Lỏ⚜☾₊‧⁺˖")
+end
+function TANLANG()  
+		gg.searchNumber(":Quỷ Sứ", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+		revert = gg.getResults(60000, nil, nil, nil, nil, nil, nil, nil, nil)
+		gg.editAll(":Ad Đần", gg.TYPE_BYTE)
+		gg.processResume()
+		gg.clearResults()
+		gg.searchNumber(":Quỷ Nô", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+		revert = gg.getResults(60000, nil, nil, nil, nil, nil, nil, nil, nil)
+		gg.editAll(":Ad Đần", gg.TYPE_BYTE)
+		gg.processResume()
+		gg.clearResults()		
+		gg.searchNumber("100000;40000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("40000" , 4) 		
+		gg.getResults(500) 
+		gg.editAll("0"  , 4)
+		gg.clearResults()
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Bỏ Delay Quái Tần Lăng Thành Công⚜☾₊‧⁺˖")
+end
 ---------- knb nhan truc tiep từ ruong dã tẩu ---------------
 function TANGKNBTRUCTIEP()
 	if ruongdatau == 0 then
@@ -189,7 +237,7 @@ function TANGKNBTRUCTIEP()
 		if TANGKNBTRUCTIEP1 == 4 then BAC1() end 
 		if TANGKNBTRUCTIEP1 == 5 then KNB1() end 
         if TANGKNBTRUCTIEP1 == 6 then HOME() end 
- end 	
+ end 
  	function KINHNGHIEM1()
 		if giatri1 == 0 then
 			if kinhnghiem == 0 then	
@@ -221,7 +269,6 @@ function TANGKNBTRUCTIEP()
 		gg.alert("⋆˖⁺‧₊☽ ⚜Đã lấy giá trị. không thể bug exp⚜☾₊‧⁺˖⋆\n - Thoát game ra vào lại.")
 		end	
 	end
- 
 	function LAYGIATRI1()
 		if kinhnghiem == 0 then
 			if giatri1 == 0 then
@@ -252,7 +299,7 @@ function TANGKNBTRUCTIEP()
 		gg.alert("\n⋆˖⁺‧₊☽ ⚜Đang trong trạng thái bug Kinh nghiệm không thể lấy giá trị.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Thoát game ra vào lại⚜ ☾₊‧⁺˖⋆\n") 		
 		end
 	end
-		function BACKHOA1()
+	function BACKHOA1()
 	if giatri1 == 0 then
 		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  
 		TANGKNBTRUCTIEP()
@@ -265,7 +312,7 @@ function TANGKNBTRUCTIEP()
 	end	
 		TANGKNBTRUCTIEP()	
 	end
-		function BAC1()
+	function BAC1()
 	if giatri1 == 0 then
 		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
 		TANGKNBTRUCTIEP()
@@ -278,7 +325,7 @@ function TANGKNBTRUCTIEP()
 	end		
 	TANGKNBTRUCTIEP()
 	end	
-		function KNB1()
+	function KNB1()
 	if giatri1 == 0 then
 		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
 		TANGKNBTRUCTIEP()	
@@ -291,7 +338,6 @@ function TANGKNBTRUCTIEP()
 	end		
 	TANGKNBTRUCTIEP()
 	end	
-
 ---------- nhận vật phẩm tùy chọn từ rương nhht-----------------
 function VATPHAMXEPCHONG()	
 		VATPHAMXEPCHONG1=gg.choice({
@@ -299,7 +345,14 @@ function VATPHAMXEPCHONG()
 	"🔰 Lấy Giá Trị",
 	"🔰 Hòa Thị Ngọc",	
 	"🔰 Sát Thủ Lệnh",	
-	"🔰 Huyền Tinh",	
+	"🔰 Huyền Tinh 5",	
+	"🔰 Huyền Tinh 6",	
+	"🔰 Huyền Tinh 7",	
+	"🔰 Huyền Tinh 8",	
+	"🔰 Huyền Tinh 9",	
+	"🔰 Huyền Tinh 10(sắp mở)",	
+	"🔰 Huyền Tinh 11(sắp mở)",	
+	"🔰 Huyền Tinh 12(sắp mở)",	
 	"🔰 Rương Sách Tinh linh Đặc Biệt",	
 
 	"Quay Lại",
@@ -308,65 +361,64 @@ function VATPHAMXEPCHONG()
 		if VATPHAMXEPCHONG1 == 2 then LAYGIATRI2() end 
 		if VATPHAMXEPCHONG1 == 3 then HOATHINGOC() end 
 		if VATPHAMXEPCHONG1 == 4 then SATTHULENH() end 
-		if VATPHAMXEPCHONG1 == 5 then HUYENTINH() end 
-		if VATPHAMXEPCHONG1 == 6 then SACHTINHLINHDACBIET() end 
-		if VATPHAMXEPCHONG1 == 7 then HOME() end 	
-end 
+		if VATPHAMXEPCHONG1 == 5 then HUYENTINH5() end 
+		if VATPHAMXEPCHONG1 == 6 then HUYENTINH6() end 
+		if VATPHAMXEPCHONG1 == 7 then HUYENTINH7() end 
+		if VATPHAMXEPCHONG1 == 8 then HUYENTINH8() end 
+		if VATPHAMXEPCHONG1 == 9 then HUYENTINH9() end 
+		if VATPHAMXEPCHONG1 == 10 then HUYENTINH10() end 
+		if VATPHAMXEPCHONG1 == 11 then HUYENTINH11() end 
+		if VATPHAMXEPCHONG1 == 12 then HUYENTINH12() end 
+		if VATPHAMXEPCHONG1 == 13 then SACHTINHLINHDACBIET() end 
+		if VATPHAMXEPCHONG1 == 14 then HOME() end 	
+end
 	function NGUHANHHONTHACH()
 		if nhht == 0 then
-	if giatri2 == 0 then
-		     
-		gg.searchNumber("100;1000;506" , 4)      
-		gg.sleep(3000) 
-		gg.refineNumber("100;1000" , 4) 
-		gg.getResults(400) 
-		gg.editAll("100000" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng rương Ngũ Hành Hồn Thạch 100⚜☾₊‧⁺˖⋆")  
-		gg.clearResults()
-		VATPHAMXEPCHONG()	
-	nhht = 1
-	else
-	gg.alert("⋆˖⁺‧₊☽ ⚜Lỗi dữ liệu vui lòng thoát game ra vào lại.⚜☾₊‧⁺˖⋆")  		
-	end
+			if giatri2 == 0 then
+				gg.searchNumber("100;1000;506" , 4)      
+				gg.sleep(3000) 
+				gg.refineNumber("100;1000" , 4) 
+				gg.getResults(400) 
+				gg.editAll("100000" , 4) 
+				gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng rương Ngũ Hành Hồn Thạch 100⚜☾₊‧⁺˖⋆")  
+				gg.clearResults()
+				VATPHAMXEPCHONG()	
+			nhht = 1
+			else
+			gg.alert("⋆˖⁺‧₊☽ ⚜Lỗi dữ liệu vui lòng thoát game ra vào lại.⚜☾₊‧⁺˖⋆")  		
+			end
 		else
 		gg.alert("⋆˖⁺‧₊☽ ⚜Tính năng đã sử dụng rồi.Thoát game vào lại để dùng lần nữa⚜☾₊‧⁺˖⋆") 	
 		end	
 	end
-
 	function LAYGIATRI2()
 		if nhht == 0 then
-	if event == 0 then
-		if giatri2 == 0 then
-	     
-	gg.searchNumber("100;1000;506" , 4)      
-	gg.sleep(1000) 
-	gg.refineNumber("506" , 4) 		
-	vatphamxepchong = gg.getResults(30) 
-	gg.addListItems(vatphamxepchong)
-	gg.alert("\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG NHHTx100] mua tại [Kỳ Trân Các] để nhận!⚜ ☾₊‧⁺˖⋆\n\n --Lưu ý!!\n-Chỉ dùng rương 100. dùng rương 1000 nguy cơ lỗi\n-Sau khi nhận được vật phẩm nhớ bấm tách 1 để lưu vật phẩm trước khi bug vật phẩm khác") 
-	gg.clearResults()	
-	giatri2 = 1	
-		else		
-		end	
-	else
-	gg.alert("⋆˖⁺‧₊☽ ⚜Lỗi dữ liệu vui lòng thoát game ra vào lại.⚜☾₊‧⁺˖⋆")  
-	end		
+				if giatri2 == 0 then	 
+					gg.searchNumber("100;1000;506" , 4)      
+					gg.sleep(1000) 
+					gg.refineNumber("506" , 4) 		
+					vatphamxepchong = gg.getResults(30) 
+					gg.addListItems(vatphamxepchong)
+					gg.alert("\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG NHHTx100] mua tại [Kỳ Trân Các] để nhận!⚜ ☾₊‧⁺˖⋆\n\n --Lưu ý!!\n-Chỉ dùng rương 100. dùng rương 1000 nguy cơ lỗi\n-Sau khi nhận được vật phẩm nhớ bấm tách 1 để lưu vật phẩm trước khi bug vật phẩm khác") 
+					gg.clearResults()	
+					giatri2 = 1	
+				else		
+				end		
 		else
 		gg.alert("⋆˖⁺‧₊☽ ⚜Lỗi dữ liệu vui lòng thoát game ra vào lại.⚜☾₊‧⁺˖⋆")   
 		end	
 	end
-
 	function SATTHULENH()
 	if giatri2 == 0 then
-	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
-	VATPHAMKHONGXEPCHONG()
-	else
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("8810" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Sát Thủ Lệnh thành công⚜ ☾₊‧⁺˖⋆") 	 
-		gg.clearResults()
-		VATPHAMXEPCHONG()
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
+		VATPHAMKHONGXEPCHONG()
+		else
+			gg .loadResults( gg .getListItems())
+			gg.getResults(30)
+			gg.editAll("8810" , 4) 
+			gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Sát Thủ Lệnh thành công⚜ ☾₊‧⁺˖⋆") 	 
+			gg.clearResults()
+			VATPHAMXEPCHONG()
 	end	
 	end
 	function HOATHINGOC()
@@ -382,68 +434,7 @@ end
 		VATPHAMXEPCHONG()
 	end	
 	end
-	function HUYENTINH()
-	if giatri2 == 0 then
-		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆")  
-		VATPHAMXEPCHONG()
-	else
-		HUYENTINH1=gg.choice({
-	"🔰 Huyền Tinh 1",	
-	"🔰 Huyền Tinh 2",		
-	"🔰 Huyền Tinh 3",		
-	"🔰 Huyền Tinh 4",		
-	"🔰 Huyền Tinh 5",		
-	"🔰 Huyền Tinh 6",		
-	"🔰 Huyền Tinh 7",		
-	"🔰 Huyền Tinh 8",
-	"🔰 Huyền Tinh 9",
-	"🔰 Quay lại",
-	},nil,"─⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜ ☾₊‧⁺˖⋆─")	
-		if HUYENTINH1 == 1 then HUYENTINH1() end 
-		if HUYENTINH1 == 2 then HUYENTINH2() end 
-		if HUYENTINH1 == 3 then HUYENTINH3() end 
-		if HUYENTINH1 == 4 then HUYENTINH4() end 
-		if HUYENTINH1 == 5 then HUYENTINH5() end 
-		if HUYENTINH1 == 6 then HUYENTINH6() end 
-		if HUYENTINH1 == 7 then HUYENTINH7() end 
-		if HUYENTINH1 == 8 then HUYENTINH8() end	 
-		if HUYENTINH1 == 9 then HUYENTINH9() end	 
-		if HUYENTINH1 == 10 then VATPHAMXEPCHONG() end 
-	end		
-	end	
-		function HUYENTINH1()
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("183" , 4)
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Huyền Tinh 1 thành công⚜☾₊‧⁺˖⋆")  
-		gg.clearResults()		
-		HUYENTINH()
-	end
-		function HUYENTINH2()
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("184" , 4)
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Huyền Tinh 2 thành công⚜☾₊‧⁺˖⋆")  
-		gg.clearResults()		
-		HUYENTINH()
-	end
-		function HUYENTINH3()
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("185" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 3 thành công⚜☾₊‧⁺˖⋆")  
-		gg.clearResults()	
-		HUYENTINH()		
-	end
-		function HUYENTINH4()
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("186" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập nhật Huyền Tinh 4 thành công⚜☾₊‧⁺˖⋆")  
-		gg.clearResults()	
-		HUYENTINH()		
-	end
-		function HUYENTINH5()
+	function HUYENTINH5()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
 		gg.editAll("187" , 4) 
@@ -451,7 +442,7 @@ end
 		gg.clearResults()
 		HUYENTINH()		
 	end
-		function HUYENTINH6()
+	function HUYENTINH6()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
 		gg.editAll("188" , 4) 
@@ -459,7 +450,7 @@ end
 		gg.clearResults()		
 		HUYENTINH()
 	end
-		function HUYENTINH7()
+	function HUYENTINH7()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
 		gg.editAll("189" , 4)
@@ -467,7 +458,7 @@ end
 		gg.clearResults()
 		HUYENTINH()		
 	end
-		function HUYENTINH8()
+	function HUYENTINH8()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
 		gg.editAll("190" , 4) 
@@ -475,7 +466,7 @@ end
 		gg.clearResults()	
 		HUYENTINH()		
 	end
-		function HUYENTINH9()
+	function HUYENTINH9()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
 		gg.editAll("110100" , 4) 
@@ -483,20 +474,43 @@ end
 		gg.clearResults()	
 		HUYENTINH()		
 	end
-
-function SACHTINHLINHDACBIET()
-	if giatri2 == 0 then
-		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
-		VATPHAMXEPCHONG()
-	else
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("12508" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Rương Sách Tinh Linh Đặc Biệt thành công⚜☾₊‧⁺˖⋆")  
-		gg.clearResults()		
-		VATPHAMXEPCHONG()	
+	function HUYENTINH10()
+		-- gg .loadResults( gg .getListItems())
+		-- gg.getResults(30)
+		-- gg.editAll("110100" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Tính năng game chưa mở⚜☾₊‧⁺˖⋆")  
+		gg.clearResults()	
+		HUYENTINH()		
 	end
-end
+	function HUYENTINH11()
+		-- gg .loadResults( gg .getListItems())
+		-- gg.getResults(30)
+		-- gg.editAll("110100" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Tính năng game chưa mở⚜☾₊‧⁺˖⋆")  
+		gg.clearResults()	
+		HUYENTINH()		
+	end
+	function HUYENTINH12()
+		-- gg .loadResults( gg .getListItems())
+		-- gg.getResults(30)
+		-- gg.editAll("110100" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Tính năng game chưa mở⚜☾₊‧⁺˖⋆")  
+		gg.clearResults()	
+		HUYENTINH()		
+	end
+	function SACHTINHLINHDACBIET()
+		if giatri2 == 0 then
+			gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
+			VATPHAMXEPCHONG()
+		else
+			gg .loadResults( gg .getListItems())
+			gg.getResults(30)
+			gg.editAll("12508" , 4) 
+			gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Rương Sách Tinh Linh Đặc Biệt thành công⚜☾₊‧⁺˖⋆")  
+			gg.clearResults()		
+			VATPHAMXEPCHONG()	
+		end
+	end
 ------------- Nhận vật phẩm tùy chọn từ rương sách tinh linh đặc biệt
 function VATPHAMKHONGXEPCHONG()	
 		VATPHAMKHONGXEPCHONG1=gg.choice({	
@@ -530,21 +544,45 @@ function VATPHAMKHONGXEPCHONG()
 		if VATPHAMKHONGXEPCHONG1 == 12 then BACHHOVUONG() end 
 		if VATPHAMKHONGXEPCHONG1 == 13 then HACHOVUONG() end 		
 		if VATPHAMKHONGXEPCHONG1 == 14 then HOME() end 
-end 
-
-	function TAYTUYKINH()
+end
+function LAYGIATRI3()
 	if giatri3 == 0 then
-	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
-	VATPHAMKHONGXEPCHONG()
-	else
-		gg .loadResults( gg .getListItems())
-		gg.getResults(30)
-		gg.editAll("8434" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Tẩy Tủy Kinh thành công⚜ ☾₊‧⁺˖⋆") 	 
+		gg.alert("\n─⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Đợi đến khi nào hiện thông báo💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Chưa hiện thông báo đừng bấm gì tránh lôi khi bug💥 ☾₊‧⁺˖⋆─\n") 	 	
+		gg.searchNumber("34456;3000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("34456" , 4) 		
+		vatphamkhongxepchong = gg.getResults(30) 
+		gg.addListItems(vatphamkhongxepchong)	 
 		gg.clearResults()
-	VATPHAMKHONGXEPCHONG()	
-	end	
-	end
+		gg.searchNumber("34515;3000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("34515" , 4) 		
+		vatphamkhongxepchong = gg.getResults(30) 
+		gg.addListItems(vatphamkhongxepchong)	 
+		gg.clearResults()		      
+		gg.searchNumber("34507;3000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("34507" , 4) 		
+		vatphamkhongxepchong = gg.getResults(30) 
+		gg.addListItems(vatphamkhongxepchong)	 
+		gg.clearResults()	   
+		gg.searchNumber("34569;3000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("34569" , 4) 		
+		vatphamkhongxepchong = gg.getResults(30) 
+		gg.addListItems(vatphamkhongxepchong)	 
+		gg.clearResults()	   
+		gg.searchNumber("34571;3000" , 4)      
+		gg.sleep(1000) 
+		gg.refineNumber("34571" , 4) 		
+		vatphamkhongxepchong = gg.getResults(30) 
+		gg.addListItems(vatphamkhongxepchong)	 
+		gg.clearResults()	
+		gg.alert("\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG SÁCH TINH LINH ĐẶC BIỆT] nhận tại [BUG VẬT PHẨM XẾP CHỒNG] !⚜ ☾₊‧⁺˖⋆\n") 		
+		giatri3 = 1
+	end		
+		VATPHAMKHONGXEPCHONG()
+	end 
 	function VOLAMMATTICH()
 	if giatri3 == 0 then
 	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
@@ -558,15 +596,15 @@ end
 	VATPHAMKHONGXEPCHONG()	
 	end	
 	end
-	function SACHEXP150()
+	function TAYTUYKINH()
 	if giatri3 == 0 then
 	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
 	VATPHAMKHONGXEPCHONG()
 	else
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
-		gg.editAll("91442" , 4) 
-		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Sách Exp 150 thành công⚜ ☾₊‧⁺˖⋆") 	 
+		gg.editAll("8434" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Tẩy Tủy Kinh thành công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()
 	VATPHAMKHONGXEPCHONG()	
 	end	
@@ -580,6 +618,19 @@ end
 		gg.getResults(30)
 		gg.editAll("91441" , 4) 
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Sách Exp 120 thành công⚜ ☾₊‧⁺˖⋆") 
+		gg.clearResults()
+	VATPHAMKHONGXEPCHONG()	
+	end	
+	end
+	function SACHEXP150()
+	if giatri3 == 0 then
+	gg.alert("⋆˖⁺‧₊☽ ⚜Chưa lấy giá trị. Vui lòng chọn lấy giá trị trước⚜☾₊‧⁺˖⋆") 
+	VATPHAMKHONGXEPCHONG()
+	else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(30)
+		gg.editAll("91442" , 4) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Sách Exp 150 thành công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()
 	VATPHAMKHONGXEPCHONG()	
 	end	
@@ -674,45 +725,6 @@ end
 		gg.clearResults()	
 	VATPHAMKHONGXEPCHONG()	
 	end	
-	end		
-
-function LAYGIATRI3()
-	if giatri3 == 0 then
-		gg.alert("\n─⋆˖⁺‧₊☽💥 Lấy giá trị khá lâu💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Đợi đến khi nào hiện thông báo💥 ☾₊‧⁺˖⋆─\n──⋆˖⁺‧₊☽ 💥Chưa hiện thông báo đừng bấm gì tránh lôi khi bug💥 ☾₊‧⁺˖⋆─\n") 	 	
-		gg.searchNumber("34456;3000" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("34456" , 4) 		
-		vatphamkhongxepchong = gg.getResults(30) 
-		gg.addListItems(vatphamkhongxepchong)	 
-		gg.clearResults()
-		gg.searchNumber("34515;3000" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("34515" , 4) 		
-		vatphamkhongxepchong = gg.getResults(30) 
-		gg.addListItems(vatphamkhongxepchong)	 
-		gg.clearResults()		      
-		gg.searchNumber("34507;3000" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("34507" , 4) 		
-		vatphamkhongxepchong = gg.getResults(30) 
-		gg.addListItems(vatphamkhongxepchong)	 
-		gg.clearResults()	   
-		gg.searchNumber("34569;3000" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("34569" , 4) 		
-		vatphamkhongxepchong = gg.getResults(30) 
-		gg.addListItems(vatphamkhongxepchong)	 
-		gg.clearResults()	   
-		gg.searchNumber("34571;3000" , 4)      
-		gg.sleep(1000) 
-		gg.refineNumber("34571" , 4) 		
-		vatphamkhongxepchong = gg.getResults(30) 
-		gg.addListItems(vatphamkhongxepchong)	 
-		gg.clearResults()	
-		gg.alert("\n⋆˖⁺‧₊☽ ⚜Lấy giá trị thành công.⚜ ☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜Sử dụng [RƯƠNG SÁCH TINH LINH ĐẶC BIỆT] nhận tại [BUG VẬT PHẨM XẾP CHỒNG] !⚜ ☾₊‧⁺˖⋆\n") 		
-		giatri3 = 1
-	end		
-		VATPHAMKHONGXEPCHONG()
 	end	
 	function SKILLPET()
 		if giatri3 == 0 then
@@ -779,7 +791,7 @@ function LAYGIATRI3()
 		if TANCONG1 == 21 then XA2() end 
 		if TANCONG1 == 22 then XA3() end 
 		if TANCONG1 == 23 then VATPHAMKHONGXEPCHONG() end	 
-		end	
+		end		
 	function GANAOE1()
 	gg .loadResults( gg .getListItems())
 	gg.getResults(30)
@@ -787,7 +799,7 @@ function LAYGIATRI3()
 	gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 	gg.clearResults()	
 	SKILLPET()	
-	end
+	end	
 	function GAN1()
 	gg .loadResults( gg .getListItems())
 	gg.getResults(30)
@@ -795,7 +807,7 @@ function LAYGIATRI3()
 	gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 	gg.clearResults()	
 	SKILLPET()		
-	end
+	end	
 	function GAN2()
 	gg .loadResults( gg .getListItems())
 	gg.getResults(30)
@@ -803,7 +815,7 @@ function LAYGIATRI3()
 	gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 	gg.clearResults()	
 	SKILLPET()		
-	end
+	end	
 	function GAN3()
 	gg .loadResults( gg .getListItems())
 	gg.getResults(30)
@@ -819,7 +831,7 @@ function LAYGIATRI3()
 	gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 	gg.clearResults()
 	SKILLPET()		
-	end	
+	end		
 	function XAAOE2()
 		
 	gg .loadResults( gg .getListItems())
@@ -828,7 +840,7 @@ function LAYGIATRI3()
 	gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 	gg.clearResults()	
 	SKILLPET()		
-	end		
+	end	
 	function XAAOE3()
 	gg .loadResults( gg .getListItems())
 	gg.getResults(30)
@@ -860,7 +872,7 @@ function LAYGIATRI3()
 	gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 	gg.clearResults()	
 	SKILLPET()		
-	end		
+	end	
 	function XAAOE7()
 	gg .loadResults( gg .getListItems())
 	gg.getResults(30)
@@ -876,7 +888,7 @@ function LAYGIATRI3()
 	gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 	gg.clearResults()	
 	SKILLPET()		
-	end		
+	end	
 	function XAAOE9()
 	gg .loadResults( gg .getListItems())
 	gg.getResults(30)
@@ -933,7 +945,6 @@ function LAYGIATRI3()
 	gg.clearResults()		
 	SKILLPET()
 	end	
-
 		function BUFFVABUA()
 	BUFFVABUA1=gg.choice({
 		"🔰 Viêm Hỏa Chi Châu (Bùa)",	
@@ -993,7 +1004,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()
 	SKILLPET()	
-	end	
+	end		
 	function BUA3()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
@@ -1009,7 +1020,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()	
 	SKILLPET()	
-	end	
+	end		
 	function BUA7()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
@@ -1041,7 +1052,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()	
 	SKILLPET()	
-	end		
+	end	
 	function BUA11()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
@@ -1057,7 +1068,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()	
 	SKILLPET()	
-	end		
+	end
 	function BUA13()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
@@ -1073,7 +1084,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()	
 	SKILLPET()	
-	end		
+	end
 	function BUA15()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
@@ -1097,7 +1108,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()
 	SKILLPET()	
-	end	
+	end
 	function BUA18()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
@@ -1113,7 +1124,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()	
 	SKILLPET()	
-	end		
+	end
 	function BUFF1()
 		gg .loadResults( gg .getListItems())
 		gg.getResults(30)
@@ -1129,7 +1140,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập Thành Công⚜ ☾₊‧⁺˖⋆") 	 
 		gg.clearResults()	
 	SKILLPET()	
-	end	
+	end
 ------------ Shop
 function SHOP()
 	SHOP1=gg.choice({
@@ -1151,23 +1162,21 @@ function SHOP()
 end
 		--- edit shop ÁO hkmp -----
 	function HOANGKIMMONPHAI2()
-	     -- phạm vi tìm kiếm
 					gg.searchNumber("110002;10", 4)
-					gg.sleep(2000) -- THỜI GIAN CHỜ
+					gg.sleep(2000) 
 					gg.refineNumber("110002" , 4)
-					gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-					gg.editAll("186" , 4) -- chỉnh sửa giá trị 3
+					gg.getResults(100) 
+					gg.editAll("186" , 4) 
 					gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nDùng 10 viên HT4 đến đổi⚜☾₊‧⁺˖⋆")	 
 					gg.clearResults()
 	end	
 	----- vũ khí
 	function HOANGKIMMONPHAI1()
-	     -- phạm vi tìm kiếm
 					gg.searchNumber("10470;10", 4)
-					gg.sleep(2000) -- THỜI GIAN CHỜ
+					gg.sleep(2000) 
 					gg.refineNumber("10470" , 4)
-					gg.getResults(100) -- HIỂN THỊ GIÁ TRỊ ĐÃ TÌM
-					gg.editAll("184" , 4) -- chỉnh sửa giá trị 3
+					gg.getResults(100) 
+					gg.editAll("184" , 4) 
 					gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nDùng 10 viên HT2 đến đổi⚜☾₊‧⁺˖⋆")	 
 					gg.clearResults()
 	end
@@ -1371,7 +1380,7 @@ end
 		gg.clearList()	 		
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công \n Lại Npc Thợ Rèn Phượng Tường Mua\n Shop Bạc Khóa ⚜☾₊‧⁺˖⋆") 		
 		SHOP()		
-	end		
+	end
 	function NHANVODANH()	
 		gg.searchNumber("14707" , 4)      
 		gg.sleep(500) 
@@ -1441,7 +1450,7 @@ end
 		gg.clearList()	 
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật Thành Công \n Lại Npc Hiệu Thuốc Phượng Tường Mua ⚜☾₊‧⁺˖⋆") 	
 		SHOP()		
-	end	
+	end
 ------------- Pet
 function PET()
 	PET1=gg.choice({
@@ -1694,7 +1703,7 @@ end -- menu 3
 		 gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n\nHãy sử dụng Tiên Thảo Lộ 1h⚜☾₊‧⁺˖⋆") 	 
 		 gg.clearResults()		
 		 TANGDMG()
-	end
+	end	
 ------------ các tính năng khác
 function CACCHUCNANGKHAC()
 	CACCHUCNANGKHAC1=gg.choice({
@@ -1709,7 +1718,7 @@ function CACCHUCNANGKHAC()
 		if CACCHUCNANGKHAC1 == 3 then LBDT() end 		
 		if CACCHUCNANGKHAC1 == 4 then TLHT1000() end 			
 		if CACCHUCNANGKHAC1 == 5 then HOME() end 			
-end
+end	
 	function LBBHD()
 		if lbphlt == 1 then
 			gg.alert("⋆˖⁺‧₊☽ ⚜Đang kích hoạt bug LB PHONG HỎA LIÊN THÀNH.\n Thoát game ra vào lại⚜☾₊‧⁺˖⋆") 
@@ -1752,7 +1761,7 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n LB mua tại kỳ trân các.⚜☾₊‧⁺˖⋆")  	 
 		gg.clearResults()		
 		CACCHUCNANGKHAC()				
-	end	
+	end
 	function TLHT1000()
 		gg.searchNumber("500;1000;1500;5000" , 4)  
 		gg.sleep(3000) 
@@ -1762,12 +1771,10 @@ end
 		gg.alert("⋆˖⁺‧₊☽ ⚜ Cập Nhật thành công\n Sử dụng bình 1000 tại Kỳ trân các⚜☾₊‧⁺˖⋆")  
 		gg.clearResults()	
 		CACCHUCNANGKHAC()				
-	end					
+	end	
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
 function EXIT()
 
 gg.clearResults()
@@ -1786,3 +1793,17 @@ if HOMEDM == 1 then
 HOME()
 end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
