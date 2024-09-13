@@ -24,18 +24,35 @@ local Menu = gg.prompt({"Nhập Pass:"},nil,{"text"})
 	end
 	if A ~= true then gg.alert("\n─⋆˖⁺‧₊☽「 ✦ Thông Báo ✦ 」☾₊‧⁺˖⋆─\n\n          ➤ Tài khoảng chưa đăng ký tool \n              ➤ Vui lòng liên hệ tác giả \n \n─\n")		return 
 	else gg.toast("✅ Kết nối thành công !✅") end
+
+-- Antihack
+L={'✔️', '➖', '➖', '➖', '➖', '➖'} -- LOADING TABLE
+LD = 0
+for i=0, 6, 1 do
+	if gg.isVisible(true) and i ~= 6 then
+		gg.setVisible(false)
+	end
+	gg.sleep(300)
+	gg.toast('Loading: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/100%')
+	LD = LD + 20
+	table.remove(L)
+	table.insert(L, 2, "✔️")
+	if i == 6 then
+		gg.toast('🛠Connect AntiBan Done!🛠')
+	end
+end
 	------- Thông báo update
-Date = "20240908"
+Date = "20240913"
 date = os.date("%Y%m%d")
 if date == Date then
   -- gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 18-8-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Thêm Bug Shop Áo HKMP Cam \n\n🔥2:Bug Shop Vũ Khí HKMP Cam \nInbox zalo nhận hướng dẫn\n\n🔥3:Bug Tốc Độ Hồi Sinh Quái \nInbox zalo nhận hướng dẫn\n\n🔥4:Nhận Bug trang bị KNVC + TDD* MẤT PHÍ *","✔️Đã Đọc")
-  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 8-9-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Bug Delay quái Map Thanh Loa Đảo (100)\n\n🔥2:Bug Delay quái Map  Dược Vương Cốc (60)\n\n🔥3:Bug Delay quái Map Tần Lăng\n\n🔥4:Bug Điểm May Mắn (đọc hướng dẫn kỹ)","✔️Đã Đọc")
+  gg.alert("\t\t\t\t\t\tTHÔNG TIN UPDATE 13-9-2024\n\t\t\t\t\t\t----------------------------\n🔥1:Bug Danh Hiệu Tự Chọn\n\n🔥2:\n\n🔥3:\n\n🔥4:","✔️Đã Đọc")
  
  HOME=-1
   else
   end 
 ---------------------------
-modbyfami = os.date ("\n\t─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n\t➤ 📅Ngày: %x📅\n\t➤ 📜Phiên Bản : 1.3📜\n\t➤ 📲Script by Nguyễn Vinh📲\n\t➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘")
+modbyfami = os.date ("\n\t─⋆˖⁺‧₊☽「 ✦ Thông Tin ✦ 」☾₊‧⁺˖⋆─\n\n\t➤ 📅Ngày: %x📅\n\t➤ 📜Phiên Bản : 1.4📜\n\t➤ 📲Script by Nguyễn Vinh📲\n\t➤ 🆘 FB: fb.com/@nguyenvinh2789 🆘")
 gg.alert(modbyfami)  	
 gg.clearResults()
 gg.clearList()
@@ -59,10 +76,12 @@ lan2 = 0
 lan3 = 0
 lan4 = 0
 lan5 = 0
+checkdanhsach = 0
 gg.setRanges(gg.REGION_ANONYMOUS)
 ------------ Main ----------------------
 function HOME()
 menu=gg.choice({	
+		"🔰 Bug Danh Hiệu",	
 		"🔰 Bug Speed",	
 		"🔰 Bug Thỏi Bạc",	
 		"🆕 Bug Delay Quái",	
@@ -75,22 +94,293 @@ menu=gg.choice({
 		"🔰 Các Chức Năng Khác",
 		"❌Exit❌",
 	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
-		if menu == 1 then SPEED() end 
-		if menu == 2 then THOIBAC() end 		
-		if menu == 3 then TOCDO() end 
-		if menu == 4 then TANGKNBTRUCTIEP() end 
-		if menu == 5 then VATPHAMXEPCHONG() end 
-		if menu == 6 then VATPHAMKHONGXEPCHONG() end 
-		if menu == 7 then SHOP() end 
-		if menu == 8 then PET() end 
-		if menu == 9 then TANGDMG() end
-		if menu == 10 then CACCHUCNANGKHAC() end 	
-		if menu == 11 then EXIT() end 
+		if menu == 1 then DANHHIEU() end 
+		if menu == 2 then SPEED() end 
+		if menu == 3 then THOIBAC() end 		
+		if menu == 4 then TOCDO() end 
+		if menu == 5 then TANGKNBTRUCTIEP() end 
+		if menu == 6 then VATPHAMXEPCHONG() end 
+		if menu == 7 then VATPHAMKHONGXEPCHONG() end 
+		if menu == 8 then SHOP() end 
+		if menu == 9 then PET() end 
+		if menu == 10 then TANGDMG() end
+		if menu == 11 then CACCHUCNANGKHAC() end 	
+		if menu == 12 then EXIT() end 
 HOMEDM=-1
 end
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+-- Danh hiệu
+
+
+ 
+function DANHHIEU()
+DANHHIEU1=gg.choice({	
+		"🔰 <<Check Giá Trị>>",	
+		"🔰 Thiếu Lâm 1",	
+		"🔰 Thiếu Lâm 2",	
+		"🔰 Thiên Vương 1",	
+		"🔰 Thiên Vương 2",	
+		"🔰 Đường Môn 1",	
+		"🔰 Đường Môn 2",		
+		"🔰 Đường Môn 3",	
+		"🔰 Ngũ Độc",
+		"🔰 Nga My",		
+		"🔰 Thúy Yên",
+		"🔰 Thiên Nhẫn",
+		"🔰 Cái Bang 1",
+		"🔰 Cái Bang 2",
+		"🔰 Côn Luân",
+		"🔰 Võ Đang",
+		"🔰 Mod Zalo",
+		"❌Exit❌",
+	} ,nil, "⋆˖⁺‧₊☽ ⚜Lựa Chọn⚜☾₊‧⁺˖⋆") 
+		if DANHHIEU1 == 1 then CHECKGIATRI() end 
+		if DANHHIEU1 == 2 then TL1() end 
+		if DANHHIEU1 == 3 then TL2() end 
+		if DANHHIEU1 == 4 then TV1() end 		
+		if DANHHIEU1 == 5 then TV2() end 
+		if DANHHIEU1 == 6 then DM1() end 
+		if DANHHIEU1 == 7 then DM2() end 
+		if DANHHIEU1 == 8 then DM3() end 
+		if DANHHIEU1 == 9 then ND() end 
+		if DANHHIEU1 == 10 then NM() end 
+		if DANHHIEU1 == 11 then TY() end
+		if DANHHIEU1 == 12 then TN() end 	
+		if DANHHIEU1 == 13 then CB1() end 	
+		if DANHHIEU1 == 14 then CB2() end 	
+		if DANHHIEU1 == 15 then VD() end 	
+		if DANHHIEU1 == 16 then CL() end 	
+		if DANHHIEU1 == 17 then MODZALO() end 	
+		if DANHHIEU1 == 18 then EXIT() end 
+HOMEDM=-1
+end
+
+function CHECKGIATRI()
+	if checkdanhsach == 0 then
+		gg.searchNumber("20000;916",gg.TYPE_AUTO,false,gg.SIGN_EQUAL,0,-1,0)      
+		gg.sleep(1000) 
+		gg.refineNumber("916",gg.TYPE_WORD) 		
+		danhhieu = gg.getResults(30) 
+		gg.addListItems(danhhieu)
+		gg.clearResults()
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Check Giá Trị Thành Công⚜☾₊‧⁺˖⋆")
+		DANHHIEU()
+		checkdanhsach = 1
+	else
+	gg.alert("⋆˖⁺‧₊☽ ⚜ Đã Check giá trị không thể chạy lại.⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Nếu lỗi thì thoát game ra vào lại⚜☾₊‧⁺˖⋆")		
+	end
+end
+	function TL1()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("905" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end
+	function TL2()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("912" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end	
+	function TV1()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("904" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function TV2()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("911" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function DM1()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("901" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end	
+	function DM2()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("913" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end	
+	function DM3()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("914" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end	
+	function ND()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("906" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function NM()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("908" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function TY()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("910" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function TN()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("902" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function CB1()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("909" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function CB2()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("915" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end		
+	function CL()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("903" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end	
+	function VD()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("907" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+	end	
+	end	
+	function MODZALO()
+		if checkdanhsach == 0 then
+		gg.alert("⋆˖⁺‧₊☽ ⚜Chưa check giá trị. Vui lòng chọn check giá trị trước⚜☾₊‧⁺˖⋆") 
+		DANHHIEU()
+		else
+		gg .loadResults( gg .getListItems())
+		gg.getResults(300)
+		gg.editAll("801" , gg.TYPE_WORD) 
+		gg.alert("⋆˖⁺‧₊☽ ⚜Cập Nhập thành công - dùng 20k sát thủ lệnh mua tại Nhiếp Thí Trần⚜ ☾₊‧⁺˖⋆") 	 
+		gg.clearResults()
+		DANHHIEU()
+		end	
+	end	
+
 ------ Bug tốc ---------
 function SPEED()
 	if speed == 0 then
