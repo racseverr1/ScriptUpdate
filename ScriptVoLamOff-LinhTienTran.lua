@@ -165,9 +165,8 @@ function CHECKGIATRI()
 		danhhieu = gg.getResults(30) 
 		gg.addListItems(danhhieu)
 		gg.clearResults()
-		gg.alert("⋆˖⁺‧₊☽ ⚜ Check Giá Trị Thành Công⚜☾₊‧⁺˖⋆")
-		DANHHIEU()
 		checkdanhsach = 1
+		gg.alert("⋆˖⁺‧₊☽ ⚜ Check Giá Trị Thành Công⚜☾₊‧⁺˖⋆")
 	else
 	gg.alert("⋆˖⁺‧₊☽ ⚜ Đã Check giá trị không thể chạy lại.⚜☾₊‧⁺˖⋆\n⋆˖⁺‧₊☽ ⚜ Nếu lỗi thì thoát game ra vào lại⚜☾₊‧⁺˖⋆")		
 	end
